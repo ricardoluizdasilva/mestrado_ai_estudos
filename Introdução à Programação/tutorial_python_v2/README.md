@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-30-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-32-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -21,7 +21,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Pensar de forma algorítmica e escrever programas estruturados e legíveis.
 - Usar os tipos de dados, as estruturas de controlo e as estruturas de dados do Python.
 - Tratar erros, trabalhar com ficheiros e organizar código em funções, classes, módulos e pacotes.
-- Manipular dados numéricos com **NumPy** e tabelas com **pandas**.
+- Manipular dados numéricos com **NumPy** e tabelas com **pandas**, e comunicá-los com gráficos (**matplotlib**, **seaborn** e **plotly**).
 - No nível avançado: preparar dados reais e criar, avaliar e interpretar modelos com **scikit-learn**.
 
 ---
@@ -32,7 +32,7 @@ O curso está organizado em **dois níveis**.
 
 ### Nível 1 – Introdução
 
-Pasta [`nivel_1_introducao`](nivel_1_introducao). São 24 capítulos, da lógica de programação ao pandas básico. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
+Pasta [`nivel_1_introducao`](nivel_1_introducao). São 25 capítulos, da lógica de programação à visualização de dados. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
 
 #### Fundamentos (capítulos 0 a 3)
 
@@ -81,12 +81,14 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 24 capítulos, da lógica
 | 20 | [Classes e objetos](nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) | Classes, `__init__` e `self`, métodos, `__str__`, atributos de classe, herança, composição e `dataclasses`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) |
 | 21 | [Módulos e pacotes](nivel_1_introducao/RLdS_21_Modulos_Pacotes.ipynb) | Importar, criar módulos e pacotes, `if __name__ == "__main__"`, biblioteca padrão e bibliotecas externas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_21_Modulos_Pacotes.ipynb) |
 
-#### Introdução à análise de dados (capítulos 22 e 23)
+#### Introdução à análise de dados (capítulos 22 a 24)
 
 | N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
 | 22 | [NumPy](nivel_1_introducao/RLdS_22_NumPy.ipynb) | Arrays, tipos, indexação e máscaras, vistas e cópias, broadcasting, eixos, estatística e álgebra linear (opcional). | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_22_NumPy.ipynb) |
 | 23 | [Pandas básico](nivel_1_introducao/RLdS_23_Pandas_Basico.ipynb) | Series e DataFrames, seleção com `loc`/`iloc`, filtros, colunas, tipos, agregações, valores em falta e CSV. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_23_Pandas_Basico.ipynb) |
+| 23 · Ficha | [Ficha de estudo – Pandas (Quiz 1)](nivel_1_introducao/RLdS_23_Pandas_Ficha_Estudo_Quiz1.ipynb) | Revisão para o quiz: `read_csv`, `loc`/`iloc`, filtros com `isin`, atribuição segura com `loc`, `describe`, contagens e `merge`, com a grelha das 16 perguntas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_23_Pandas_Ficha_Estudo_Quiz1.ipynb) |
+| 24 | [Visualização de dados](nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) | Escolher o gráfico certo, matplotlib, `.plot()` do pandas, seaborn (distribuições, relações, correlações), gráficos interativos com plotly e boas práticas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) |
 
 ### Nível 2 – Avançado
 
@@ -118,7 +120,7 @@ Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e um anexo, para q
 ```bash
 git clone https://github.com/ricardoluizdasilva/mestrado_ai_estudos.git
 cd "mestrado_ai_estudos/Introdução à Programação/tutorial_python_v2"
-python -m pip install numpy pandas matplotlib scikit-learn openpyxl pyarrow requests beautifulsoup4
+python -m pip install numpy pandas matplotlib seaborn plotly scikit-learn openpyxl pyarrow requests beautifulsoup4
 ```
 
 Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Jupyter) e escolhe um kernel **Python 3.10 ou superior**.
@@ -141,6 +143,8 @@ Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Ju
 | pandas | 2.2 ou superior (testado também com 3.0) |
 | scikit-learn | 1.6 ou superior (nível avançado) |
 | matplotlib | 3.x |
+| seaborn | 0.13 ou superior |
+| plotly | 5.x ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
 
@@ -150,11 +154,10 @@ O Google Colab já inclui todas estas bibliotecas.
 tutorial_python_v2/
 ├── README.md                 ← este ficheiro
 ├── LEIA-ME_ALTERACOES.md     ← registo de alterações da revisão de 2026
-├── nivel_1_introducao/       ← capítulos 0 a 23
+├── nivel_1_introducao/       ← capítulos 0 a 24
 └── nivel_2_avancado/         ← módulos 1 a 5 e anexo
 ```
 
 ## Autor
 
 Desenvolvido por **RLdS** (Ricardo Luiz da Silva). Sugestões e correções são bem-vindas através de *issues* ou *pull requests*.
-
