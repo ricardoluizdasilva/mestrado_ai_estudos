@@ -1,0 +1,8 @@
+=== DIAGNÓSTICO ASEBA ===
+Python: 3.12.15
+Porta: /dev/serial/by-id/usb-Mobsya.org_Thymio-II_Wireless_00124B001DF456B0-if00
+Registo: diagnostico/aseba_trace.jsonl
+A estabelecer ligação...
+Thymio conectado: 58360
+ID: 58360
+Registos: 659
