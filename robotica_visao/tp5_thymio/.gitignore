@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Temporários
+*.tmp
+*.bak
+*~
+.DS_Store
+
+# Logs de execução
+*.log
+
+# Ficheiros multimédia temporários
+*.avi
+*.mp4

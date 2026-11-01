@@ -1,0 +1,321 @@
+import importlib.util
+import sys
+import time
+from pathlib import Path
+
+import cv2
+import mediapipe as mp
+import numpy as np
+from thymiodirect import Thymio
+
+import csv
+from datetime import datetime
+
+
+BASE = Path(__file__).resolve().parent.parent
+FRAME = Path("/mnt/c/Users/ricar/ThymioCam/frame.jpg")
+MODELO = BASE / "modelos" / "hand_landmarker.task"
+ASM = BASE / "src" / "aseba" / "watchdog_motores.asm"
+
+PORTA = "/dev/ttyACM0"
+DURACAO_MAXIMA = 15.0
+IDADE_MAXIMA = 0.5
+VELOCIDADE_MAX = 20
+
+# Resultados experimentais
+PASTA_RESULTADOS = BASE / "resultados" / "joystick"
+PASTA_RESULTADOS.mkdir(parents=True, exist_ok=True)
+
+NOME_CSV = "joystick_" + datetime.now().strftime("%Y%m%d_%H%M%S_%f") + ".csv"
+
+FICHEIRO_CSV = PASTA_RESULTADOS / NOME_CSV
+
+# Importar funcoes ja validadas
+sys.path.insert(0, str(BASE / "testes"))
+from testar_timer_contador import encerrar
+
+spec = importlib.util.spec_from_file_location(
+    "joystick_visual", BASE / "src" / "02_hand_motion.py"
+)
+visual = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(visual)
+
+
+def limitar(valor):
+    return max(-VELOCIDADE_MAX, min(VELOCIDADE_MAX, valor))
+
+
+def uint16(valor):
+    """Representacao de valores assinados em 16 bits."""
+    return int(valor) & 0xFFFF
+
+
+def int16(valor):
+    """Converte um inteiro de 16 bits para valor com sinal."""
+    valor = int(valor) & 0xFFFF
+    return valor - 65536 if valor >= 32768 else valor
+
+
+def main():
+    for ficheiro in (FRAME, MODELO, ASM):
+        if not ficheiro.is_file():
+            raise FileNotFoundError(ficheiro)
+
+    print("=== TP5 - JOYSTICK THYMIO ===")
+    print("ATENCAO: rodas suspensas.")
+    print("Duracao maxima:", DURACAO_MAXIMA, "segundos")
+    print("Velocidade maxima:", VELOCIDADE_MAX)
+
+    #    th = Thymio(serial_port=PORTA)
+
+    th = Thymio(
+        serial_port=PORTA,
+        refreshing_rate=0.1,
+        refreshing_coverage={
+            "motor.left.speed",
+            "motor.right.speed",
+            "motor.left.target",
+            "motor.right.target",
+            "leds.top",
+            "timer.period",
+        },
+    )
+    node_id = None
+
+    options = mp.tasks.vision.HandLandmarkerOptions(
+        base_options=mp.tasks.BaseOptions(model_asset_path=str(MODELO)),
+        running_mode=mp.tasks.vision.RunningMode.VIDEO,
+        num_hands=1,
+        min_hand_detection_confidence=0.5,
+        min_tracking_confidence=0.5,
+    )
+
+    dados = []
+    inicio = None
+
+    try:
+        # Estabelecer comunicacao
+        print("A ligar ao Thymio...")
+        th.connect()
+
+        node_id = th.first_node()
+        if node_id is None:
+            raise RuntimeError("Thymio nao encontrado.")
+
+        robot = th[node_id]
+        conn = th.thymio_proxy.connection
+        node = conn.remote_nodes[node_id]
+        offset = node.var_total_size
+
+        if offset + 6 > node.max_var_size:
+            raise RuntimeError("Memoria Aseba insuficiente.")
+
+        # Paragem preventiva
+        robot["motor.left.target"] = 0
+        robot["motor.right.target"] = 0
+        time.sleep(0.4)
+
+        # Carregar watchdog previamente validado
+        programa = ASM.read_text(encoding="utf-8")
+        th.run_asm(node_id, programa)
+        time.sleep(0.5)
+
+        print("Watchdog carregado.")
+        print("A iniciar controlo visual...")
+
+        # Ignorar imagem anterior ao inicio
+        ultimo_mtime = FRAME.stat().st_mtime_ns
+        ultimo_frame = time.monotonic()
+        inicio = time.monotonic()
+        ultimo_log = inicio
+        ultimo_timestamp = -1
+
+        sequencia = 0
+        estado_anterior = None
+
+        # Ultimo comando calculado num fotograma valido
+        esquerda = 0
+        direita = 0
+        direcao = "PARAR"
+
+        # Estado da detecao
+        mao_detetada = False
+        estado = "A AGUARDAR IMAGEM"
+
+        imagem_atual = np.zeros((480, 640, 3), dtype=np.uint8)
+
+        with mp.tasks.vision.HandLandmarker.create_from_options(options) as detector:
+            while time.monotonic() - inicio < DURACAO_MAXIMA:
+                agora = time.monotonic()
+                frame_novo = None
+
+                try:
+                    stat = FRAME.stat()
+
+                    if stat.st_mtime_ns != ultimo_mtime:
+                        candidato = cv2.imread(str(FRAME))
+
+                        if candidato is not None:
+                            frame_novo = candidato
+                            ultimo_mtime = stat.st_mtime_ns
+                            ultimo_frame = time.monotonic()
+                except OSError:
+                    pass
+
+                idade = time.monotonic() - ultimo_frame
+
+                if frame_novo is not None and idade <= IDADE_MAXIMA:
+                    rgb = cv2.cvtColor(frame_novo, cv2.COLOR_BGR2RGB)
+
+                    imagem_mp = mp.Image(
+                        image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(rgb)
+                    )
+
+                    timestamp = max(
+                        int((time.monotonic() - inicio) * 1000), ultimo_timestamp + 1
+                    )
+                    ultimo_timestamp = timestamp
+
+                    resultado = detector.detect_for_video(imagem_mp, timestamp)
+
+                    imagem_atual = frame_novo
+
+                    if resultado.hand_landmarks:
+                        pontos = resultado.hand_landmarks[0]
+
+                        x, y = visual.desenhar_ma(imagem_atual, pontos)
+
+                        esquerda, direita, direcao = visual.joystick(x, y)
+
+                        esquerda = limitar(esquerda)
+                        direita = limitar(direita)
+
+                        # Enviar comandos supervisionados
+                        conn.set_variables(
+                            node_id,
+                            offset + 4,
+                            [
+                                uint16(esquerda),
+                                uint16(direita),
+                            ],
+                        )
+
+                        # Renovar autorizacao apenas
+                        # depois de um fotograma valido
+                        sequencia = (sequencia % 32767) + 1
+
+                        conn.set_variables(
+                            node_id,
+                            offset,
+                            [sequencia],
+                        )
+
+                        mao_detetada = True
+                        estado = "MAO DETETADA"
+
+                    else:
+                        # Sem mao: ordenar paragem imediata
+                        esquerda = 0
+                        direita = 0
+                        direcao = "PARAR / SEM MAO"
+                        mao_detetada = False
+                        estado = "SEM MAO"
+
+                        conn.set_variables(
+                            node_id,
+                            offset + 4,
+                            [0, 0],
+                        )
+
+                        # Nao renovar o heartbeat.
+                        # O watchdog tambem expirara.
+
+                elif idade > IDADE_MAXIMA:
+                    # A captura deixou de fornecer imagens
+                    esquerda = 0
+                    direita = 0
+                    direcao = "PARAR / IMAGEM DESATUALIZADA"
+                    mao_detetada = False
+                    estado = "IMAGEM DESATUALIZADA"
+
+                    # Nao renovar o heartbeat.
+                    # O watchdog garante expiracao
+                    # mesmo que Python deixe de responder.
+
+                else:
+                    # Ainda estamos dentro do intervalo
+                    # valido do ultimo fotograma.
+                    #
+                    # Nao recalcular, nao enviar comandos
+                    # e nao renovar o heartbeat.
+                    estado = "A AGUARDAR FRAME" if mao_detetada else "SEM MAO"
+
+                # Criar uma copia da imagem para apresentar a interface
+                imagem_visual = imagem_atual.copy()
+                visual.desenhar_interface(
+                    imagem_visual,
+                    direcao,
+                    esquerda,
+                    direita,
+                    estado,
+                )
+
+                cv2.imshow(
+                    "TP5 - Thymio REAL",
+                    imagem_visual,
+                )
+
+                # Ignorar os estados transitorios entre fotogramas
+                if (
+                    estado
+                    in (
+                        "SEM MAO",
+                        "IMAGEM DESATUALIZADA",
+                        "MAO DETETADA",
+                    )
+                    and estado != estado_anterior
+                ):
+                    print("Estado:", estado)
+                    estado_anterior = estado
+
+                # Registar comandos e velocidades uma vez por segundo
+                if agora - ultimo_log >= 1.0:
+                    target_l = int16(robot["motor.left.target"])
+                    target_r = int16(robot["motor.right.target"])
+                    speed_l = int16(robot["motor.left.speed"])
+                    speed_r = int16(robot["motor.right.speed"])
+                    auth = int(robot["leds.top"][1])
+
+                    print(
+                        f"t={agora - inicio:.1f}s | "
+                        f"{direcao} | "
+                        f"Cmd L={esquerda} R={direita} | "
+                        f"Target L={target_l} R={target_r} | "
+                        f"Speed L={speed_l} R={speed_r} | "
+                        f"Auth={auth} | "
+                        f"Idade={idade:.2f}s"
+                    )
+
+                    ultimo_log = agora
+
+                # Verificar o teclado em cada iteracao
+                tecla = cv2.waitKey(1) & 0xFF
+
+                if tecla in (ord("q"), 27):
+                    print("Paragem solicitada.")
+                    break
+
+                time.sleep(0.02)
+
+        print("Fim do ensaio.")
+
+    finally:
+        cv2.destroyAllWindows()
+        encerrar(th, node_id)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("Interrupcao solicitada.")

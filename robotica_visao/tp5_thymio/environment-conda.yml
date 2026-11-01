@@ -1,0 +1,7 @@
+name: thymio
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+prefix: /home/ricar/miniforge3/envs/thymio
