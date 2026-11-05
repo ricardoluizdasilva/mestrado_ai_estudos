@@ -105,6 +105,20 @@ Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e um anexo, para q
 
 ---
 
+## Fichas de consulta rápida
+
+Pasta [`consulta_rapida`](consulta_rapida). São resumos em PDF (A4 na horizontal), para imprimir ou ter abertos ao lado do notebook. Cada bloco indica o capítulo e a secção onde o tema é explicado, e cada ficha inclui um bloco com os erros mais frequentes.
+
+| Ficha | Conteúdos | Capítulos |
+| --- | --- | --- |
+| [Python essencial](consulta_rapida/RLdS_Consulta_Rapida_Python.pdf) | 4 páginas: bases (variáveis, strings, entrada e saída, operadores, decisões, ciclos); estruturas de dados; funções, exceções e ficheiros; classes, módulos e armadilhas frequentes. | 4 a 21 |
+| [NumPy](consulta_rapida/RLdS_Consulta_Rapida_NumPy.pdf) | 2 páginas: criar, selecionar e remodelar arrays; operações vetorizadas, broadcasting, eixos, valores especiais, álgebra linear e armadilhas. | 22 |
+| [Pandas](consulta_rapida/RLdS_Consulta_Rapida_Pandas.pdf) | 3 páginas: fundamentos (ler, inspecionar, selecionar, filtrar); transformar e resumir (colunas, ordenação, ausentes, tipos, texto, datas, `groupby`); combinar, exportar e armadilhas. | 23 · N2_01 · N2_02 |
+| [Visualização de dados](consulta_rapida/RLdS_Consulta_Rapida_Visualizacao.pdf) | 2 páginas: que gráfico usar, matplotlib e gráficos com pandas; seaborn, plotly express e boas práticas. | 24 |
+| [Scikit-learn](consulta_rapida/RLdS_Consulta_Rapida_ScikitLearn.pdf) | 3 páginas: fluxo, separação, pré-processamento e pipelines; modelos, métricas e afinação; probabilidades, aplicações e armadilhas. | N2_03 · N2_04 · N2_05 |
+
+---
+
 ## Como usar
 
 ### No Google Colab (recomendado para começar)
@@ -154,6 +168,7 @@ O Google Colab já inclui todas estas bibliotecas.
 tutorial_python_v2/
 ├── README.md                 ← este ficheiro
 ├── LEIA-ME_ALTERACOES.md     ← registo de alterações da revisão de 2026
+├── consulta_rapida/          ← fichas de consulta rápida em PDF
 ├── nivel_1_introducao/       ← capítulos 0 a 24
 └── nivel_2_avancado/         ← módulos 1 a 5 e anexo
 ```
