@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-32-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-33-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -28,7 +28,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 
 ## Estrutura do curso
 
-O curso está organizado em **dois níveis**.
+O curso está organizado em **dois níveis**, a que se junta um nível dedicado à inteligência artificial, em construção.
 
 ### Nível 1 – Introdução
 
@@ -103,6 +103,14 @@ Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e um anexo, para q
 | 5 | [Scikit-learn: aprofundamento e aplicações](nivel_2_avancado/RLdS_N2_05_ScikitLearn_Aplicacoes.ipynb) | Ensembles, calibração, importância por permutação, validação por grupos e no tempo, clustering, PCA e gravação de modelos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_05_ScikitLearn_Aplicacoes.ipynb) |
 | Anexo | [Linha de comando, concorrência, redes e outras ferramentas](nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) | `sys.argv`, `argparse`, `logging`, threads, sockets, `requests`, Beautiful Soup, `sqlite3` e `unittest`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) |
 
+### Nível IA – Python para inteligência artificial (em construção)
+
+Pasta [`nivel_3_ia`](nivel_3_ia). Módulos orientados para a inteligência artificial, que partem da teoria (estatística, matemática) e chegam às bibliotecas usadas na prática.
+
+| Módulo | Tema | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 1 | [Estatística descritiva com Python](nivel_3_ia/RLdS_N3_01_Estatistica_Descritiva_Python.ipynb) | Os exercícios 1 a 12 da disciplina de Fundamentos de Estatística resolvidos em Python puro: tabelas de frequências, classes pela regra de Sturges, medidas de localização, dispersão, assimetria e curtose, outliers, histogramas e diagramas de extremos e quartis, e verificação automática contra as soluções oficiais. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_01_Estatistica_Descritiva_Python.ipynb) |
+
 ---
 
 ## Fichas de consulta rápida
@@ -170,7 +178,8 @@ tutorial_python_v2/
 ├── LEIA-ME_ALTERACOES.md     ← registo de alterações da revisão de 2026
 ├── consulta_rapida/          ← fichas de consulta rápida em PDF
 ├── nivel_1_introducao/       ← capítulos 0 a 24
-└── nivel_2_avancado/         ← módulos 1 a 5 e anexo
+├── nivel_2_avancado/         ← módulos 1 a 5 e anexo
+└── nivel_3_ia/               ← Python para inteligência artificial (em construção)
 ```
 
 ## Autor
