@@ -1,0 +1,33 @@
+# Bibliotecas usadas nos notebooks do tutorial (Python 3.10 ou superior).
+# Instalação:  pip install -r requirements.txt
+# O Google Colab já inclui todas estas bibliotecas.
+
+# Dados e cálculo
+numpy>=2.0
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.6
+
+# Gráficos
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.18
+
+# Ficheiros e Internet
+openpyxl>=3.1
+pyarrow>=14
+requests>=2.31
+beautifulsoup4>=4.12
+
+# Ferramentas de programação (anexo A2)
+pytest>=8
+ruff>=0.5
+
+# Notebooks (Jupyter, VS Code e verificação automática)
+ipykernel>=6.29
+nbformat>=5.9
+nbclient>=0.10
+
+# PyTorch (módulos N3_05 a N3_07) instala-se à parte. A versão só para CPU é mais leve:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# torchvision e transformers só são usados nas partes opcionais do N3_06 e do N3_07.
