@@ -32,6 +32,7 @@ import time
 from pathlib import Path
 
 import nbformat
+from jupyter_client.manager import KernelManager
 from nbclient import NotebookClient
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -67,7 +68,9 @@ def escolher(alvos: list[str]) -> list[Path]:
     return notebooks
 
 
-def executar(original: Path, copia: Path, kernel: str, timeout: int) -> tuple[list, int, str]:
+def executar(
+    original: Path, copia: Path, kernel: str, timeout: int
+) -> tuple[list, int, str]:
     nb = nbformat.read(original, as_version=4)
     run = copy.deepcopy(nb)
     for c in run.cells:
@@ -76,9 +79,18 @@ def executar(original: Path, copia: Path, kernel: str, timeout: int) -> tuple[li
             c.source = RE_INPUT.sub("_inp(", c.source)
     run.cells.insert(0, nbformat.v4.new_code_cell(CELULA_INPUT))
     estado = "ok"
+    pasta_ipc = Path(tempfile.mkdtemp(prefix="kernel_"))
     try:
+        # Em Linux e macOS, o kernel comunica por IPC (sockets locais) em vez de TCP:
+        # é igualmente local e evita o aviso «Kernel is running over TCP without encryption».
+        # O caminho dos sockets tem de ser absoluto, porque o kernel corre noutra pasta.
+        km = KernelManager(kernel_name=kernel)
+        if sys.platform != "win32":
+            km.transport = "ipc"
+            km.ip = str(pasta_ipc / "ipc")
         NotebookClient(
             run,
+            km=km,
             kernel_name=kernel,
             timeout=timeout,
             allow_errors=True,
@@ -86,6 +98,8 @@ def executar(original: Path, copia: Path, kernel: str, timeout: int) -> tuple[li
         ).execute()
     except Exception as e:  # noqa: BLE001 - tempo esgotado, kernel morto, etc.
         estado = f"{type(e).__name__}: {str(e).splitlines()[0][:150]}"
+    finally:
+        shutil.rmtree(pasta_ipc, ignore_errors=True)
     inesperados, esperados = [], 0
     for i, c in enumerate(run.cells[1:], start=1):
         for o in c.get("outputs", []):
@@ -93,14 +107,20 @@ def executar(original: Path, copia: Path, kernel: str, timeout: int) -> tuple[li
                 if de_proposito(c.source):
                     esperados += 1
                 else:
-                    ultima = c.source.strip().splitlines()[-1][:70] if c.source.strip() else ""
+                    ultima = (
+                        c.source.strip().splitlines()[-1][:70]
+                        if c.source.strip()
+                        else ""
+                    )
                     inesperados.append((i, o.ename, str(o.evalue)[:120], ultima))
     return inesperados, esperados, estado
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("alvos", nargs="*", help="pastas ou notebooks (relativos a tutorial_python)")
+    ap.add_argument(
+        "alvos", nargs="*", help="pastas ou notebooks (relativos a tutorial_python)"
+    )
     ap.add_argument("--kernel", default="python3")
     ap.add_argument("--timeout", type=int, default=600)
     ap.add_argument("--lista", action="store_true", help="mostra os notebooks e sai")
@@ -113,18 +133,27 @@ def main() -> int:
 
     temp = Path(tempfile.mkdtemp(prefix="tutorial_python_"))
     trabalho = temp / "tutorial_python"
-    shutil.copytree(RAIZ, trabalho, ignore=shutil.ignore_patterns(".git", ".ipynb_checkpoints", "__pycache__"))
+    shutil.copytree(
+        RAIZ,
+        trabalho,
+        ignore=shutil.ignore_patterns(".git", ".ipynb_checkpoints", "__pycache__"),
+    )
     falhas = 0
     t_total = time.time()
     try:
         for p in notebooks:
             rel = p.relative_to(RAIZ)
             t0 = time.time()
-            inesperados, esperados, estado = executar(p, trabalho / rel, args.kernel, args.timeout)
+            inesperados, esperados, estado = executar(
+                p, trabalho / rel, args.kernel, args.timeout
+            )
             ok = estado == "ok" and not inesperados
             falhas += not ok
             marca = "OK   " if ok else "FALHA"
-            print(f"{marca} {rel!s:<62} {time.time() - t0:6.1f} s  erros de propósito: {esperados}", flush=True)
+            print(
+                f"{marca} {rel!s:<62} {time.time() - t0:6.1f} s  erros de propósito: {esperados}",
+                flush=True,
+            )
             if estado != "ok":
                 print(f"      execução interrompida: {estado}")
             for i, nome, valor, ultima in inesperados:
@@ -132,8 +161,10 @@ def main() -> int:
     finally:
         shutil.rmtree(temp, ignore_errors=True)
 
-    print(f"\n{len(notebooks) - falhas}/{len(notebooks)} notebooks sem erros inesperados "
-          f"({time.time() - t_total:.0f} s).")
+    print(
+        f"\n{len(notebooks) - falhas}/{len(notebooks)} notebooks sem erros inesperados "
+        f"({time.time() - t_total:.0f} s)."
+    )
     return 1 if falhas else 0
 
 
