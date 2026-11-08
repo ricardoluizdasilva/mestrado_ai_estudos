@@ -80,11 +80,11 @@ def executar(
     run.cells.insert(0, nbformat.v4.new_code_cell(CELULA_INPUT))
     estado = "ok"
     pasta_ipc = Path(tempfile.mkdtemp(prefix="kernel_"))
+    km = KernelManager(kernel_name=kernel)
     try:
         # Em Linux e macOS, o kernel comunica por IPC (sockets locais) em vez de TCP:
         # é igualmente local e evita o aviso «Kernel is running over TCP without encryption».
         # O caminho dos sockets tem de ser absoluto, porque o kernel corre noutra pasta.
-        km = KernelManager(kernel_name=kernel)
         if sys.platform != "win32":
             km.transport = "ipc"
             km.ip = str(pasta_ipc / "ipc")
@@ -99,6 +99,9 @@ def executar(
     except Exception as e:  # noqa: BLE001 - tempo esgotado, kernel morto, etc.
         estado = f"{type(e).__name__}: {str(e).splitlines()[0][:150]}"
     finally:
+        # Como o gestor do kernel é criado aqui, também é aqui que o kernel é desligado.
+        if km.has_kernel:
+            km.shutdown_kernel(now=True)
         shutil.rmtree(pasta_ipc, ignore_errors=True)
     inesperados, esperados = [], 0
     for i, c in enumerate(run.cells[1:], start=1):
