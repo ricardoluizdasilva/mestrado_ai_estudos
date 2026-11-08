@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-43-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-43-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -28,7 +28,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 
 ## Estrutura do curso
 
-O curso está organizado em **dois níveis**, a que se junta um nível dedicado à inteligência artificial, em construção.
+O curso está organizado em **dois níveis**, a que se junta um nível dedicado à inteligência artificial.
 
 ### Nível 1 – Introdução
 
@@ -110,7 +110,7 @@ Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e dois anexos, par
 | Anexo A1 | [Linha de comando, concorrência, redes e outras ferramentas](nivel_2_avancado/N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) | `sys.argv`, `argparse`, `logging`, threads, sockets, `requests`, Beautiful Soup, `sqlite3` e `unittest`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_2_avancado/N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) |
 | Anexo A2 | [Do notebook ao projeto](nivel_2_avancado/N2_A2_Anexo_Notebook_Projeto.ipynb) | Instalar o Python, executar ficheiros `.py`, ambientes virtuais (`venv`), `pip`, `requirements.txt` e `pyproject.toml`, estrutura `src/`/`tests/`, testes com `pytest`, `ruff` (linter e formatador), Git e GitHub. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_2_avancado/N2_A2_Anexo_Notebook_Projeto.ipynb) |
 
-### Nível IA – Python para inteligência artificial (em construção)
+### Nível IA – Python para inteligência artificial
 
 Pasta [`nivel_3_ia`](nivel_3_ia). Módulos orientados para a inteligência artificial, que partem da teoria (estatística, matemática) e chegam às bibliotecas usadas na prática.
 
@@ -162,8 +162,10 @@ Pasta [`consulta_rapida`](consulta_rapida). São resumos em PDF (A4 na horizonta
 ```bash
 git clone https://github.com/ricardoluizdasilva/mestrado_ai_estudos.git
 cd "mestrado_ai_estudos/Introdução à Programação/tutorial_python"
-python -m pip install numpy pandas matplotlib seaborn plotly scikit-learn openpyxl pyarrow requests beautifulsoup4
+python -m pip install -r requirements.txt
 ```
+
+Para os módulos N3_05 a N3_07 instala também o PyTorch. A versão só para CPU é mais leve: `python -m pip install torch --index-url https://download.pytorch.org/whl/cpu`.
 
 Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Jupyter) e escolhe um kernel **Python 3.10 ou superior**.
 
@@ -173,6 +175,21 @@ Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Ju
 - ⚠️ **Erros de propósito:** as células que começam por `# ⚠️ Esta célula gera um erro de propósito` mostram erros intencionais. Lê a mensagem e continua.
 - 💡 **Soluções:** os exercícios têm uma solução escondida num bloco «Ver uma solução possível». Tenta primeiro sozinho!
 - Alguns capítulos usam `input()`: escreve a resposta na caixa que aparece e carrega em `Enter`.
+- ✅ **Verifica o que aprendeste:** cada capítulo termina com uma lista de verificação. Se houver um ponto de que não tenhas a certeza, volta à secção correspondente.
+- Os notebooks dos níveis 1 e 2 são guardados **sem saídas**: os resultados aparecem quando executas as células. Os do nível IA guardam as saídas de uma execução de referência, porque alguns exemplos demoram a correr.
+
+### Verificação automática
+
+Sempre que o tutorial é alterado, o GitHub executa todos os notebooks (fluxo [`notebooks.yml`](../../.github/workflows/notebooks.yml)) e o selo no início desta página mostra o resultado. A verificação também corre no dia 1 de cada mês, para detetar alterações nas bibliotecas. Os erros de propósito (⚠️) não contam.
+
+Para fazer a mesma verificação no teu computador, a partir desta pasta:
+
+```bash
+python ferramentas/verificar_notebooks.py                     # todos os notebooks
+python ferramentas/verificar_notebooks.py nivel_1_introducao  # só uma pasta
+```
+
+Os notebooks são executados numa cópia temporária, por isso os originais e a pasta de trabalho não são alterados.
 
 ---
 
@@ -199,12 +216,23 @@ O Google Colab já inclui todas estas bibliotecas.
 ```text
 tutorial_python/
 ├── README.md                 ← este ficheiro
+├── LICENSE.md                ← licenças (conteúdos e código)
+├── LICENSE-*.txt             ← textos completos das licenças CC BY-NC-SA 4.0 e MIT
+├── requirements.txt          ← bibliotecas usadas nos notebooks
 ├── consulta_rapida/          ← fichas de consulta rápida em PDF
+├── ferramentas/              ← verificação automática dos notebooks
 ├── nivel_1_introducao/       ← capítulos 0 a 25
 ├── nivel_2_avancado/         ← módulos 1 a 5 e anexos A1 e A2
-└── nivel_3_ia/               ← Python para inteligência artificial (em construção)
+└── nivel_3_ia/               ← Python para inteligência artificial
     └── dados/                ← conjuntos de dados reais usados nos módulos
 ```
+
+## Licença
+
+- **Conteúdos** (textos, exercícios, imagens, notebooks e fichas em PDF): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt). Podes partilhar e adaptar para fins não comerciais, indicando o autor e mantendo a mesma licença.
+- **Código** (ficheiros `.py`, código das células e verificação automática): [MIT](LICENSE-MIT.txt).
+
+Os detalhes, a sugestão de atribuição e as exceções (dados de terceiros) estão em [`LICENSE.md`](LICENSE.md).
 
 ## Autor
 
