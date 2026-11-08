@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-33-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-39-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -32,7 +32,7 @@ O curso está organizado em **dois níveis**, a que se junta um nível dedicado 
 
 ### Nível 1 – Introdução
 
-Pasta [`nivel_1_introducao`](nivel_1_introducao). São 25 capítulos, da lógica de programação à visualização de dados. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
+Pasta [`nivel_1_introducao`](nivel_1_introducao). São 26 capítulos, da lógica de programação à visualização de dados e ao Python intermédio. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
 
 #### Fundamentos (capítulos 0 a 3)
 
@@ -59,7 +59,7 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 25 capítulos, da lógica
 | N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
 | 10 | [Estruturas de decisão](nivel_1_introducao/RLdS_10_Estruturas_Decisao.ipynb) | `if`/`elif`/`else`, condições compostas e aninhadas, expressão condicional e `match/case`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_10_Estruturas_Decisao.ipynb) |
-| 11 | [Ciclos](nivel_1_introducao/RLdS_11_Ciclos.ipynb) | `for`, `range()`, `enumerate()`, `while`, `break`/`continue`, `for…else` e ciclos aninhados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_11_Ciclos.ipynb) |
+| 11 | [Ciclos](nivel_1_introducao/RLdS_11_Ciclos.ipynb) | `for`, `range()`, `enumerate()`, `while`, `break`/`continue`/`pass`, `for…else` e ciclos aninhados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_11_Ciclos.ipynb) |
 
 #### Estruturas de dados (capítulos 12 a 15)
 
@@ -68,17 +68,17 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 25 capítulos, da lógica
 | 12 | [Listas](nivel_1_introducao/RLdS_12_Listas.ipynb) | Indexação e slicing, métodos, ordenação, listas aninhadas, cópia vs. referência e list comprehensions. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_12_Listas.ipynb) |
 | 13 | [Tuplos](nivel_1_introducao/RLdS_13_Tuplos.ipynb) | Imutabilidade, tuplo de um elemento, desempacotamento e conversões. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_13_Tuplos.ipynb) |
 | 14 | [Dicionários](nivel_1_introducao/RLdS_14_Dicionarios.ipynb) | Acesso por chave, `get()`, percorrer, atualizar e juntar, ordenar, comprehensions e cópias. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_14_Dicionarios.ipynb) |
-| 15 | [Conjuntos e síntese das estruturas de dados](nivel_1_introducao/RLdS_15_Conjuntos.ipynb) | Operações de conjuntos e comparação entre listas, tuplos, dicionários e conjuntos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_15_Conjuntos.ipynb) |
+| 15 | [Conjuntos e síntese das estruturas de dados](nivel_1_introducao/RLdS_15_Conjuntos.ipynb) | Operações de conjuntos, comprehensions de conjuntos e comparação entre listas, tuplos, dicionários e conjuntos (incluindo os métodos de cada um). | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_15_Conjuntos.ipynb) |
 
 #### Programas robustos e organizados (capítulos 16 a 21)
 
 | N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
-| 16 | [Tratamento de exceções](nivel_1_introducao/RLdS_16_Excecoes.ipynb) | Exceções mais comuns, `try`/`except`/`else`/`finally` e `raise`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_16_Excecoes.ipynb) |
+| 16 | [Tratamento de exceções](nivel_1_introducao/RLdS_16_Excecoes.ipynb) | Exceções mais comuns, `try`/`except`/`else`/`finally`, `raise`, como ler um *traceback* e exceções próprias. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_16_Excecoes.ipynb) |
 | 17 | [Ficheiros](nivel_1_introducao/RLdS_17_Ficheiros.ipynb) | Modos de abertura, `with`, leitura e escrita, codificação UTF-8, cursor (`seek`/`tell`) e modo binário. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_17_Ficheiros.ipynb) |
 | 18 | [Funções](nivel_1_introducao/RLdS_18_Funcoes.ipynb) | Parâmetros e valores por omissão, argumentos nomeados, âmbito, `*args`/`**kwargs`, recursão e memoização. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_18_Funcoes.ipynb) |
 | 19 | [Expressões lambda](nivel_1_introducao/RLdS_19_Lambda.ipynb) | Funções anónimas com `map()`, `filter()`, `sorted()`, `min()`/`max()` e funções que criam funções. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_19_Lambda.ipynb) |
-| 20 | [Classes e objetos](nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) | Classes, `__init__` e `self`, métodos, `__str__`, atributos de classe, herança, composição e `dataclasses`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) |
+| 20 | [Classes e objetos](nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) | Classes, `__init__` e `self`, métodos, `__str__`, atributos de classe, herança, composição, encapsulamento (`_`, `__` e `@property`), classes abstratas (`abc`) e `dataclasses`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_20_Classes_Objetos.ipynb) |
 | 21 | [Módulos e pacotes](nivel_1_introducao/RLdS_21_Modulos_Pacotes.ipynb) | Importar, criar módulos e pacotes, `if __name__ == "__main__"`, biblioteca padrão e bibliotecas externas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_21_Modulos_Pacotes.ipynb) |
 
 #### Introdução à análise de dados (capítulos 22 a 24)
@@ -88,11 +88,17 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 25 capítulos, da lógica
 | 22 | [NumPy](nivel_1_introducao/RLdS_22_NumPy.ipynb) | Arrays, tipos, indexação e máscaras, vistas e cópias, broadcasting, eixos, estatística e álgebra linear (opcional). | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_22_NumPy.ipynb) |
 | 23 | [Pandas básico](nivel_1_introducao/RLdS_23_Pandas_Basico.ipynb) | Series e DataFrames, seleção com `loc`/`iloc`, filtros, colunas, tipos, agregações, valores em falta e CSV. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_23_Pandas_Basico.ipynb) |
 | 23 · Ficha | [Ficha de estudo – Pandas (Quiz 1)](nivel_1_introducao/RLdS_23_Pandas_Ficha_Estudo_Quiz_01.ipynb) | Revisão para o quiz: `read_csv`, `loc`/`iloc`, filtros com `isin`, atribuição segura com `loc`, `describe`, contagens e `merge`, com a grelha das 16 perguntas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_23_Pandas_Ficha_Estudo_Quiz_01.ipynb) |
-| 24 | [Visualização de dados](nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) | Escolher o gráfico certo, matplotlib, `.plot()` do pandas, seaborn (distribuições, relações, correlações), gráficos interativos com plotly e boas práticas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) |
+| 24 | [Visualização de dados](nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) | Escolher o gráfico certo, matplotlib, `.plot()` do pandas, seaborn (distribuições, relações, correlações), gráficos interativos com plotly, séries temporais, áreas empilhadas, barras de erro, `jointplot`, hexágonos e densidade 2D, e boas práticas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_24_Visualizacao_Dados.ipynb) |
+
+#### Python intermédio (capítulo 25)
+
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 25 | [Python intermédio](nivel_1_introducao/RLdS_25_Python_Intermedio.ipynb) | Iteradores (`iter`/`next`), geradores e `yield`, `zip`/`any`/`all`, decoradores com `functools.wraps`, gestores de contexto (`with`, `__enter__`/`__exit__`, `contextlib`) e anotações de tipo, com a ligação ao `DataLoader` e ao `torch.no_grad()` do PyTorch. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_1_introducao/RLdS_25_Python_Intermedio.ipynb) |
 
 ### Nível 2 – Avançado
 
-Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e um anexo, para quem concluiu o nível 1. Os módulos de scikit-learn pressupõem noções básicas de estatística (média, desvio padrão, probabilidade). Cada módulo é autónomo, gera os seus próprios dados sintéticos e inclui exercícios resolvidos e um projeto final.
+Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e dois anexos, para quem concluiu o nível 1. Os módulos de scikit-learn pressupõem noções básicas de estatística (média, desvio padrão, probabilidade). Cada módulo é autónomo, gera os seus próprios dados sintéticos e inclui exercícios resolvidos e um projeto final.
 
 | Módulo | Tema | Conteúdos | Colab |
 | --- | --- | --- | --- |
@@ -101,7 +107,8 @@ Pasta [`nivel_2_avancado`](nivel_2_avancado). São 5 módulos e um anexo, para q
 | 3 | [Scikit-learn: fundamentos e regressão](nivel_2_avancado/RLdS_N2_03_ScikitLearn_Fundamentos.ipynb) | API do scikit-learn, regressão linear simples e múltipla, métricas, pipelines, validação cruzada, regularização e afinação. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_03_ScikitLearn_Fundamentos.ipynb) |
 | 4 | [Scikit-learn: classificação e seleção de modelos](nivel_2_avancado/RLdS_N2_04_ScikitLearn_Classificacao.ipynb) | Matriz de confusão e métricas, modelos de classificação, curvas ROC/PR, limiar de decisão e seleção de modelos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_04_ScikitLearn_Classificacao.ipynb) |
 | 5 | [Scikit-learn: aprofundamento e aplicações](nivel_2_avancado/RLdS_N2_05_ScikitLearn_Aplicacoes.ipynb) | Ensembles, calibração, importância por permutação, validação por grupos e no tempo, clustering, PCA e gravação de modelos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_05_ScikitLearn_Aplicacoes.ipynb) |
-| Anexo | [Linha de comando, concorrência, redes e outras ferramentas](nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) | `sys.argv`, `argparse`, `logging`, threads, sockets, `requests`, Beautiful Soup, `sqlite3` e `unittest`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) |
+| Anexo A1 | [Linha de comando, concorrência, redes e outras ferramentas](nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) | `sys.argv`, `argparse`, `logging`, threads, sockets, `requests`, Beautiful Soup, `sqlite3` e `unittest`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_A1_Anexo_Linha_Comando_Concorrencia.ipynb) |
+| Anexo A2 | [Do notebook ao projeto](nivel_2_avancado/RLdS_N2_A2_Anexo_Notebook_Projeto.ipynb) | Instalar o Python, executar ficheiros `.py`, ambientes virtuais (`venv`), `pip`, `requirements.txt` e `pyproject.toml`, estrutura `src/`/`tests/`, testes com `pytest`, `ruff` (linter e formatador), Git e GitHub. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_2_avancado/RLdS_N2_A2_Anexo_Notebook_Projeto.ipynb) |
 
 ### Nível IA – Python para inteligência artificial (em construção)
 
@@ -110,6 +117,10 @@ Pasta [`nivel_3_ia`](nivel_3_ia). Módulos orientados para a inteligência artif
 | Módulo | Tema | Conteúdos | Colab |
 | --- | --- | --- | --- |
 | 1 | [Estatística descritiva com Python](nivel_3_ia/RLdS_N3_01_Estatistica_Descritiva_Python.ipynb) | Os exercícios 1 a 12 da disciplina de Fundamentos de Estatística resolvidos em Python puro: tabelas de frequências, classes pela regra de Sturges, medidas de localização, dispersão, assimetria e curtose, outliers, histogramas e diagramas de extremos e quartis, e verificação automática contra as soluções oficiais. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_01_Estatistica_Descritiva_Python.ipynb) |
+| 2 | [Estatística descritiva com NumPy, pandas e SciPy](nivel_3_ia/RLdS_N3_02_Estatistica_Descritiva_Bibliotecas.ipynb) | Resolução completa dos mesmos 12 exercícios com as bibliotecas, alínea a alínea, comparada com o módulo 1: `ddof` e métodos de quantis (Weibull, linear, equivalências no Excel), tabelas com pandas e `np.histogram`, `groupby`, interpolação na ogiva, assimetria e curtose por momentos com SciPy, gráficos com seaborn, e refatoração num módulo com classes de dados testado com `unittest`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_02_Estatistica_Descritiva_Bibliotecas.ipynb) |
+| 3 | [Do dado ao conhecimento: o processo KDD](nivel_3_ia/RLdS_N3_03_Processo_KDD.ipynb) | Caso de estudo de ponta a ponta (prever o abandono de clientes) com as seis fases do KDD: seleção de três fontes (CSV, SQLite, JSON de uma API) e janelas temporais, limpeza com registo de decisões, transformação (agregação RFM, normalização, codificação), redução (correlação, informação mútua, `SelectKBest`, PCA), mineração (classificação e k-médias), avaliação (*lift*, importância, paradoxo de Simpson) e fugas de informação. Inclui o módulo reutilizável `kdd.py`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_03_Processo_KDD.ipynb) |
+| 3 · Modelo | [Modelo do processo KDD](nivel_3_ia/RLdS_N3_03_Modelo_KDD.ipynb) | Notebook-modelo para aplicar o processo KDD aos teus dados: perguntas por fase, células `# ADAPTAR` e funções do `kdd.py`. Corre de ponta a ponta com um exemplo do scikit-learn. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_03_Modelo_KDD.ipynb) |
+| 4 | [Redes neuronais de raiz, com NumPy](nivel_3_ia/RLdS_N3_04_Redes_Neuronais_NumPy.ipynb) | Do neurónio à retropropagação, sem bibliotecas de *deep learning*: o neurónio como regressão logística e o problema do XOR, funções de ativação, entropia cruzada e descida do gradiente (taxa de aprendizagem), rede com uma camada escondida, retropropagação com verificação por diferenças finitas, mini-lotes com um gerador, curvas de aprendizagem, sobreajuste, L2 e paragem antecipada, comparação com o `MLPClassifier` e o que o PyTorch automatiza. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python_v2/nivel_3_ia/RLdS_N3_04_Redes_Neuronais_NumPy.ipynb) |
 
 ---
 
@@ -119,11 +130,14 @@ Pasta [`consulta_rapida`](consulta_rapida). São resumos em PDF (A4 na horizonta
 
 | Ficha | Conteúdos | Capítulos |
 | --- | --- | --- |
-| [Python essencial](consulta_rapida/RLdS_Consulta_Rapida_Python.pdf) | 4 páginas: bases (variáveis, strings, entrada e saída, operadores, decisões, ciclos); estruturas de dados; funções, exceções e ficheiros; classes, módulos e armadilhas frequentes. | 4 a 21 |
+| [Python essencial](consulta_rapida/RLdS_Consulta_Rapida_Python.pdf) | 4 páginas: bases (variáveis, strings, entrada e saída, operadores, decisões, ciclos); estruturas de dados e os métodos de cada uma; funções, exceções (incluindo exceções próprias e *tracebacks*) e ficheiros; classes, encapsulamento, classes abstratas, módulos e armadilhas frequentes. | 4 a 21 |
 | [NumPy](consulta_rapida/RLdS_Consulta_Rapida_NumPy.pdf) | 2 páginas: criar, selecionar e remodelar arrays; operações vetorizadas, broadcasting, eixos, valores especiais, álgebra linear e armadilhas. | 22 |
 | [Pandas](consulta_rapida/RLdS_Consulta_Rapida_Pandas.pdf) | 3 páginas: fundamentos (ler, inspecionar, selecionar, filtrar); transformar e resumir (colunas, ordenação, ausentes, tipos, texto, datas, `groupby`); combinar, exportar e armadilhas. | 23 · N2_01 · N2_02 |
 | [Visualização de dados](consulta_rapida/RLdS_Consulta_Rapida_Visualizacao.pdf) | 2 páginas: que gráfico usar, matplotlib e gráficos com pandas; seaborn, plotly express e boas práticas. | 24 |
 | [Scikit-learn](consulta_rapida/RLdS_Consulta_Rapida_ScikitLearn.pdf) | 3 páginas: fluxo, separação, pré-processamento e pipelines; modelos, métricas e afinação; probabilidades, aplicações e armadilhas. | N2_03 · N2_04 · N2_05 |
+| [Python intermédio](consulta_rapida/RLdS_Consulta_Rapida_Python_Intermedio.pdf) | 2 páginas: iteradores, geradores e `yield`, `itertools`, lista ou gerador; `zip`/`any`/`all`, decoradores, gestores de contexto e anotações de tipo. | 25 |
+| [Do notebook ao projeto](consulta_rapida/RLdS_Consulta_Rapida_Notebook_Projeto.pdf) | 2 páginas: executar código, ambientes virtuais (Windows e macOS/Linux), `pip` e `requirements.txt`, estrutura de um projeto; `pytest`, `ruff`, Git e GitHub, e armadilhas. | A2 |
+| [Processo KDD](consulta_rapida/RLdS_Consulta_Rapida_Processo_KDD.pdf) | 2 páginas: as seis fases, seleção, limpeza e transformação com o `kdd.py`; redução, mineração, avaliação e fugas de informação. | N3_03 |
 
 ---
 
@@ -167,6 +181,7 @@ Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Ju
 | matplotlib | 3.x |
 | seaborn | 0.13 ou superior |
 | plotly | 5.x ou superior |
+| pytest e ruff | versões recentes (anexo A2; o notebook instala-as) |
 
 O Google Colab já inclui todas estas bibliotecas.
 
@@ -177,8 +192,8 @@ tutorial_python_v2/
 ├── README.md                 ← este ficheiro
 ├── LEIA-ME_ALTERACOES.md     ← registo de alterações da revisão de 2026
 ├── consulta_rapida/          ← fichas de consulta rápida em PDF
-├── nivel_1_introducao/       ← capítulos 0 a 24
-├── nivel_2_avancado/         ← módulos 1 a 5 e anexo
+├── nivel_1_introducao/       ← capítulos 0 a 25
+├── nivel_2_avancado/         ← módulos 1 a 5 e anexos A1 e A2
 └── nivel_3_ia/               ← Python para inteligência artificial (em construção)
 ```
 
