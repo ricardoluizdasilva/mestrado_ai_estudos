@@ -1,0 +1,41 @@
+=== ANÁLISE DO FLUXO ASEBA ===
+Bytes recebidos: 4601
+
+=== RESULTADOS ===
+Mensagens enquadradas: 87
+Bytes consumidos: 3488
+Bytes restantes: 1113
+Anomalias: 1
+
+=== TIPOS DE MENSAGEM ===
+0x9000: 1
+0x9001: 44
+0x9002: 17
+0x9003: 21
+0x900C: 1
+0x900D: 3
+
+=== ÚLTIMAS 10 MENSAGENS ===
+offset= 2645 origem=58360 tipo=0x9003 payload=  96
+offset= 2747 origem=58360 tipo=0x9003 payload=  98
+offset= 2851 origem=58360 tipo=0x9003 payload= 103
+offset= 2960 origem=58360 tipo=0x9003 payload= 101
+offset= 3067 origem=58360 tipo=0x9003 payload=  40
+offset= 3113 origem=58360 tipo=0x9003 payload=  87
+offset= 3206 origem=58360 tipo=0x9003 payload=  74
+offset= 3286 origem=58360 tipo=0x9003 payload=  64
+offset= 3356 origem=58360 tipo=0x9003 payload=  64
+offset= 3426 origem=58360 tipo=0x9003 payload=  56
+
+=== PRIMEIRA ANOMALIA ===
+{'offset': 3488, 'reason': 'Payload ultrapassa o fim da captura', 'length': 63488, 'source': 995, 'message_id': 2704, 'available': 1107}
+
+=== BYTES EM TORNO DA ANOMALIA ===
+003456: 61 6e 67 6c 65 20 61 20 74 6f 20 64 65 73 74 03
+003472: 00 02 00 04 64 65 73 74 02 00 01 76 01 00 01 61
+003488: 00 f8 e3 03 90 0a 64 65 71 75 65 2e 73 69 7a 65
+003504: 13 72 65 70 6f 72 74 20 73 69 7a 65 20 6f 66 20
+003520: 64 65 73 74 02 00 ff ff 05 64 65 71 75 65 01 00
+003536: 04 73 69 7a 65 41 00 f8 e3 03 90 09 64 65 71 75
+003552: 65 2e 67 65 74 1d 66 69 6c 6c 20 64 65 73 74 20
+003568: 66 72 6f 6d 20 64 65 71 75 65 20 61 74 20 69 6e

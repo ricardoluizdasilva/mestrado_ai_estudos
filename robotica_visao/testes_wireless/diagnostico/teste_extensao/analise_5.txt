@@ -1,0 +1,41 @@
+=== ANÁLISE DO FLUXO ASEBA ===
+Bytes recebidos: 2555
+
+=== RESULTADOS ===
+Mensagens enquadradas: 70
+Bytes consumidos: 2013
+Bytes restantes: 542
+Anomalias: 1
+
+=== TIPOS DE MENSAGEM ===
+0x9000: 1
+0x9001: 44
+0x9002: 17
+0x9003: 4
+0x900C: 1
+0x900D: 3
+
+=== ÚLTIMAS 10 MENSAGENS ===
+offset= 1550 origem=58360 tipo=0x9002 payload=  77
+offset= 1633 origem=58360 tipo=0x9002 payload=  38
+offset= 1677 origem=58360 tipo=0x9002 payload=  25
+offset= 1708 origem=58360 tipo=0x9002 payload=  18
+offset= 1732 origem=58360 tipo=0x9002 payload=  15
+offset= 1753 origem=58360 tipo=0x9002 payload=  15
+offset= 1774 origem=58360 tipo=0x9003 payload=  44
+offset= 1824 origem=58360 tipo=0x9003 payload=  57
+offset= 1887 origem=58360 tipo=0x9003 payload=  59
+offset= 1952 origem=58360 tipo=0x9003 payload=  55
+
+=== PRIMEIRA ANOMALIA ===
+{'offset': 2013, 'reason': 'Payload ultrapassa o fim da captura', 'length': 65125, 'source': 1023, 'message_id': 29299, 'available': 536}
+
+=== BYTES EM TORNO DA ANOMALIA ===
+001981: 1d 57 72 69 74 65 20 74 68 65 20 73 65 74 74 69
+001997: 6e 67 73 20 69 6e 74 6f 20 66 6c 61 73 68 00 00
+002013: 65 fe ff 03 73 72 63 01 00 05 69 6e 64 65 78 55
+002029: 00 f8 e3 03 90 0c 64 65 71 75 65 2e 69 6e 73 65
+002045: 72 74 2f 73 68 69 66 74 20 64 65 71 75 65 20 61
+002061: 74 20 69 6e 64 65 78 20 62 79 20 6c 65 6e 28 73
+002077: 72 63 29 20 61 6e 64 20 69 6e 73 65 72 74 20 73
+002093: 72 63 03 00 ff ff 05 64 65 71 75 65 fe ff 03 73

@@ -1,0 +1,37 @@
+
+=== WSL2 ===
+Operações RX: 676
+Mensagens reconstruídas: 61
+Erros estruturais: [(244, 'Payload truncado no log')]
+
+Primeiras mensagens:
+seq=   2 origem=58360 tipo=0x900C payload=0900
+seq=  11 origem=58360 tipo=0x900D payload=0200
+seq=  15 origem=58360 tipo=0x900D payload=03064f40f8e3ffff
+seq=  19 origem=58360 tipo=0x900C payload=0900
+seq=  23 origem=58360 tipo=0x900D payload=0110d2e63ca000fa4913b67b563cc7c7
+seq=  27 origem=58360 tipo=0x9000 payload=097468796d696f2d49490900fe052000
+seq=  31 origem=58360 tipo=0x9001 payload=0100035f6964
+seq=  35 origem=58360 tipo=0x9001 payload=01000c6576656e742e736f75726365
+seq=  39 origem=58360 tipo=0x9001 payload=20000a6576656e742e61726773
+seq=  43 origem=58360 tipo=0x9001 payload=02000a5f667776657273696f6e
+
+=== PI5 ===
+Operações RX: 280
+Mensagens reconstruídas: 61
+Erros estruturais: [(244, 'Payload truncado no log')]
+
+Primeiras mensagens:
+seq=   2 origem=58360 tipo=0x900C payload=0900
+seq=  11 origem=58360 tipo=0x900D payload=0200
+seq=  15 origem=58360 tipo=0x900D payload=03064f40f8e3ffff
+seq=  19 origem=58360 tipo=0x900C payload=0900
+seq=  23 origem=58360 tipo=0x900D payload=0110d2e63ca000fa4913b67b563cc7c7
+seq=  27 origem=58360 tipo=0x9000 payload=097468796d696f2d49490900fe052000
+seq=  31 origem=58360 tipo=0x9001 payload=0100035f6964
+seq=  35 origem=58360 tipo=0x9001 payload=01000c6576656e742e736f75726365
+seq=  39 origem=58360 tipo=0x9001 payload=20000a6576656e742e61726773
+seq=  43 origem=58360 tipo=0x9001 payload=02000a5f667776657273696f6e
+
+=== PRIMEIRA DIFERENÇA ===
+Não foram encontradas diferenças.

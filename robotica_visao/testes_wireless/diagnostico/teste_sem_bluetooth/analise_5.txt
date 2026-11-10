@@ -1,0 +1,30 @@
+=== ANÁLISE DO FLUXO ASEBA ===
+Bytes recebidos: 3280
+
+=== RESULTADOS ===
+Mensagens enquadradas: 84
+Bytes consumidos: 3280
+Bytes restantes: 0
+Anomalias: 0
+
+=== TIPOS DE MENSAGEM ===
+0x9000: 1
+0x9001: 44
+0x9002: 17
+0x9003: 18
+0x900C: 1
+0x900D: 3
+
+=== ÚLTIMAS 10 MENSAGENS ===
+offset= 2369 origem=58360 tipo=0x9003 payload=  85
+offset= 2460 origem=58360 tipo=0x9003 payload=  81
+offset= 2547 origem=58360 tipo=0x9003 payload=  96
+offset= 2649 origem=58360 tipo=0x9003 payload=  96
+offset= 2751 origem=58360 tipo=0x9003 payload=  98
+offset= 2855 origem=58360 tipo=0x9003 payload= 103
+offset= 2964 origem=58360 tipo=0x9003 payload=  64
+offset= 3034 origem=58360 tipo=0x9003 payload= 101
+offset= 3141 origem=58360 tipo=0x9003 payload=  40
+offset= 3187 origem=58360 tipo=0x9003 payload=  87
+
+Nenhuma anomalia de enquadramento encontrada.

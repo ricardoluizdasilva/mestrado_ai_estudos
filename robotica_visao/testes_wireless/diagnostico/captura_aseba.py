@@ -13,7 +13,7 @@ PORT = (
     "00124B001DF456B0-if00"
 )
 
-OUTPUT = Path("diagnostico/aseba_trace.jsonl")
+OUTPUT = Path("diagnostico/aseba_trace_pi5.jsonl")
 MAX_RECORDS = 2000
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)

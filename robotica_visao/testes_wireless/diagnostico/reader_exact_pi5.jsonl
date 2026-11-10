@@ -1,0 +1,129 @@
+{"timestamp_utc": "2026-11-01T04:10:10.906436+00:00", "event": "header", "length": 2, "source_node": 58360, "message_id": 36876, "header_hex": "0200f8e30c90"}
+{"timestamp_utc": "2026-11-01T04:10:10.906728+00:00", "event": "message", "length": 2, "source_node": 58360, "message_id": 36876}
+{"timestamp_utc": "2026-11-01T04:10:11.907920+00:00", "event": "empty_read", "requested": 6, "accumulated": 0}
+{"timestamp_utc": "2026-11-01T04:10:12.909167+00:00", "event": "empty_read", "requested": 6, "accumulated": 0}
+{"timestamp_utc": "2026-11-01T04:10:12.909378+00:00", "event": "read_error", "error_type": "TimeoutError", "error": "Leitura incompleta: 0/6 bytes"}
+{"timestamp_utc": "2026-11-01T04:10:12.926596+00:00", "event": "header", "length": 2, "source_node": 58360, "message_id": 36877, "header_hex": "0200f8e30d90"}
+{"timestamp_utc": "2026-11-01T04:10:12.926814+00:00", "event": "message", "length": 2, "source_node": 58360, "message_id": 36877}
+{"timestamp_utc": "2026-11-01T04:10:12.955582+00:00", "event": "header", "length": 8, "source_node": 58360, "message_id": 36877, "header_hex": "0800f8e30d90"}
+{"timestamp_utc": "2026-11-01T04:10:12.955785+00:00", "event": "message", "length": 8, "source_node": 58360, "message_id": 36877}
+{"timestamp_utc": "2026-11-01T04:10:12.976676+00:00", "event": "header", "length": 2, "source_node": 58360, "message_id": 36876, "header_hex": "0200f8e30c90"}
+{"timestamp_utc": "2026-11-01T04:10:12.976888+00:00", "event": "message", "length": 2, "source_node": 58360, "message_id": 36876}
+{"timestamp_utc": "2026-11-01T04:10:12.996719+00:00", "event": "header", "length": 18, "source_node": 58360, "message_id": 36877, "header_hex": "1200f8e30d90"}
+{"timestamp_utc": "2026-11-01T04:10:12.996945+00:00", "event": "message", "length": 18, "source_node": 58360, "message_id": 36877}
+{"timestamp_utc": "2026-11-01T04:10:13.014620+00:00", "event": "header", "length": 24, "source_node": 58360, "message_id": 36864, "header_hex": "1800f8e30090"}
+{"timestamp_utc": "2026-11-01T04:10:13.014827+00:00", "event": "message", "length": 24, "source_node": 58360, "message_id": 36864}
+{"timestamp_utc": "2026-11-01T04:10:13.026586+00:00", "event": "header", "length": 6, "source_node": 58360, "message_id": 36865, "header_hex": "0600f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.026769+00:00", "event": "message", "length": 6, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.043800+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.043987+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.058602+00:00", "event": "header", "length": 13, "source_node": 58360, "message_id": 36865, "header_hex": "0d00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.058806+00:00", "event": "message", "length": 13, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.074607+00:00", "event": "header", "length": 13, "source_node": 58360, "message_id": 36865, "header_hex": "0d00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.074811+00:00", "event": "message", "length": 13, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.088771+00:00", "event": "header", "length": 13, "source_node": 58360, "message_id": 36865, "header_hex": "0d00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.088956+00:00", "event": "message", "length": 13, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.104608+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.104823+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.120652+00:00", "event": "header", "length": 18, "source_node": 58360, "message_id": 36865, "header_hex": "1200f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.120900+00:00", "event": "message", "length": 18, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.135626+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.135840+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.151624+00:00", "event": "header", "length": 16, "source_node": 58360, "message_id": 36865, "header_hex": "1000f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.151840+00:00", "event": "message", "length": 16, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.166632+00:00", "event": "header", "length": 17, "source_node": 58360, "message_id": 36865, "header_hex": "1100f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.166838+00:00", "event": "message", "length": 17, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.182624+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.182832+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.197655+00:00", "event": "header", "length": 16, "source_node": 58360, "message_id": 36865, "header_hex": "1000f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.197868+00:00", "event": "message", "length": 16, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.213659+00:00", "event": "header", "length": 17, "source_node": 58360, "message_id": 36865, "header_hex": "1100f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.213871+00:00", "event": "message", "length": 17, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.228640+00:00", "event": "header", "length": 18, "source_node": 58360, "message_id": 36865, "header_hex": "1200f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.228856+00:00", "event": "message", "length": 18, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.244655+00:00", "event": "header", "length": 25, "source_node": 58360, "message_id": 36865, "header_hex": "1900f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.244899+00:00", "event": "message", "length": 25, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.260652+00:00", "event": "header", "length": 28, "source_node": 58360, "message_id": 36865, "header_hex": "1c00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.260890+00:00", "event": "message", "length": 28, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.275634+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.275865+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.289655+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.289886+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.307662+00:00", "event": "header", "length": 22, "source_node": 58360, "message_id": 36865, "header_hex": "1600f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.307929+00:00", "event": "message", "length": 22, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.321718+00:00", "event": "header", "length": 24, "source_node": 58360, "message_id": 36865, "header_hex": "1800f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.322039+00:00", "event": "message", "length": 24, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.336930+00:00", "event": "header", "length": 20, "source_node": 58360, "message_id": 36865, "header_hex": "1400f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.337645+00:00", "event": "message", "length": 20, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.352118+00:00", "event": "header", "length": 20, "source_node": 58360, "message_id": 36865, "header_hex": "1400f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.352416+00:00", "event": "message", "length": 20, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.367733+00:00", "event": "header", "length": 21, "source_node": 58360, "message_id": 36865, "header_hex": "1500f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.368672+00:00", "event": "message", "length": 21, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.381660+00:00", "event": "header", "length": 8, "source_node": 58360, "message_id": 36865, "header_hex": "0800f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.381893+00:00", "event": "message", "length": 8, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.397678+00:00", "event": "header", "length": 8, "source_node": 58360, "message_id": 36865, "header_hex": "0800f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.397922+00:00", "event": "message", "length": 8, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.413678+00:00", "event": "header", "length": 19, "source_node": 58360, "message_id": 36865, "header_hex": "1300f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.413918+00:00", "event": "message", "length": 19, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.428895+00:00", "event": "header", "length": 20, "source_node": 58360, "message_id": 36865, "header_hex": "1400f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.429195+00:00", "event": "message", "length": 20, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.444646+00:00", "event": "header", "length": 17, "source_node": 58360, "message_id": 36865, "header_hex": "1100f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.444864+00:00", "event": "message", "length": 17, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.459645+00:00", "event": "header", "length": 18, "source_node": 58360, "message_id": 36865, "header_hex": "1200f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.459868+00:00", "event": "message", "length": 18, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.475658+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.475912+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.489692+00:00", "event": "header", "length": 6, "source_node": 58360, "message_id": 36865, "header_hex": "0600f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.489952+00:00", "event": "message", "length": 6, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.505698+00:00", "event": "header", "length": 11, "source_node": 58360, "message_id": 36865, "header_hex": "0b00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.505949+00:00", "event": "message", "length": 11, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.521722+00:00", "event": "header", "length": 19, "source_node": 58360, "message_id": 36865, "header_hex": "1300f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.522128+00:00", "event": "message", "length": 19, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.538673+00:00", "event": "header", "length": 20, "source_node": 58360, "message_id": 36865, "header_hex": "1400f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.539034+00:00", "event": "message", "length": 20, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.551824+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.552050+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.567766+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.568107+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.582726+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.583057+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.600850+00:00", "event": "header", "length": 14, "source_node": 58360, "message_id": 36865, "header_hex": "0e00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.601199+00:00", "event": "message", "length": 14, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.613752+00:00", "event": "header", "length": 16, "source_node": 58360, "message_id": 36865, "header_hex": "1000f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.614099+00:00", "event": "message", "length": 16, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.631746+00:00", "event": "header", "length": 16, "source_node": 58360, "message_id": 36865, "header_hex": "1000f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.632179+00:00", "event": "message", "length": 16, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.644651+00:00", "event": "header", "length": 12, "source_node": 58360, "message_id": 36865, "header_hex": "0c00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.644861+00:00", "event": "message", "length": 12, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.661669+00:00", "event": "header", "length": 15, "source_node": 58360, "message_id": 36865, "header_hex": "0f00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.661877+00:00", "event": "message", "length": 15, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.677668+00:00", "event": "header", "length": 11, "source_node": 58360, "message_id": 36865, "header_hex": "0b00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.677875+00:00", "event": "message", "length": 11, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.690724+00:00", "event": "header", "length": 13, "source_node": 58360, "message_id": 36865, "header_hex": "0d00f8e30190"}
+{"timestamp_utc": "2026-11-01T04:10:13.691103+00:00", "event": "message", "length": 13, "source_node": 58360, "message_id": 36865}
+{"timestamp_utc": "2026-11-01T04:10:13.709709+00:00", "event": "header", "length": 47, "source_node": 58360, "message_id": 36866, "header_hex": "2f00f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.709936+00:00", "event": "message", "length": 47, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.723861+00:00", "event": "header", "length": 39, "source_node": 58360, "message_id": 36866, "header_hex": "2700f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.724188+00:00", "event": "message", "length": 39, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.742838+00:00", "event": "header", "length": 43, "source_node": 58360, "message_id": 36866, "header_hex": "2b00f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.743039+00:00", "event": "message", "length": 43, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.763646+00:00", "event": "header", "length": 45, "source_node": 58360, "message_id": 36866, "header_hex": "2d00f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.763804+00:00", "event": "message", "length": 45, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.779731+00:00", "event": "header", "length": 41, "source_node": 58360, "message_id": 36866, "header_hex": "2900f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.779818+00:00", "event": "message", "length": 41, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.793624+00:00", "event": "header", "length": 31, "source_node": 58360, "message_id": 36866, "header_hex": "1f00f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.793740+00:00", "event": "message", "length": 31, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.808610+00:00", "event": "header", "length": 30, "source_node": 58360, "message_id": 36866, "header_hex": "1e00f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.808697+00:00", "event": "message", "length": 30, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.825690+00:00", "event": "header", "length": 55, "source_node": 58360, "message_id": 36866, "header_hex": "3700f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.825870+00:00", "event": "message", "length": 55, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.840611+00:00", "event": "header", "length": 22, "source_node": 58360, "message_id": 36866, "header_hex": "1600f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.840714+00:00", "event": "message", "length": 22, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.854605+00:00", "event": "header", "length": 33, "source_node": 58360, "message_id": 36866, "header_hex": "2100f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.854676+00:00", "event": "message", "length": 33, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:13.876651+00:00", "event": "header", "length": 55, "source_node": 58360, "message_id": 36866, "header_hex": "3700f8e30290"}
+{"timestamp_utc": "2026-11-01T04:10:13.876779+00:00", "event": "message", "length": 55, "source_node": 58360, "message_id": 36866}
+{"timestamp_utc": "2026-11-01T04:10:14.494199+00:00", "event": "header", "length": 884, "source_node": 65280, "message_id": 1279, "header_hex": "740300ffff04"}
+{"timestamp_utc": "2026-11-01T04:10:14.879744+00:00", "event": "message", "length": 884, "source_node": 65280, "message_id": 1279}
+{"timestamp_utc": "2026-11-01T04:10:14.880304+00:00", "event": "header", "length": 8307, "source_node": 25956, "message_id": 29811, "header_hex": "732064657374"}
+{"timestamp_utc": "2026-11-01T04:10:14.880381+00:00", "event": "read_error", "error_type": "ValueError", "error": "Comprimento suspeito: 8307"}

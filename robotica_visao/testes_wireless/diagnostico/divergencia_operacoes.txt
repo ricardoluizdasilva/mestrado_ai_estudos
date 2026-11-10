@@ -1,0 +1,86 @@
+
+=== COMPARAÇÃO RX ===
+WSL2: 676 operações
+PI5 : 280 operações
+Fim de uma captura no índice: 280
+Primeiras diferenças: [276, 277, 278, 279]
+
+Contexto da primeira diferença:
+
+Índice 273
+WSL2: {'seq': 280, 'timestamp_utc': '2026-11-01T03:34:18.971405+00:00', 'elapsed_s': 3.237937, 'direction': 'RX', 'length': 2, 'hex': 'f8e3', 'truncated': False}
+PI5 : {'seq': 280, 'timestamp_utc': '2026-11-01T03:46:22.684340+00:00', 'elapsed_s': 3.331112, 'direction': 'RX', 'length': 2, 'hex': 'f8e3', 'truncated': False}
+
+Índice 274
+WSL2: {'seq': 281, 'timestamp_utc': '2026-11-01T03:34:18.971502+00:00', 'elapsed_s': 3.238013, 'direction': 'RX', 'length': 2, 'hex': '0390', 'truncated': False}
+PI5 : {'seq': 281, 'timestamp_utc': '2026-11-01T03:46:22.684381+00:00', 'elapsed_s': 3.331151, 'direction': 'RX', 'length': 2, 'hex': '0390', 'truncated': False}
+
+Índice 275
+WSL2: {'seq': 282, 'timestamp_utc': '2026-11-01T03:34:18.971562+00:00', 'elapsed_s': 3.238069, 'direction': 'RX', 'length': 57, 'hex': '155f73797374656d2e73657474696e67732e726561640e5265616420612073657474696e6702000100076164647265737301000576616c7565', 'truncated': False}
+PI5 : {'seq': 282, 'timestamp_utc': '2026-11-01T03:46:22.684414+00:00', 'elapsed_s': 3.331184, 'direction': 'RX', 'length': 57, 'hex': '155f73797374656d2e73657474696e67732e726561640e5265616420612073657474696e6702000100076164647265737301000576616c7565', 'truncated': False}
+
+Índice 276
+WSL2: {'seq': 283, 'timestamp_utc': '2026-11-01T03:34:18.991642+00:00', 'elapsed_s': 3.258165, 'direction': 'RX', 'length': 2, 'hex': '3b00', 'truncated': False}
+PI5 : {'seq': 283, 'timestamp_utc': '2026-11-01T03:46:23.296050+00:00', 'elapsed_s': 3.942839, 'direction': 'RX', 'length': 2, 'hex': '653f', 'truncated': False}
+
+Índice 277
+WSL2: {'seq': 284, 'timestamp_utc': '2026-11-01T03:34:18.991766+00:00', 'elapsed_s': 3.258273, 'direction': 'RX', 'length': 2, 'hex': 'f8e3', 'truncated': False}
+PI5 : {'seq': 284, 'timestamp_utc': '2026-11-01T03:46:23.296183+00:00', 'elapsed_s': 3.942955, 'direction': 'RX', 'length': 2, 'hex': '00f8', 'truncated': False}
+
+Índice 278
+WSL2: {'seq': 285, 'timestamp_utc': '2026-11-01T03:34:18.991808+00:00', 'elapsed_s': 3.258314, 'direction': 'RX', 'length': 2, 'hex': '0390', 'truncated': False}
+PI5 : {'seq': 285, 'timestamp_utc': '2026-11-01T03:46:23.296226+00:00', 'elapsed_s': 3.942997, 'direction': 'RX', 'length': 2, 'hex': 'e303', 'truncated': False}
+
+Índice 279
+WSL2: {'seq': 286, 'timestamp_utc': '2026-11-01T03:34:18.991841+00:00', 'elapsed_s': 3.258345, 'direction': 'RX', 'length': 59, 'hex': '165f73797374656d2e73657474696e67732e77726974650f577269746520612073657474696e6702000100076164647265737301000576616c7565', 'truncated': False}
+PI5 : {'seq': 289, 'timestamp_utc': '2026-11-01T03:46:24.296731+00:00', 'elapsed_s': 4.943541, 'direction': 'RX', 'length': 371, 'hex': '900964657175652e7365741c636f706965732073726320746f20646571756520617420696e6465780300ffff056465717565feff03737263010005696e646578', 'truncated': True}
+
+Tamanhos mais frequentes:
+WSL2: [(2, 514), (16, 42), (15, 8), (14, 6), (18, 5), (55, 5), (13, 4), (20, 4)]
+PI5 : [(2, 213), (15, 8), (14, 6), (18, 5), (13, 4), (16, 4), (20, 4), (8, 3)]
+
+=== COMPARAÇÃO TX ===
+WSL2: 48 operações
+PI5 : 43 operações
+Fim de uma captura no índice: 43
+Primeiras diferenças: [12, 16, 23, 27, 34, 38]
+
+Contexto da primeira diferença:
+
+Índice 9
+WSL2: {'seq': 530, 'timestamp_utc': '2026-11-01T03:34:20.433116+00:00', 'elapsed_s': 4.699632, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 290, 'timestamp_utc': '2026-11-01T03:46:24.618225+00:00', 'elapsed_s': 5.265013, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Índice 10
+WSL2: {'seq': 535, 'timestamp_utc': '2026-11-01T03:34:20.634912+00:00', 'elapsed_s': 4.901448, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 291, 'timestamp_utc': '2026-11-01T03:46:25.130129+00:00', 'elapsed_s': 5.776914, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Índice 11
+WSL2: {'seq': 540, 'timestamp_utc': '2026-11-01T03:34:20.836780+00:00', 'elapsed_s': 5.103302, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 292, 'timestamp_utc': '2026-11-01T03:46:25.638130+00:00', 'elapsed_s': 6.284916, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Índice 12
+WSL2: {'seq': 545, 'timestamp_utc': '2026-11-01T03:34:21.038258+00:00', 'elapsed_s': 5.304771, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 293, 'timestamp_utc': '2026-11-01T03:46:25.806671+00:00', 'elapsed_s': 6.453458, 'direction': 'TX', 'length': 8, 'hex': '0200010011a00500', 'truncated': False}
+
+Índice 13
+WSL2: {'seq': 550, 'timestamp_utc': '2026-11-01T03:34:21.239398+00:00', 'elapsed_s': 5.50593, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 294, 'timestamp_utc': '2026-11-01T03:46:25.839364+00:00', 'elapsed_s': 6.48614, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Índice 14
+WSL2: {'seq': 555, 'timestamp_utc': '2026-11-01T03:34:21.440594+00:00', 'elapsed_s': 5.70711, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 295, 'timestamp_utc': '2026-11-01T03:46:26.040507+00:00', 'elapsed_s': 6.687283, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Índice 15
+WSL2: {'seq': 560, 'timestamp_utc': '2026-11-01T03:34:21.641960+00:00', 'elapsed_s': 5.908487, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+PI5 : {'seq': 296, 'timestamp_utc': '2026-11-01T03:46:26.241554+00:00', 'elapsed_s': 6.888334, 'direction': 'TX', 'length': 12, 'hex': '060001000ba0f8e339000700', 'truncated': False}
+
+Tamanhos mais frequentes:
+WSL2: [(12, 38), (8, 6), (10, 4)]
+PI5 : [(12, 33), (8, 6), (10, 4)]
+
+=== OPERAÇÕES TRUNCADAS ===
+WSL2 total: 27
+Primeiros: [(254, 77, 'RX'), (302, 98, 'RX'), (306, 86, 'RX'), (310, 86, 'RX'), (314, 85, 'RX'), (318, 81, 'RX'), (322, 96, 'RX'), (326, 96, 'RX'), (330, 98, 'RX'), (334, 103, 'RX')]
+PI5 total: 2
+Primeiros: [(254, 77, 'RX'), (289, 371, 'RX')]
