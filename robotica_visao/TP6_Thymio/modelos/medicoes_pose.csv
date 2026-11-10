@@ -1,0 +1,11 @@
+run_id,mode,delta_x_cm,delta_y_cm,delta_theta_deg,log_file,notes
+esquerda_1,left,,,,,
+esquerda_2,left,,,,,
+esquerda_3,left,,,,,
+esquerda_4,left,,,,,
+esquerda_5,left,,,,,
+direita_1,right,,,,,
+direita_2,right,,,,,
+direita_3,right,,,,,
+direita_4,right,,,,,
+direita_5,right,,,,,

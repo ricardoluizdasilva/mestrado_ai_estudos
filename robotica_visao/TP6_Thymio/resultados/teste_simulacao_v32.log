@@ -1,0 +1,22 @@
+Simulação iniciada.
+{'amostra': 0, 'estado': 0, 'ticks': 0, 'angulo_graus': 0.0, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 1, 'estado': 0, 'ticks': 0, 'angulo_graus': 0.0, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 2, 'estado': 1, 'ticks': 3, 'angulo_graus': 8.4375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 3, 'estado': 1, 'ticks': 3, 'angulo_graus': 8.4375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 4, 'estado': 1, 'ticks': 6, 'angulo_graus': 16.875, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 5, 'estado': 1, 'ticks': 10, 'angulo_graus': 28.125, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 6, 'estado': 1, 'ticks': 10, 'angulo_graus': 28.125, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 7, 'estado': 1, 'ticks': 13, 'angulo_graus': 36.5625, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 8, 'estado': 1, 'ticks': 13, 'angulo_graus': 36.5625, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 9, 'estado': 2, 'ticks': 14, 'angulo_graus': 39.375, 'paragem_graus': 39.375, 'modo': 0}
+{'amostra': 10, 'estado': 2, 'ticks': 14, 'angulo_graus': 39.375, 'paragem_graus': 39.375, 'modo': 0}
+{'amostra': 11, 'estado': 2, 'ticks': 14, 'angulo_graus': 39.375, 'paragem_graus': 39.375, 'modo': 0}
+{'amostra': 12, 'estado': 3, 'ticks': 14, 'angulo_graus': 39.375, 'paragem_graus': 39.375, 'modo': 0}
+
+=== RESULTADO ===
+Estado final: 3
+Ciclos: 14
+Ângulo de paragem: 39.375
+Ficheiro: resultados/simulacao_angular_v32.json
+SIMULAÇÃO V3.2: OK
+Paragem solicitada. Nó desbloqueado.

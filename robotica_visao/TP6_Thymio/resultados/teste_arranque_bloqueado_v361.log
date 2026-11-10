@@ -1,0 +1,10 @@
+=== BLOQUEIO DE ARRANQUE V3.6.1 ===
+estado: 6
+falha: 1
+arm: 0
+request: 0
+ciclos_reta: 0
+motor_esquerdo: 0
+motor_direito: 0
+BLOQUEIO DE ARRANQUE: OK
+Programa parado. Nó desbloqueado.

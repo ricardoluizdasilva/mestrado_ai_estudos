@@ -1,0 +1,34 @@
+Orientação inicial: 0.0
+A iniciar rotação -60/+60
+t=0.10s theta=0.00° vel=(0,0)
+t=0.20s theta=0.00° vel=(0,0)
+t=0.30s theta=0.00° vel=(0,0)
+t=0.40s theta=0.00° vel=(0,0)
+t=0.50s theta=0.00° vel=(0,0)
+t=0.60s theta=0.00° vel=(0,0)
+t=0.70s theta=8.14° vel=(-55,54)
+t=0.80s theta=8.14° vel=(-55,54)
+t=0.90s theta=8.14° vel=(-55,54)
+t=1.00s theta=15.73° vel=(-61,64)
+t=1.10s theta=15.73° vel=(-61,64)
+t=1.20s theta=15.73° vel=(-61,64)
+t=1.30s theta=23.62° vel=(-60,65)
+A reduzir velocidade.
+t=1.50s theta=23.62° vel=(-60,65)
+t=1.60s theta=31.39° vel=(-59,64)
+t=1.71s theta=31.39° vel=(-59,64)
+t=1.81s theta=31.39° vel=(-59,64)
+t=1.91s theta=36.60° vel=(-30,31)
+t=2.01s theta=36.60° vel=(-30,31)
+t=2.11s theta=36.60° vel=(-30,31)
+t=2.21s theta=40.14° vel=(-29,28)
+Motivo de paragem: limiar_angular
+
+=== RESULTADO ===
+Alvo: 45.000°
+Orientação final estimada: 44.907°
+Desvio estimado: -0.093°
+Motivo: limiar_angular
+CSV: resultados/controlo_rotacao_45_v31_teste2.csv
+Paragem de segurança solicitada.
+Nó desbloqueado.

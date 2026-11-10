@@ -1,0 +1,30 @@
+=== TESTE DE SEGURANÇA V3.6 ===
+Programa iniciado sem pedido de movimento.
+{'amostra': 0, 'ticks': 3, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4544, 2457, 2558, 3629, 4043, 0, 0]}
+{'amostra': 1, 'ticks': 9, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4542, 2454, 2558, 3627, 4045, 0, 0]}
+{'amostra': 2, 'ticks': 12, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4543, 2453, 2558, 3628, 4043, 0, 0]}
+{'amostra': 3, 'ticks': 18, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2453, 2557, 3625, 4043, 0, 0]}
+{'amostra': 4, 'ticks': 24, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4542, 2453, 2556, 3628, 4049, 0, 0]}
+{'amostra': 5, 'ticks': 27, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4544, 2454, 2558, 3629, 4043, 0, 0]}
+{'amostra': 6, 'ticks': 34, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4544, 2454, 2558, 3629, 4045, 0, 0]}
+{'amostra': 7, 'ticks': 37, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4543, 2453, 2557, 3628, 4045, 0, 0]}
+{'amostra': 8, 'ticks': 43, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4542, 2454, 2558, 3628, 4045, 0, 0]}
+{'amostra': 9, 'ticks': 46, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4543, 2458, 2560, 3627, 4045, 0, 0]}
+{'amostra': 10, 'ticks': 52, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2456, 2559, 3629, 4045, 0, 0]}
+{'amostra': 11, 'ticks': 58, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2451, 2554, 3627, 4045, 0, 0]}
+{'amostra': 12, 'ticks': 61, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4543, 2454, 2556, 3631, 4045, 0, 0]}
+{'amostra': 13, 'ticks': 67, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4543, 2455, 2558, 3628, 4043, 0, 0]}
+{'amostra': 14, 'ticks': 73, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4546, 2456, 2556, 3626, 4043, 0, 0]}
+{'amostra': 15, 'ticks': 77, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4544, 2460, 2564, 3630, 4047, 0, 0]}
+{'amostra': 16, 'ticks': 83, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2456, 2559, 3630, 4043, 0, 0]}
+{'amostra': 17, 'ticks': 86, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4544, 2455, 2557, 3629, 4047, 0, 0]}
+{'amostra': 18, 'ticks': 92, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2456, 2560, 3628, 4045, 0, 0]}
+{'amostra': 19, 'ticks': 98, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4545, 2456, 2558, 3628, 4043, 0, 0]}
+{'amostra': 20, 'ticks': 101, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [4542, 2458, 2559, 3628, 4048, 0, 0]}
+
+=== RESULTADO ===
+Incremento do temporizador: 98
+Estados e motores: OK
+TESTE DE SENSORES V3.6: OK
+Resultados: resultados/sensores_v36.json
+Paragem solicitada. Nó desbloqueado.

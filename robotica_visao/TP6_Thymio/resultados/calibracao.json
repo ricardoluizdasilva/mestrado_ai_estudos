@@ -1,0 +1,39 @@
+{
+  "kd_left": 0.03524238812563105,
+  "kd_right": 0.03524238812563105,
+  "unit": "cm/(s*motor.speed)",
+  "source": "experimental, straight runs, least squares through origin",
+  "n": 5,
+  "trials": [
+    {
+      "run_id": "reta_1",
+      "kd": 0.0433104331458059,
+      "area_speed_dt": 106.20997450000002,
+      "distance_cm": 4.6
+    },
+    {
+      "run_id": "reta_2",
+      "kd": 0.036804634289553495,
+      "area_speed_dt": 144.0036045,
+      "distance_cm": 5.3
+    },
+    {
+      "run_id": "reta_3",
+      "kd": 0.03406369372300074,
+      "area_speed_dt": 182.01197000000002,
+      "distance_cm": 6.2
+    },
+    {
+      "run_id": "reta_4",
+      "kd": 0.033728084556052744,
+      "area_speed_dt": 219.40172700000002,
+      "distance_cm": 7.4
+    },
+    {
+      "run_id": "reta_5",
+      "kd": 0.03509827191743764,
+      "area_speed_dt": 282.06516899999997,
+      "distance_cm": 9.9
+    }
+  ]
+}

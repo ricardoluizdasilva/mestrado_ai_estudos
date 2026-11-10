@@ -1,0 +1,23 @@
+=== TESTE ESTÁTICO TP6 ===
+Thymio: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Compilação: OK
+Programa iniciado.
+{'tempo_s': 0.0, 'ticks': 0, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 0.5, 'ticks': 4, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 1.0, 'ticks': 9, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 1.5, 'ticks': 13, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 2.0, 'ticks': 20, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 2.5, 'ticks': 24, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.0, 'ticks': 29, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.5, 'ticks': 33, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 4.0, 'ticks': 38, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 4.5, 'ticks': 43, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 5.0, 'ticks': 50, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADOS ===
+Incremento do contador: 50
+CSV: resultados/odometria_estatica_tdm.csv
+Pose permaneceu em zero.
+Programa parado.
+Motores: paragem solicitada.
+Nó desbloqueado.

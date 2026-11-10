@@ -1,0 +1,18 @@
+[
+  {
+    "manobra": 1,
+    "estado": 3,
+    "ciclos": 33,
+    "theta_rel_graus": 90.0,
+    "theta_global_graus": 90.0,
+    "turns": 0
+  },
+  {
+    "manobra": 2,
+    "estado": 3,
+    "ciclos": 33,
+    "theta_rel_graus": 90.0,
+    "theta_global_graus": 180.0,
+    "turns": 1
+  }
+]

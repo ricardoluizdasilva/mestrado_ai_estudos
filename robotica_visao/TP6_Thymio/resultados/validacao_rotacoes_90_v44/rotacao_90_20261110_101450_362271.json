@@ -1,0 +1,17 @@
+{
+  "instante": "2026-11-10T10:14:45.969040",
+  "versao": "V4.4",
+  "estado_final": 5,
+  "falha": 0,
+  "x_cm": 0.05,
+  "y_cm": -0.04,
+  "angulo_odometria_graus": 89.5166015625,
+  "angulo_controlador_graus": 89.5166015625,
+  "velocidades_finais": [
+    0,
+    0
+  ],
+  "angulo_fisico_graus": 90.0,
+  "erro_fisico_face_90_graus": 0.0,
+  "erro_odometria_graus": -0.4833984375
+}

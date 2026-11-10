@@ -1,0 +1,37 @@
+=== TESTE FÍSICO V3.6.1 ===
+Sensores iniciais: [0, 0, 0, 0, 0, 0, 0]
+Controlador armado.
+Sequência autorizada.
+Estado 0: dist=0.000 cm, angulo=0.00°
+Estado 1: dist=0.210 cm, angulo=0.00°
+Estado 2: dist=9.770 cm, angulo=0.00°
+Estado 3: dist=9.770 cm, angulo=3.24°
+Estado 4: dist=9.770 cm, angulo=89.23°
+Estado 1: dist=0.450 cm, angulo=0.00°
+Estado 2: dist=9.745 cm, angulo=0.00°
+Estado 3: dist=9.745 cm, angulo=1.41°
+Estado 4: dist=9.745 cm, angulo=89.55°
+Estado 1: dist=0.000 cm, angulo=0.00°
+Estado 2: dist=9.705 cm, angulo=0.00°
+Estado 3: dist=9.705 cm, angulo=0.00°
+Estado 4: dist=9.705 cm, angulo=89.11°
+Estado 1: dist=0.185 cm, angulo=0.00°
+Estado 2: dist=9.730 cm, angulo=0.00°
+Estado 3: dist=9.730 cm, angulo=1.53°
+Estado 4: dist=9.730 cm, angulo=89.34°
+Estado 5: dist=9.730 cm, angulo=89.34°
+
+=== RESULTADOS ===
+Motivo: concluido
+Estado final: 5
+Lados concluídos: 4
+Falha: 0
+X global: +0.0120 cm
+Y global: +0.4470 cm
+Orientação global: +356.325°
+Ciclos reta: 47
+Ciclos rotação: 46
+CSV: resultados/sequencia_v38_fisica_4lados.csv
+QUADRADO V3.8: CONCLUÍDO
+Paragem de segurança solicitada.
+Nó desbloqueado.

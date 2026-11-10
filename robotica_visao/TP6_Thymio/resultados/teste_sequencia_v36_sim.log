@@ -1,0 +1,14 @@
+Simulação V3.6 iniciada.
+
+=== RESULTADO V3.6 ===
+estado: 5
+historico: [1, 2, 3, 4, 5]
+ciclos_reta: 39
+ciclos_rotacao: 32
+distancia_cm: 9.75
+angulo_graus: 90.0
+orientacao_global_simulada_graus: 90.0
+
+SEQUENCIA V3.6: OK
+Resultados: resultados/sequencia_v36_sim.json
+Programa parado. No desbloqueado.

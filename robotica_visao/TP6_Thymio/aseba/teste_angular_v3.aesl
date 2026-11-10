@@ -1,0 +1,42 @@
+# Teste de normalizacao angular sem movimento
+var test_theta = 0
+var test_delta = 0
+var test_step = 0
+var test_results[8]
+
+timer.period[0] = 100
+
+onevent timer0
+    if test_step < 8 then
+
+        if test_step < 4 then
+            test_delta = 16384
+        else
+            test_delta = -16384
+        end
+
+        if test_delta > 0 then
+            if test_theta > 32767 - test_delta then
+                test_theta = test_theta - 16384
+                test_theta = test_theta - 16384
+                test_theta = test_theta + test_delta
+                test_theta = test_theta - 16384
+                test_theta = test_theta - 16384
+            else
+                test_theta = test_theta + test_delta
+            end
+        else
+            if test_theta < -32768 - test_delta then
+                test_theta = test_theta + 16384
+                test_theta = test_theta + 16384
+                test_theta = test_theta + test_delta
+                test_theta = test_theta + 16384
+                test_theta = test_theta + 16384
+            else
+                test_theta = test_theta + test_delta
+            end
+        end
+
+        test_results[test_step] = test_theta
+        test_step = test_step + 1
+    end

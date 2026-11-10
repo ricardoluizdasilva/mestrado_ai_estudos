@@ -1,0 +1,18 @@
+[
+  {
+    "instante": "2026-11-09T23:17:58.315445",
+    "etapa": "pose_teste_artificial",
+    "x_cm": 10.0,
+    "y_cm": 5.0,
+    "theta_graus": 90.0,
+    "corr_applied": 1
+  },
+  {
+    "instante": "2026-11-09T23:17:59.620782",
+    "etapa": "referencia_fisica_aplicada",
+    "x_cm": 0.0,
+    "y_cm": 0.0,
+    "theta_graus": 0.0,
+    "corr_applied": 2
+  }
+]

@@ -1,0 +1,170 @@
+# TP6 exercício 7: odometria embarcada em Aseba (protótipo A TESTAR em hardware).
+# Convenções: x/y e ds em unidades de 0.1 mm; theta em unidades Aseba (-pi,pi -> int16).
+# Intervalo fixo de timer0 = 100 ms. Usar GANHO APENAS DEPOIS de calibrar.
+# KD_MILLI: round(Kd(cm/(s*unidade motor.speed))*1000) calculado no script Python.
+# Exemplo: Kd=0.04 -> KD_MILLI=40, mas é apenas ilustrativo, NÃO é calibração.
+# Risco de arredondamento (Aseba aritmética inteira), escorregamento e overflow int16.
+# Este programa não comanda motores. Apenas calcula pose estimada.
+
+var odo_x_01mm = 0
+var odo_y_01mm = 0
+var odo_theta_b = 0
+var odo_kd_milli = 35
+var odo_dl_01mm = 0
+var odo_dr_01mm = 0
+var odo_ds_01mm = 0
+var odo_diff_01mm = 0
+var odo_dtheta_b = 0
+var odo_theta_mid_b = 0
+var odo_cos_b = 0
+var odo_sin_b = 0
+var odo_dx_01mm = 0
+var odo_dy_01mm = 0
+
+# Ativar apenas o timer (não iniciar motores)
+var odo_ticks = 0
+
+var odo_snapshot[6] = [0, 0, 0, 0, 0, 0]
+
+
+# Buffer para 40 ciclos de 100 ms
+var odo_record_n = 0
+var odo_dl_log[40]
+var odo_dr_log[40]
+var odo_pose_log[3] = [0, 0, 0]
+
+# V2: coordenadas em unidades de 0,01 mm
+var odo_x_coarse = 0
+var odo_x_rem = 0
+var odo_x_carry = 0
+var odo_y_coarse = 0
+var odo_y_rem = 0
+var odo_y_carry = 0
+var odo_ds2_005mm = 0
+var odo_dx_001mm = 0
+var odo_dy_001mm = 0
+var odo_pose_hi_log[4] = [0, 0, 0, 0]
+
+var odo_half_b = 0
+var odo_turns = 0
+
+var test_theta_log[8]
+var test_mid_log[8]
+var test_turns_log[8]
+
+timer.period[0] = 100
+
+onevent timer0
+    odo_ticks = odo_ticks + 1
+    # Kd [cm/s/unidade] -> deslocamento em 0.1 mm num intervalo de 0.1 s
+    # d_01mm = speed * Kd * 10 = speed * KD_MILLI / 100
+    odo_dl_01mm = 0
+    odo_dr_01mm = 0
+
+    odo_ds_01mm = (odo_dl_01mm + odo_dr_01mm) / 2
+    odo_ds2_005mm = odo_dl_01mm + odo_dr_01mm
+    odo_diff_01mm = odo_dr_01mm - odo_dl_01mm
+
+    # distância entre rodas L=9.35 cm = 935 unidades de 0.1mm
+    # 1 rad = aprox. 10430 unidades Aseba
+    if odo_ticks <= 4 then
+        odo_dtheta_b = 16384
+    elseif odo_ticks <= 8 then
+        odo_dtheta_b = -16384
+    else
+        odo_dtheta_b = 0
+    end
+
+    odo_half_b = odo_dtheta_b / 2
+
+    if odo_half_b > 0 then
+        if odo_theta_b > 32767 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    end
+    call math.cos(odo_cos_b, odo_theta_mid_b)
+    call math.sin(odo_sin_b, odo_theta_mid_b)
+
+    # cos/sin Aseba escalados aproximadamente por 32767
+    call math.muldiv(odo_dx_001mm, odo_ds2_005mm, odo_cos_b, 6553)
+    call math.muldiv(odo_dy_001mm, odo_ds2_005mm, odo_sin_b, 6553)
+
+    odo_x_rem = odo_x_rem + odo_dx_001mm
+    odo_x_carry = odo_x_rem / 10
+    odo_x_coarse = odo_x_coarse + odo_x_carry
+    odo_x_rem = odo_x_rem - odo_x_carry * 10
+    odo_x_01mm = odo_x_coarse
+    odo_y_rem = odo_y_rem + odo_dy_001mm
+    odo_y_carry = odo_y_rem / 10
+    odo_y_coarse = odo_y_coarse + odo_y_carry
+    odo_y_rem = odo_y_rem - odo_y_carry * 10
+    odo_y_01mm = odo_y_coarse
+    if odo_dtheta_b > 0 then
+        if odo_theta_b > 32767 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_turns = odo_turns + 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_turns = odo_turns - 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    end
+
+    # Registar os incrementos efetivamente usados no cálculo
+    if odo_record_n < 40 then
+        odo_dl_log[odo_record_n] = odo_dl_01mm
+        odo_dr_log[odo_record_n] = odo_dr_01mm
+        odo_pose_log = [odo_x_01mm, odo_y_01mm, odo_theta_b]
+        odo_pose_hi_log = [
+            odo_x_coarse, odo_x_rem,
+            odo_y_coarse, odo_y_rem
+        ]
+        odo_record_n = odo_record_n + 1
+    end
+
+
+    # Fotografia da pose e das velocidades após cada ciclo
+    odo_snapshot = [
+        odo_ticks,
+        odo_x_01mm,
+        odo_y_01mm,
+        odo_theta_b,
+        motor.left.speed,
+        motor.right.speed
+    ]
+
+
+    if odo_ticks <= 8 then
+        test_theta_log[odo_ticks - 1] = odo_theta_b
+        test_mid_log[odo_ticks - 1] = odo_theta_mid_b
+        test_turns_log[odo_ticks - 1] = odo_turns
+    end

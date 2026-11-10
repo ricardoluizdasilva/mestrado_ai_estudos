@@ -1,0 +1,10 @@
+=== TESTES V4.0 ===
+{'teste': 'A - origem', 'x_cm': 0.0, 'y_cm': 0.0, 'theta_graus': 0.0, 'aplicacoes': 1, 'motores': [0, 0]}
+{'teste': 'B - positiva', 'x_cm': 10.0, 'y_cm': 5.0, 'theta_graus': 90.0, 'aplicacoes': 2, 'motores': [0, 0]}
+{'teste': 'C - negativa', 'x_cm': -5.0, 'y_cm': -10.0, 'theta_graus': -90.0, 'aplicacoes': 3, 'motores': [0, 0]}
+{'teste': 'D - residuos', 'x_cm': 10.123, 'y_cm': -5.067, 'theta_graus': 270.0, 'aplicacoes': 4, 'motores': [0, 0]}
+{'teste': 'E - precisao', 'x_cm': 0.001, 'y_cm': -0.001, 'theta_graus': 360.0, 'aplicacoes': 5, 'motores': [0, 0]}
+
+REFERENCIAS V4.0: OK
+Resultados: resultados/ex9_referencias_v40.json
+Programa parado. No desbloqueado.

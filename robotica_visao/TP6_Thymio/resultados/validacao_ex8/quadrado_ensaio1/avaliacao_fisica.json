@@ -1,0 +1,21 @@
+{
+  "exercicio": 8,
+  "controlador": "V3.8",
+  "lados": 4,
+  "lado_nominal_cm": 10.0,
+  "estado_final": 5,
+  "falhas": 0,
+  "odometria": {
+    "x_final_cm": 0.012,
+    "y_final_cm": 0.447,
+    "rotacao_acumulada_graus": 356.325,
+    "erro_fecho_cm": 0.4472,
+    "erro_angular_graus": -3.675
+  },
+  "medicao_fisica": {
+    "erro_fecho_cm_aproximado": 3.0,
+    "desvio_angular_graus_aproximado": 10.0,
+    "sentido_desvio_angular": "nao_registado"
+  },
+  "observacao": "Medições físicas aproximadas. A orientação foi medida em módulo."
+}

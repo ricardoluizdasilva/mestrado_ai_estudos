@@ -1,0 +1,18 @@
+{
+  "estado": 5,
+  "falha": 0,
+  "lados": 2,
+  "historico": [
+    1,
+    2,
+    3,
+    4,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "distancia_ultimo_lado_cm": 9.75,
+  "angulo_ultima_curva_graus": 90.0
+}

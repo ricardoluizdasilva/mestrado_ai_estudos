@@ -1,0 +1,37 @@
+Modo real configurado.
+Alvo físico pretendido: 45 graus
+Limiar embarcado: ~37 graus
+{'tempo_s': 0.15, 'estado': 0, 'modo': 0, 'ticks': 0, 'theta_graus': 0.0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 0.3, 'estado': 1, 'modo': 1, 'ticks': 1, 'theta_graus': 0.0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 0.45, 'estado': 1, 'modo': 1, 'ticks': 1, 'theta_graus': 0.0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 0.601, 'estado': 1, 'modo': 1, 'ticks': 4, 'theta_graus': 5.8722, 'vel_esq': -56, 'vel_dir': 63}
+{'tempo_s': 0.751, 'estado': 1, 'modo': 1, 'ticks': 4, 'theta_graus': 5.8722, 'vel_esq': -56, 'vel_dir': 63}
+{'tempo_s': 0.901, 'estado': 1, 'modo': 1, 'ticks': 6, 'theta_graus': 10.8325, 'vel_esq': -51, 'vel_dir': 65}
+{'tempo_s': 1.051, 'estado': 1, 'modo': 1, 'ticks': 6, 'theta_graus': 10.8325, 'vel_esq': -51, 'vel_dir': 65}
+{'tempo_s': 1.201, 'estado': 1, 'modo': 1, 'ticks': 9, 'theta_graus': 18.3032, 'vel_esq': -57, 'vel_dir': 64}
+{'tempo_s': 1.351, 'estado': 1, 'modo': 1, 'ticks': 9, 'theta_graus': 18.3032, 'vel_esq': -57, 'vel_dir': 64}
+{'tempo_s': 1.502, 'estado': 1, 'modo': 1, 'ticks': 13, 'theta_graus': 24.549, 'vel_esq': -31, 'vel_dir': 32}
+{'tempo_s': 1.652, 'estado': 1, 'modo': 1, 'ticks': 13, 'theta_graus': 24.549, 'vel_esq': -31, 'vel_dir': 32}
+{'tempo_s': 1.802, 'estado': 1, 'modo': 1, 'ticks': 16, 'theta_graus': 28.2843, 'vel_esq': -27, 'vel_dir': 32}
+{'tempo_s': 1.952, 'estado': 1, 'modo': 1, 'ticks': 16, 'theta_graus': 28.2843, 'vel_esq': -27, 'vel_dir': 32}
+{'tempo_s': 2.102, 'estado': 1, 'modo': 1, 'ticks': 19, 'theta_graus': 31.8329, 'vel_esq': -30, 'vel_dir': 30}
+{'tempo_s': 2.253, 'estado': 1, 'modo': 1, 'ticks': 19, 'theta_graus': 31.8329, 'vel_esq': -30, 'vel_dir': 30}
+{'tempo_s': 2.403, 'estado': 1, 'modo': 1, 'ticks': 22, 'theta_graus': 35.3815, 'vel_esq': -29, 'vel_dir': 30}
+{'tempo_s': 2.553, 'estado': 1, 'modo': 1, 'ticks': 22, 'theta_graus': 35.3815, 'vel_esq': -29, 'vel_dir': 30}
+{'tempo_s': 2.703, 'estado': 2, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': -5, 'vel_dir': 4}
+{'tempo_s': 2.853, 'estado': 2, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': -5, 'vel_dir': 4}
+{'tempo_s': 3.004, 'estado': 2, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.154, 'estado': 2, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.304, 'estado': 2, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.454, 'estado': 3, 'modo': 1, 'ticks': 24, 'theta_graus': 37.8918, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADO V3.2 ===
+Estado final: 3
+Modo ativo: 1
+Ângulo no limiar: 37.892°
+Ângulo final estimado: 38.013°
+Rotação residual: +0.121°
+Desvio para 45°: -6.987°
+CSV: resultados/rotacao_embarcada_v32_45.csv
+Paragem de segurança solicitada.
+Nó desbloqueado.

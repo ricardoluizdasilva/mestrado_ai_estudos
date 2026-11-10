@@ -1,0 +1,10 @@
+=== POSE ANTES DA CORRECAO ===
+{'x_cm': -0.266, 'y_cm': 0.079, 'theta_graus': 359.6759033203125}
+
+=== POSE DEPOIS DA CORRECAO ===
+{'x_cm': 0.0, 'y_cm': 0.0, 'theta_graus': 360.0}
+Correcoes aplicadas: 1
+Pedido pendente: 0
+
+CORRECAO EMBARCADA V3.9: OK
+Programa parado. No desbloqueado.

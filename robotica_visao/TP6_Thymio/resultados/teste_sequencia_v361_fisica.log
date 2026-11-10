@@ -1,0 +1,24 @@
+=== TESTE FÍSICO V3.6.1 ===
+Sensores iniciais: [0, 0, 0, 0, 0, 0, 0]
+Controlador armado.
+Sequência autorizada.
+Estado 0: dist=0.000 cm, angulo=0.00°
+Estado 1: dist=0.440 cm, angulo=0.00°
+Estado 2: dist=9.805 cm, angulo=0.00°
+Estado 3: dist=9.805 cm, angulo=3.30°
+Estado 4: dist=9.805 cm, angulo=89.20°
+Estado 5: dist=9.805 cm, angulo=89.20°
+
+=== RESULTADOS ===
+Motivo: concluido
+Estado final: 5
+Falha: 0
+X global: +9.9200 cm
+Y global: +0.1170 cm
+Orientação global: +89.022°
+Ciclos reta: 47
+Ciclos rotação: 47
+CSV: resultados/sequencia_v361_fisica.csv
+SEQUÊNCIA FÍSICA V3.6.1: CONCLUÍDA
+Paragem de segurança solicitada.
+Nó desbloqueado.

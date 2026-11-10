@@ -1,0 +1,6 @@
+run_id,log_file,distance_cm,notes
+reta_1,resultados/calibracao/reta_1.csv,4.6,
+reta_2,resultados/calibracao/reta_2.csv,5.3,
+reta_3,resultados/calibracao/reta_3.csv,6.2,
+reta_4,resultados/calibracao/reta_4.csv,7.4,
+reta_5,resultados/calibracao/reta_5.csv,9.9,

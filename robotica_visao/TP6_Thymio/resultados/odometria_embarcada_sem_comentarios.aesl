@@ -1,0 +1,29 @@
+var odo_x_01mm = 0
+var odo_y_01mm = 0
+var odo_theta_b = 0
+var odo_kd_milli = 35
+var odo_dl_01mm = 0
+var odo_dr_01mm = 0
+var odo_ds_01mm = 0
+var odo_diff_01mm = 0
+var odo_dtheta_b = 0
+var odo_theta_mid_b = 0
+var odo_cos_b = 0
+var odo_sin_b = 0
+var odo_dx_01mm = 0
+var odo_dy_01mm = 0
+timer.period[0] = 100
+onevent timer0
+    call math.muldiv(odo_dl_01mm, motor.left.speed, odo_kd_milli, 100)
+    call math.muldiv(odo_dr_01mm, motor.right.speed, odo_kd_milli, 100)
+    odo_ds_01mm = (odo_dl_01mm + odo_dr_01mm) / 2
+    odo_diff_01mm = odo_dr_01mm - odo_dl_01mm
+    call math.muldiv(odo_dtheta_b, odo_diff_01mm, 10430, 935)
+    odo_theta_mid_b = odo_theta_b + odo_dtheta_b / 2
+    call math.cos(odo_cos_b, odo_theta_mid_b)
+    call math.sin(odo_sin_b, odo_theta_mid_b)
+    call math.muldiv(odo_dx_01mm, odo_ds_01mm, odo_cos_b, 32767)
+    call math.muldiv(odo_dy_01mm, odo_ds_01mm, odo_sin_b, 32767)
+    odo_x_01mm = odo_x_01mm + odo_dx_01mm
+    odo_y_01mm = odo_y_01mm + odo_dy_01mm
+    odo_theta_b = odo_theta_b + odo_dtheta_b

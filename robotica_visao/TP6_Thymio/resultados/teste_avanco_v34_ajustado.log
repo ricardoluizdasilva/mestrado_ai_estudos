@@ -1,0 +1,43 @@
+AVANÇO FÍSICO INICIADO.
+{'estado': 0, 'ticks': 0, 'distancia_cm': 0.0, 'paragem_cm': 0.0, 'modo': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 0, 'ticks': 0, 'distancia_cm': 0.0, 'paragem_cm': 0.0, 'modo': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 1, 'ticks': 3, 'distancia_cm': 0.415, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 55, 'vel_dir': 70}
+{'estado': 1, 'ticks': 6, 'distancia_cm': 1.21, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 78, 'vel_dir': 83}
+{'estado': 1, 'ticks': 6, 'distancia_cm': 1.21, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 78, 'vel_dir': 83}
+{'estado': 1, 'ticks': 9, 'distancia_cm': 2.04, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 84, 'vel_dir': 79}
+{'estado': 1, 'ticks': 9, 'distancia_cm': 2.04, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 83, 'vel_dir': 86}
+{'estado': 1, 'ticks': 12, 'distancia_cm': 2.92, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 83, 'vel_dir': 86}
+{'estado': 1, 'ticks': 16, 'distancia_cm': 4.035, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 78, 'vel_dir': 83}
+{'estado': 1, 'ticks': 16, 'distancia_cm': 4.035, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 78, 'vel_dir': 83}
+{'estado': 1, 'ticks': 19, 'distancia_cm': 4.875, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 83, 'vel_dir': 78}
+{'estado': 1, 'ticks': 19, 'distancia_cm': 4.875, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 81, 'vel_dir': 82}
+{'estado': 1, 'ticks': 22, 'distancia_cm': 5.68, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 81, 'vel_dir': 82}
+{'estado': 1, 'ticks': 25, 'distancia_cm': 6.505, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 82, 'vel_dir': 82}
+{'estado': 1, 'ticks': 25, 'distancia_cm': 6.505, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 35, 'vel_dir': 44}
+{'estado': 1, 'ticks': 28, 'distancia_cm': 7.195, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 35, 'vel_dir': 44}
+{'estado': 1, 'ticks': 31, 'distancia_cm': 7.605, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 40, 'vel_dir': 40}
+{'estado': 1, 'ticks': 31, 'distancia_cm': 7.605, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 40, 'vel_dir': 40}
+{'estado': 1, 'ticks': 34, 'distancia_cm': 8.025, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 40, 'vel_dir': 40}
+{'estado': 1, 'ticks': 37, 'distancia_cm': 8.44, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 39, 'vel_dir': 40}
+{'estado': 1, 'ticks': 37, 'distancia_cm': 8.44, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 39, 'vel_dir': 40}
+{'estado': 1, 'ticks': 40, 'distancia_cm': 8.855, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 40, 'vel_dir': 38}
+{'estado': 1, 'ticks': 44, 'distancia_cm': 9.395, 'paragem_cm': 0.0, 'modo': 1, 'vel_esq': 43, 'vel_dir': 40}
+{'estado': 1, 'ticks': 44, 'distancia_cm': 9.395, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 43, 'vel_dir': 40}
+{'estado': 2, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 39, 'vel_dir': 39}
+{'estado': 2, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 2, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 2, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 2, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 0, 'vel_dir': 0}
+{'estado': 3, 'ticks': 47, 'distancia_cm': 9.8, 'paragem_cm': 9.8, 'modo': 1, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADO V3.4 ===
+Estado final: 3
+Ciclos: 47
+Distância de controlo: 9.8 cm
+Distância no limiar: 9.8 cm
+X final estimado: 9.8000 cm
+Y final estimado: -0.0450 cm
+Deslocamento estimado: 9.8001 cm
+TESTE FÍSICO V3.4 CONCLUÍDO
+Resultados: resultados/avanco_linear_v34_ajustado.json
+Paragem solicitada. Nó desbloqueado.

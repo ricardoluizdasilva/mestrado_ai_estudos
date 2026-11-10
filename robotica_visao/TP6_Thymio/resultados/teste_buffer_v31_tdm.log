@@ -1,0 +1,39 @@
+Thymio identificado: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Compilação e carregamento: OK
+Leitura do snapshot iniciada.
+Movimento 80/120 iniciado.
+{'amostra': 0, 'ticks': 0, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 1, 'ticks': 2, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 2, 'ticks': 5, 'x_01mm': 85, 'y_01mm': 1, 'theta_b': 489, 'vel_esq': 73, 'vel_dir': 126}
+{'amostra': 3, 'ticks': 5, 'x_01mm': 85, 'y_01mm': 1, 'theta_b': 489, 'vel_esq': 73, 'vel_dir': 126}
+{'amostra': 4, 'ticks': 8, 'x_01mm': 184, 'y_01mm': 8, 'theta_b': 922, 'vel_esq': 81, 'vel_dir': 99}
+{'amostra': 5, 'ticks': 12, 'x_01mm': 318, 'y_01mm': 24, 'theta_b': 1524, 'vel_esq': 81, 'vel_dir': 105}
+{'amostra': 6, 'ticks': 12, 'x_01mm': 318, 'y_01mm': 24, 'theta_b': 1524, 'vel_esq': 81, 'vel_dir': 105}
+{'amostra': 7, 'ticks': 15, 'x_01mm': 424, 'y_01mm': 42, 'theta_b': 2035, 'vel_esq': 82, 'vel_dir': 130}
+{'amostra': 8, 'ticks': 18, 'x_01mm': 525, 'y_01mm': 65, 'theta_b': 2546, 'vel_esq': 79, 'vel_dir': 124}
+Comando de paragem enviado.
+{'amostra': 9, 'ticks': 20, 'x_01mm': 588, 'y_01mm': 81, 'theta_b': 2757, 'vel_esq': 81, 'vel_dir': 107}
+{'amostra': 10, 'ticks': 20, 'x_01mm': 588, 'y_01mm': 81, 'theta_b': 2757, 'vel_esq': 81, 'vel_dir': 107}
+{'amostra': 11, 'ticks': 23, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 79, 'vel_dir': 127}
+{'amostra': 12, 'ticks': 26, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 13, 'ticks': 26, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 14, 'ticks': 29, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 15, 'ticks': 32, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 16, 'ticks': 35, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 17, 'ticks': 35, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 18, 'ticks': 38, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 19, 'ticks': 40, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 20, 'ticks': 40, 'x_01mm': 682, 'y_01mm': 108, 'theta_b': 3113, 'vel_esq': 0, 'vel_dir': 0}
+\n=== BUFFER ASEBA ===
+Ciclos guardados: 40
+Soma dl: 555
+Soma dr: 835
+Pose Aseba: [682, 108, 3113]
+JSON: resultados/odometria_buffer_v31_40ciclos.json
+
+=== RESULTADOS ===
+Incremento de ticks: 40
+Pose permaneceu em zero: False
+CSV: resultados/odometria_buffer_v31_dinamica.csv
+Paragem solicitada.
+Nó desbloqueado.

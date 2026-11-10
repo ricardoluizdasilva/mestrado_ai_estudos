@@ -1,0 +1,37 @@
+
+V4.2 carregada. Estado 0, comandos de motor 0.
+Confirme robot alinhado, espaço livre e supervisão. Escreva INICIAR: Trajetória iniciada — pode interromper fisicamente o robô.
+Estado 1 | lado 0 | falha 0
+Estado 2 | lado 0 | falha 0
+Estado 3 | lado 0 | falha 0
+Estado 4 | lado 0 | falha 0
+Estado 1 | lado 1 | falha 0
+Estado 2 | lado 1 | falha 0
+Estado 3 | lado 1 | falha 0
+Estado 4 | lado 1 | falha 0
+Estado 1 | lado 2 | falha 0
+Estado 2 | lado 2 | falha 0
+Estado 3 | lado 2 | falha 0
+Estado 4 | lado 2 | falha 0
+Estado 1 | lado 3 | falha 0
+Estado 2 | lado 3 | falha 0
+Estado 3 | lado 3 | falha 0
+Estado 4 | lado 3 | falha 0
+Estado 5 | lado 4 | falha 0
+
+QUADRADO CONCLUÍDO. NÃO DESLOQUE O ROBÔ.
+Odometria pré-correção: {'x_cm': -0.282, 'y_cm': 0.495, 'theta_graus': 354.6112060546875}
+Trajetória guardada: resultados/validacao_v45/trajetoria_v45.csv
+Meça X e Y com sinais e o desvio angular assinado relativo à orientação inicial.
+A pose será corrigida para theta=360° + desvio angular.
+X (cm, com sinal; Enter cancela): Y (cm, com sinal; Enter cancela): desvio angular (graus, com sinal; Enter cancela): Paragem solicitada. Nó desbloqueado.
+Traceback (most recent call last):
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/testar_v45_quadrado_calibrado.py", line 211, in <module>
+    try: main()
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/testar_v45_quadrado_calibrado.py", line 208, in main
+    client.run_async_program(lambda: run(client))
+  File "/dados/ambientes/miniforge3/envs/thymio/lib/python3.10/site-packages/tdmclient/clientasync.py", line 199, in run_async_program
+    co.send(None)
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/testar_v45_quadrado_calibrado.py", line 165, in run
+    raise ValueError('Medição fora dos limites de segurança do ensaio')
+ValueError: Medição fora dos limites de segurança do ensaio

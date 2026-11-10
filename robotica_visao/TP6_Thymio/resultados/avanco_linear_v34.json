@@ -1,0 +1,263 @@
+[
+  {
+    "estado": 0,
+    "ticks": 0,
+    "distancia_cm": 0.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 0,
+    "ticks": 0,
+    "distancia_cm": 0.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 3,
+    "distancia_cm": 0.435,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 60,
+    "vel_dir": 69
+  },
+  {
+    "estado": 1,
+    "ticks": 6,
+    "distancia_cm": 1.265,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 108,
+    "vel_dir": 80
+  },
+  {
+    "estado": 1,
+    "ticks": 6,
+    "distancia_cm": 1.265,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 108,
+    "vel_dir": 80
+  },
+  {
+    "estado": 1,
+    "ticks": 8,
+    "distancia_cm": 1.795,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 78,
+    "vel_dir": 79
+  },
+  {
+    "estado": 1,
+    "ticks": 8,
+    "distancia_cm": 1.795,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 76,
+    "vel_dir": 82
+  },
+  {
+    "estado": 1,
+    "ticks": 12,
+    "distancia_cm": 2.91,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 76,
+    "vel_dir": 82
+  },
+  {
+    "estado": 1,
+    "ticks": 12,
+    "distancia_cm": 2.91,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 81,
+    "vel_dir": 85
+  },
+  {
+    "estado": 1,
+    "ticks": 15,
+    "distancia_cm": 3.75,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 78,
+    "vel_dir": 79
+  },
+  {
+    "estado": 1,
+    "ticks": 17,
+    "distancia_cm": 4.29,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 78,
+    "vel_dir": 79
+  },
+  {
+    "estado": 1,
+    "ticks": 21,
+    "distancia_cm": 5.38,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 78,
+    "vel_dir": 83
+  },
+  {
+    "estado": 1,
+    "ticks": 21,
+    "distancia_cm": 5.38,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 78,
+    "vel_dir": 83
+  },
+  {
+    "estado": 1,
+    "ticks": 24,
+    "distancia_cm": 6.205,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 82,
+    "vel_dir": 75
+  },
+  {
+    "estado": 1,
+    "ticks": 27,
+    "distancia_cm": 7.005,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 79,
+    "vel_dir": 81
+  },
+  {
+    "estado": 1,
+    "ticks": 27,
+    "distancia_cm": 7.005,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 79,
+    "vel_dir": 81
+  },
+  {
+    "estado": 1,
+    "ticks": 30,
+    "distancia_cm": 7.39,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 41,
+    "vel_dir": 39
+  },
+  {
+    "estado": 1,
+    "ticks": 33,
+    "distancia_cm": 7.795,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 38,
+    "vel_dir": 42
+  },
+  {
+    "estado": 1,
+    "ticks": 33,
+    "distancia_cm": 7.795,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 38,
+    "vel_dir": 42
+  },
+  {
+    "estado": 1,
+    "ticks": 36,
+    "distancia_cm": 8.19,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 39,
+    "vel_dir": 40
+  },
+  {
+    "estado": 1,
+    "ticks": 39,
+    "distancia_cm": 8.56,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 34,
+    "vel_dir": 41
+  },
+  {
+    "estado": 1,
+    "ticks": 39,
+    "distancia_cm": 8.56,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 34,
+    "vel_dir": 41
+  },
+  {
+    "estado": 1,
+    "ticks": 42,
+    "distancia_cm": 8.955,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 39,
+    "vel_dir": 40
+  },
+  {
+    "estado": 1,
+    "ticks": 42,
+    "distancia_cm": 8.955,
+    "paragem_cm": 0.0,
+    "modo": 1,
+    "vel_esq": 40,
+    "vel_dir": 39
+  },
+  {
+    "estado": 1,
+    "ticks": 45,
+    "distancia_cm": 9.355,
+    "paragem_cm": 9.605,
+    "modo": 1,
+    "vel_esq": 40,
+    "vel_dir": 39
+  },
+  {
+    "estado": 2,
+    "ticks": 47,
+    "distancia_cm": 9.605,
+    "paragem_cm": 9.605,
+    "modo": 1,
+    "vel_esq": 1,
+    "vel_dir": 3
+  },
+  {
+    "estado": 2,
+    "ticks": 47,
+    "distancia_cm": 9.605,
+    "paragem_cm": 9.605,
+    "modo": 1,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 2,
+    "ticks": 47,
+    "distancia_cm": 9.605,
+    "paragem_cm": 9.605,
+    "modo": 1,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 3,
+    "ticks": 47,
+    "distancia_cm": 9.605,
+    "paragem_cm": 9.605,
+    "modo": 1,
+    "vel_esq": 0,
+    "vel_dir": 0
+  }
+]

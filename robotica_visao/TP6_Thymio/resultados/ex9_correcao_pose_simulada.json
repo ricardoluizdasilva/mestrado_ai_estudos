@@ -1,0 +1,22 @@
+{
+  "tipo": "simulacao_com_referencia_ideal",
+  "pose_odom": {
+    "x_cm": -0.266,
+    "y_cm": 0.079,
+    "theta_graus": 359.676
+  },
+  "pose_referencia": {
+    "x_cm": 0.0,
+    "y_cm": 0.0,
+    "theta_graus": 360.0
+  },
+  "pose_corrigida": {
+    "x_cm": 0.0,
+    "y_cm": 0.0,
+    "theta_graus": 360.0
+  },
+  "erro_antes_cm": 0.2774833328328028,
+  "erro_depois_cm": 0.0,
+  "erro_angular_antes_graus": -0.3240000000000123,
+  "erro_angular_depois_graus": 0.0
+}

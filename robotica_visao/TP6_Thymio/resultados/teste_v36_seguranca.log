@@ -1,0 +1,20 @@
+=== TESTE DE SEGURANÇA V3.6 ===
+Programa iniciado sem pedido de movimento.
+{'amostra': 0, 'ticks': 2, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 1, 'ticks': 9, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 2, 'ticks': 12, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 3, 'ticks': 18, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 4, 'ticks': 22, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 5, 'ticks': 28, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 6, 'ticks': 32, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 7, 'ticks': 38, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 8, 'ticks': 41, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 9, 'ticks': 47, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+{'amostra': 10, 'ticks': 53, 'state': 0, 'arm': 0, 'request': 0, 'fault': 0, 'motor_left': 0, 'motor_right': 0, 'proximidade': [0, 0, 0, 0, 0, 0, 0]}
+
+=== RESULTADO ===
+Incremento do temporizador: 51
+Estados e motores: OK
+TESTE DE SEGURANÇA V3.6: OK
+Resultados: resultados/seguranca_v36.json
+Paragem solicitada. Nó desbloqueado.

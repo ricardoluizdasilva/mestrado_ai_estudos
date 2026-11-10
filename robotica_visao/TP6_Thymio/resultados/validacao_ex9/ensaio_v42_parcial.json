@@ -1,0 +1,27 @@
+{
+  "tipo": "ensaio_fisico_com_correcao_v42",
+  "instante": "2026-11-09T23:46:03.723102",
+  "correcao_aplicada": false,
+  "fonte_referencia": "medicao_manual_externa",
+  "odometria_pre_correcao": {
+    "x_cm": -0.182,
+    "y_cm": 0.325,
+    "theta_graus": 357.8466796875
+  },
+  "estado_final": 5,
+  "lados": 4,
+  "medicao_externa": {
+    "x_cm": 5.0,
+    "y_cm": 1.0,
+    "desvio_angular_graus": 18.0,
+    "theta_global_graus": 378.0
+  },
+  "referencia_aseba": {
+    "corr_ref_x_coarse": 500,
+    "corr_ref_x_rem": 0,
+    "corr_ref_y_coarse": 100,
+    "corr_ref_y_rem": 0,
+    "corr_ref_theta_b": 3277,
+    "corr_ref_turns": 1
+  }
+}

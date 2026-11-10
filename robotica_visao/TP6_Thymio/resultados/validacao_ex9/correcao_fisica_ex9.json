@@ -1,0 +1,28 @@
+{
+  "tipo": "correcao_por_medicao_fisica_manual",
+  "odometria_antes": {
+    "x_cm": -0.228,
+    "y_cm": 0.747,
+    "theta_graus": 356.759
+  },
+  "pose_fisica_medida": {
+    "x_cm": -2.0,
+    "y_cm": 0.5,
+    "theta_graus": 342.0
+  },
+  "correcao": {
+    "delta_x_cm": -1.772,
+    "delta_y_cm": -0.247,
+    "delta_theta_graus": -14.759000000000015,
+    "discrepancia_posicional_mm": 17.8913191240892
+  },
+  "referencia_aseba": {
+    "corr_ref_x_coarse": -200,
+    "corr_ref_x_rem": 0,
+    "corr_ref_y_coarse": 50,
+    "corr_ref_y_rem": 0,
+    "corr_ref_theta_b": -3277,
+    "corr_ref_turns": 1
+  },
+  "aplicada_no_robot": false
+}

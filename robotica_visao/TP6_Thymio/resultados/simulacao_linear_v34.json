@@ -1,0 +1,227 @@
+[
+  {
+    "estado": 0,
+    "ticks": 0,
+    "distancia_cm": 0.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 0,
+    "ticks": 0,
+    "distancia_cm": 0.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 3,
+    "distancia_cm": 0.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 3,
+    "distancia_cm": 0.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 6,
+    "distancia_cm": 1.5,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 9,
+    "distancia_cm": 2.25,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 9,
+    "distancia_cm": 2.25,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 12,
+    "distancia_cm": 3.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 15,
+    "distancia_cm": 3.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 15,
+    "distancia_cm": 3.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 18,
+    "distancia_cm": 4.5,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 18,
+    "distancia_cm": 4.5,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 22,
+    "distancia_cm": 5.5,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 25,
+    "distancia_cm": 6.25,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 25,
+    "distancia_cm": 6.25,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 28,
+    "distancia_cm": 7.0,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 31,
+    "distancia_cm": 7.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 31,
+    "distancia_cm": 7.75,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 34,
+    "distancia_cm": 8.5,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 37,
+    "distancia_cm": 9.25,
+    "paragem_cm": 0.0,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 1,
+    "ticks": 37,
+    "distancia_cm": 9.25,
+    "paragem_cm": 9.5,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 2,
+    "ticks": 38,
+    "distancia_cm": 9.5,
+    "paragem_cm": 9.5,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 2,
+    "ticks": 38,
+    "distancia_cm": 9.5,
+    "paragem_cm": 9.5,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 2,
+    "ticks": 38,
+    "distancia_cm": 9.5,
+    "paragem_cm": 9.5,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  },
+  {
+    "estado": 3,
+    "ticks": 38,
+    "distancia_cm": 9.5,
+    "paragem_cm": 9.5,
+    "modo": 0,
+    "vel_esq": 0,
+    "vel_dir": 0
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "tipo": "ensaio_fisico_com_correcao_v42",
+  "instante": "2026-11-10T10:30:42.089748",
+  "correcao_aplicada": false,
+  "fonte_referencia": "medicao_manual_externa",
+  "odometria_pre_correcao": {
+    "x_cm": -0.282,
+    "y_cm": 0.495,
+    "theta_graus": 354.6112060546875
+  },
+  "estado_final": 5,
+  "lados": 4
+}

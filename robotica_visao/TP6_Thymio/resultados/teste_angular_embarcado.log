@@ -1,0 +1,5 @@
+Passos executados: 8
+Obtido:   [16384, -32768, -16384, 0, -16384, -32768, 16384, 0]
+Esperado: [16384, -32768, -16384, 0, -16384, -32768, 16384, 0]
+TESTE ANGULAR EMBARCADO: OK
+Programa parado e nó desbloqueado.

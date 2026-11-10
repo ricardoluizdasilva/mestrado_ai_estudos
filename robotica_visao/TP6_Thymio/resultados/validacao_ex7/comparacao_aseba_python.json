@@ -1,0 +1,21 @@
+{
+  "ciclos": 40,
+  "kd_representado": 0.035,
+  "distancia_entre_rodas_cm": 9.35,
+  "pose_aseba": {
+    "x_cm": 6.63,
+    "y_cm": 0.8,
+    "theta_graus": 15.809326171875
+  },
+  "pose_python": {
+    "x_cm": 6.854663017801777,
+    "y_cm": 0.9141125489938607,
+    "theta_graus": 15.871237319666657
+  },
+  "erros_aseba_menos_python": {
+    "x_cm": -0.22466301780177744,
+    "y_cm": -0.1141125489938607,
+    "posicao_cm": 0.2519824307480147,
+    "theta_graus": -0.06191114779165671
+  }
+}

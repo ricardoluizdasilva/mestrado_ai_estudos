@@ -1,0 +1,32 @@
+Thymio identificado: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Compilação e carregamento: OK
+Leitura do snapshot iniciada.
+Pose V3: [0, 0, 0, 0]
+{'amostra': 0, 'ticks': 2, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 1, 'ticks': 9, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 2, 'ticks': 12, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 3, 'ticks': 16, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 4, 'ticks': 23, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 5, 'ticks': 26, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 6, 'ticks': 32, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 7, 'ticks': 38, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 8, 'ticks': 44, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 9, 'ticks': 47, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+Pose V3: [0, 0, 0, 0]
+{'amostra': 10, 'ticks': 52, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADOS ===
+Incremento de ticks: 50
+Pose estável: True
+CSV: resultados/odometria_v3_estatica.csv
+Paragem solicitada.
+Nó desbloqueado.

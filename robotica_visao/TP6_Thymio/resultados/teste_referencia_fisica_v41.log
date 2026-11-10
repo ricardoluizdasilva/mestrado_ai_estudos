@@ -1,0 +1,13 @@
+=== TP6 - REFERENCIA FISICA V4.1 ===
+Thymio parado, referencia (0, 0, 0 graus)
+A discrepancia inicial sera artificial.
+
+Robot alinhado e seguro? Escreva SIM: 
+Motores parados.
+Pose artificial: {'x_cm': 10.0, 'y_cm': 5.0, 'theta_graus': 90.0}
+Pose corrigida: {'x_cm': 0.0, 'y_cm': 0.0, 'theta_graus': 0.0}
+JSON: resultados/ex9_referencia_fisica_v41.json
+CSV: resultados/ex9_referencia_fisica_v41.csv
+
+REFERENCIA FISICA V4.1: OK
+Programa parado. No desbloqueado.

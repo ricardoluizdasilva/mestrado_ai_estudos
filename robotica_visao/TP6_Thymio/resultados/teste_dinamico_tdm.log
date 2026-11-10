@@ -1,0 +1,35 @@
+=== TESTE ESTÁTICO TP6 ===
+Thymio: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Compilação: OK
+Programa iniciado.
+A iniciar movimento de teste...
+{'tempo_s': 0.0, 'ticks': 0, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 0.2, 'ticks': 2, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 2}
+{'tempo_s': 0.4, 'ticks': 4, 'x_01mm': 57, 'y_01mm': 0, 'theta_b': 300, 'vel_esq': 66, 'vel_dir': 106}
+{'tempo_s': 0.6, 'ticks': 6, 'x_01mm': 121, 'y_01mm': 2, 'theta_b': 689, 'vel_esq': 78, 'vel_dir': 128}
+{'tempo_s': 0.8, 'ticks': 9, 'x_01mm': 221, 'y_01mm': 10, 'theta_b': 1290, 'vel_esq': 79, 'vel_dir': 137}
+{'tempo_s': 1.0, 'ticks': 11, 'x_01mm': 288, 'y_01mm': 18, 'theta_b': 1524, 'vel_esq': 78, 'vel_dir': 137}
+{'tempo_s': 1.2, 'ticks': 13, 'x_01mm': 354, 'y_01mm': 27, 'theta_b': 1836, 'vel_esq': 82, 'vel_dir': 120}
+{'tempo_s': 1.4, 'ticks': 13, 'x_01mm': 423, 'y_01mm': 40, 'theta_b': 2192, 'vel_esq': 76, 'vel_dir': 137}
+{'tempo_s': 1.6, 'ticks': 15, 'x_01mm': 423, 'y_01mm': 40, 'theta_b': 2192, 'vel_esq': 85, 'vel_dir': 108}
+{'tempo_s': 1.8, 'ticks': 17, 'x_01mm': 486, 'y_01mm': 54, 'theta_b': 2514, 'vel_esq': 85, 'vel_dir': 108}
+Motores parados.
+{'tempo_s': 2.0, 'ticks': 22, 'x_01mm': 640, 'y_01mm': 96, 'theta_b': 3181, 'vel_esq': 78, 'vel_dir': 129}
+{'tempo_s': 2.2, 'ticks': 24, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3425, 'vel_esq': 53, 'vel_dir': 88}
+{'tempo_s': 2.4, 'ticks': 24, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 2.6, 'ticks': 26, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 2.8, 'ticks': 28, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.0, 'ticks': 31, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.2, 'ticks': 33, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.4, 'ticks': 35, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.6, 'ticks': 37, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 3.8, 'ticks': 39, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+{'tempo_s': 4.0, 'ticks': 42, 'x_01mm': 700, 'y_01mm': 115, 'theta_b': 3436, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADOS ===
+Incremento do contador: 42
+CSV: resultados/odometria_dinamica_tdm.csv
+Pose alterada durante o ensaio.
+Programa parado.
+Motores: paragem solicitada.
+Nó desbloqueado.

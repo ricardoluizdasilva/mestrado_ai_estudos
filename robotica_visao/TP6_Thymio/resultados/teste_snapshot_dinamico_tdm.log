@@ -1,0 +1,33 @@
+Thymio identificado: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Compilação e carregamento: OK
+Leitura do snapshot iniciada.
+Movimento 80/120 iniciado.
+{'amostra': 0, 'ticks': 2, 'x_01mm': 0, 'y_01mm': 0, 'theta_b': 0, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 1, 'ticks': 4, 'x_01mm': 55, 'y_01mm': 0, 'theta_b': 267, 'vel_esq': 69, 'vel_dir': 100}
+{'amostra': 2, 'ticks': 4, 'x_01mm': 55, 'y_01mm': 0, 'theta_b': 267, 'vel_esq': 69, 'vel_dir': 100}
+{'amostra': 3, 'ticks': 6, 'x_01mm': 115, 'y_01mm': 1, 'theta_b': 511, 'vel_esq': 77, 'vel_dir': 110}
+{'amostra': 4, 'ticks': 9, 'x_01mm': 208, 'y_01mm': 6, 'theta_b': 833, 'vel_esq': 74, 'vel_dir': 100}
+{'amostra': 5, 'ticks': 11, 'x_01mm': 271, 'y_01mm': 11, 'theta_b': 1044, 'vel_esq': 84, 'vel_dir': 113}
+{'amostra': 6, 'ticks': 13, 'x_01mm': 335, 'y_01mm': 18, 'theta_b': 1322, 'vel_esq': 82, 'vel_dir': 133}
+{'amostra': 7, 'ticks': 15, 'x_01mm': 405, 'y_01mm': 27, 'theta_b': 1611, 'vel_esq': 97, 'vel_dir': 113}
+{'amostra': 8, 'ticks': 18, 'x_01mm': 511, 'y_01mm': 45, 'theta_b': 2190, 'vel_esq': 83, 'vel_dir': 114}
+Comando de paragem enviado.
+{'amostra': 9, 'ticks': 20, 'x_01mm': 580, 'y_01mm': 60, 'theta_b': 2579, 'vel_esq': 78, 'vel_dir': 130}
+{'amostra': 10, 'ticks': 23, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 74, 'vel_dir': 115}
+{'amostra': 11, 'ticks': 23, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 74, 'vel_dir': 115}
+{'amostra': 12, 'ticks': 25, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 13, 'ticks': 27, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 14, 'ticks': 30, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 15, 'ticks': 32, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 16, 'ticks': 35, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 17, 'ticks': 35, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 18, 'ticks': 37, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 19, 'ticks': 39, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+{'amostra': 20, 'ticks': 42, 'x_01mm': 671, 'y_01mm': 85, 'theta_b': 3080, 'vel_esq': 0, 'vel_dir': 0}
+
+=== RESULTADOS ===
+Incremento de ticks: 40
+Pose permaneceu em zero: False
+CSV: resultados/odometria_snapshot_dinamica.csv
+Paragem solicitada.
+Nó desbloqueado.

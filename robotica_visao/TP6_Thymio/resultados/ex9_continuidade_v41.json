@@ -1,0 +1,68 @@
+[
+  {
+    "teste": "A - deslocamento Y",
+    "referencia": {
+      "x_cm": 10.0,
+      "y_cm": 5.0,
+      "theta_graus": 90.0
+    },
+    "incrementos_01mm": {
+      "esquerda": 20,
+      "direita": 20
+    },
+    "pose_final": {
+      "x_cm": 10.0,
+      "y_cm": 5.2,
+      "theta_graus": 90.0
+    },
+    "motores": [
+      0,
+      0
+    ],
+    "estado": "OK"
+  },
+  {
+    "teste": "B - preservacao de residuos",
+    "referencia": {
+      "x_cm": 10.123,
+      "y_cm": -5.067,
+      "theta_graus": 0.0
+    },
+    "incrementos_01mm": {
+      "esquerda": 20,
+      "direita": 20
+    },
+    "pose_final": {
+      "x_cm": 10.323,
+      "y_cm": -5.067,
+      "theta_graus": 0.0
+    },
+    "motores": [
+      0,
+      0
+    ],
+    "estado": "OK"
+  },
+  {
+    "teste": "C - rotacao",
+    "referencia": {
+      "x_cm": 0.0,
+      "y_cm": 0.0,
+      "theta_graus": 0.0
+    },
+    "incrementos_01mm": {
+      "esquerda": -20,
+      "direita": 20
+    },
+    "pose_final": {
+      "x_cm": 0.0,
+      "y_cm": 0.0,
+      "theta_graus": 2.449951171875
+    },
+    "motores": [
+      0,
+      0
+    ],
+    "estado": "OK"
+  }
+]

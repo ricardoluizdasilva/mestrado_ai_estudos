@@ -1,0 +1,33 @@
+
+V4.2 carregada. Estado 0, comandos de motor 0.
+Confirme robot alinhado, espaço livre e supervisão. Escreva INICIAR: Trajetória iniciada — pode interromper fisicamente o robô.
+Estado 1 | lado 0 | falha 0
+Estado 2 | lado 0 | falha 0
+Estado 3 | lado 0 | falha 0
+Estado 4 | lado 0 | falha 0
+Estado 1 | lado 1 | falha 0
+Estado 2 | lado 1 | falha 0
+Estado 3 | lado 1 | falha 0
+Estado 4 | lado 1 | falha 0
+Estado 1 | lado 2 | falha 0
+Estado 2 | lado 2 | falha 0
+Estado 3 | lado 2 | falha 0
+Estado 4 | lado 2 | falha 0
+Estado 1 | lado 3 | falha 0
+Estado 2 | lado 3 | falha 0
+Estado 3 | lado 3 | falha 0
+Estado 4 | lado 3 | falha 0
+Estado 5 | lado 4 | falha 0
+
+QUADRADO CONCLUÍDO. NÃO DESLOQUE O ROBÔ.
+Odometria pré-correção: {'x_cm': -0.067, 'y_cm': -0.039, 'theta_graus': 357.2369384765625}
+Trajetória guardada: resultados/validacao_v45/ensaio_20261110_103756/trajetoria_v45.csv
+Meça X e Y com sinais e o desvio angular assinado relativo à orientação inicial.
+A pose será corrigida para theta=360° + desvio angular.
+X (cm, com sinal; Enter cancela): Y (cm, com sinal; Enter cancela): desvio angular (graus, com sinal; Enter cancela): Angulo introduzido: +358.000 graus; desvio normalizado: -2.000 graus
+Confirmar a aplicação desta pose física? Escreva CORRIGIR: 
+CORREÇÃO V4.2: OK
+Pose antes: {'x_cm': -0.067, 'y_cm': -0.039, 'theta_graus': 357.2369384765625}
+Pose depois: {'x_cm': 0.0, 'y_cm': 0.0, 'theta_graus': 358.00048828125}
+Evidência: resultados/validacao_v45/ensaio_20261110_103756/ensaio_v45_corrigido.json
+Paragem solicitada. Nó desbloqueado.

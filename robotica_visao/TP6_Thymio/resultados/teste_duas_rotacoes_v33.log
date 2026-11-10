@@ -1,0 +1,10 @@
+
+=== MANOBRA SIMULADA 1 ===
+{'manobra': 1, 'estado': 3, 'ciclos': 33, 'theta_rel_graus': 90.0, 'theta_global_graus': 90.0, 'turns': 0}
+
+=== MANOBRA SIMULADA 2 ===
+{'manobra': 2, 'estado': 3, 'ciclos': 33, 'theta_rel_graus': 90.0, 'theta_global_graus': 180.0, 'turns': 1}
+
+DUAS ROTAÇÕES RELATIVAS: OK
+Resultados: resultados/duas_rotacoes_v33.json
+Programa parado e nó desbloqueado.

@@ -1,0 +1,11 @@
+Diagnostico: abort
+A iniciar manobra logica...
+Paragem solicitada. No desbloqueado.
+Traceback (most recent call last):
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/testar_interrupcao_v36.py", line 166, in <module>
+    client.run_async_program(testar)
+  File "/dados/ambientes/miniforge3/envs/thymio/lib/python3.10/site-packages/tdmclient/clientasync.py", line 199, in run_async_program
+    co.send(None)
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/testar_interrupcao_v36.py", line 98, in testar
+    raise RuntimeError(
+RuntimeError: Manobra abortada antes da injecao

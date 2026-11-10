@@ -1,0 +1,27 @@
+=== TP6 - VALIDAÇÃO ASEBA ===
+Programa: resultados/odometria_embarcada_calibrada.aesl
+A estabelecer comunicação...
+Thymio identificado: 58360
+
+A compilar código Aseba...
+line # TP6 exercício 7: odometria embarcada em Aseba (protótipo A TESTAR em hardware).
+
+A encerrar comunicação...
+
+=== ENCERRAMENTO ===
+Comandos de paragem enviados.
+Shutdown da comunicacao solicitado.
+Thread de entrada terminada.
+Thread principal terminada.
+Tarefas pendentes antes da limpeza: 1
+Tarefas pendentes apos limpeza: 0
+Ciclo asyncio fechado corretamente.
+Procedimento de encerramento concluido.
+Traceback (most recent call last):
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/validar_aseba_tp6.py", line 75, in <module>
+    main()
+  File "/dados/projetos/mestrado_ai_estudos/robotica_visao/TP6_Thymio/scripts/validar_aseba_tp6.py", line 59, in main
+    bytecode = assembler.assemble()
+  File "/dados/ambientes/miniforge3/envs/thymio/lib/python3.10/site-packages/thymiodirect/assembler.py", line 396, in assemble
+    raise Exception(f"Syntax error (line {i+1})")
+Exception: Syntax error (line 1)

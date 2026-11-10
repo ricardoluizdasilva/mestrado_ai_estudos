@@ -1,0 +1,377 @@
+# TP6 exercício 7: odometria embarcada em Aseba (protótipo A TESTAR em hardware).
+# Convenções: x/y e ds em unidades de 0.1 mm; theta em unidades Aseba (-pi,pi -> int16).
+# Intervalo fixo de timer0 = 100 ms. Usar GANHO APENAS DEPOIS de calibrar.
+# KD_MILLI: round(Kd(cm/(s*unidade motor.speed))*1000) calculado no script Python.
+# Exemplo: Kd=0.04 -> KD_MILLI=40, mas é apenas ilustrativo, NÃO é calibração.
+# Risco de arredondamento (Aseba aritmética inteira), escorregamento e overflow int16.
+# Este programa não comanda motores. Apenas calcula pose estimada.
+
+var odo_x_01mm = 0
+var odo_y_01mm = 0
+var odo_theta_b = 0
+var odo_kd_milli = 35
+var odo_dl_01mm = 0
+var odo_dr_01mm = 0
+var odo_ds_01mm = 0
+var odo_diff_01mm = 0
+var odo_dtheta_b = 0
+var odo_theta_mid_b = 0
+var odo_cos_b = 0
+var odo_sin_b = 0
+var odo_dx_01mm = 0
+var odo_dy_01mm = 0
+
+# Ativar apenas o timer (não iniciar motores)
+var odo_ticks = 0
+
+var odo_snapshot[6] = [0, 0, 0, 0, 0, 0]
+
+
+# Buffer para 40 ciclos de 100 ms
+var odo_record_n = 0
+var odo_dl_log[40]
+var odo_dr_log[40]
+var odo_pose_log[3] = [0, 0, 0]
+
+# V2: coordenadas em unidades de 0,01 mm
+var odo_x_coarse = 0
+var odo_x_rem = 0
+var odo_x_carry = 0
+var odo_y_coarse = 0
+var odo_y_rem = 0
+var odo_y_carry = 0
+var odo_ds2_005mm = 0
+var odo_dx_001mm = 0
+var odo_dy_001mm = 0
+var odo_pose_hi_log[4] = [0, 0, 0, 0]
+
+var odo_half_b = 0
+var odo_turns = 0
+
+
+var seq_request = 0
+var seq_arm = 0
+var seq_abort = 0
+var seq_state = 0
+var seq_side = 0
+var seq_goal_sides = 4
+var seq_fault = 0
+var seq_ticks = 0
+var seq_line_ticks = 0
+var seq_turn_ticks = 0
+var seq_progress = 0
+var seq_heading_b = 0
+var seq_correction = 0
+var seq_angle_b = 0
+var seq_wait = 0
+var seq_last_state = 0
+var seq_history[20]
+var seq_history_n = 0
+
+# TP6 Ex9 V4.2: external measured pose (signed 16-bit Aseba units)
+var corr_request = 0
+var corr_applied = 0
+var corr_rejected = 0
+var corr_status = 0
+var corr_ref_x_coarse = 0
+var corr_ref_x_rem = 0
+var corr_ref_y_coarse = 0
+var corr_ref_y_rem = 0
+var corr_ref_theta_b = 0
+var corr_ref_turns = 0
+# Preserve pose before correction for audit
+var corr_pre_x_coarse = 0
+var corr_pre_x_rem = 0
+var corr_pre_y_coarse = 0
+var corr_pre_y_rem = 0
+var corr_pre_theta_b = 0
+var corr_pre_turns = 0
+
+timer.period[0] = 100
+
+onevent timer0
+    odo_ticks = odo_ticks + 1
+    # Kd [cm/s/unidade] -> deslocamento em 0.1 mm num intervalo de 0.1 s
+    # d_01mm = speed * Kd * 10 = speed * KD_MILLI / 100
+    call math.muldiv(odo_dl_01mm, motor.left.speed, odo_kd_milli, 100)
+    call math.muldiv(odo_dr_01mm, motor.right.speed, odo_kd_milli, 100)
+
+    odo_ds_01mm = (odo_dl_01mm + odo_dr_01mm) / 2
+    odo_ds2_005mm = odo_dl_01mm + odo_dr_01mm
+    odo_diff_01mm = odo_dr_01mm - odo_dl_01mm
+
+    # distância entre rodas L=9.35 cm = 935 unidades de 0.1mm
+    # 1 rad = aprox. 10430 unidades Aseba
+    call math.muldiv(odo_dtheta_b, odo_diff_01mm, 10430, 935)
+
+    odo_half_b = odo_dtheta_b / 2
+
+    if odo_half_b > 0 then
+        if odo_theta_b > 32767 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    end
+    call math.cos(odo_cos_b, odo_theta_mid_b)
+    call math.sin(odo_sin_b, odo_theta_mid_b)
+
+    # cos/sin Aseba escalados aproximadamente por 32767
+    call math.muldiv(odo_dx_001mm, odo_ds2_005mm, odo_cos_b, 6553)
+    call math.muldiv(odo_dy_001mm, odo_ds2_005mm, odo_sin_b, 6553)
+
+    odo_x_rem = odo_x_rem + odo_dx_001mm
+    odo_x_carry = odo_x_rem / 10
+    odo_x_coarse = odo_x_coarse + odo_x_carry
+    odo_x_rem = odo_x_rem - odo_x_carry * 10
+    odo_x_01mm = odo_x_coarse
+    odo_y_rem = odo_y_rem + odo_dy_001mm
+    odo_y_carry = odo_y_rem / 10
+    odo_y_coarse = odo_y_coarse + odo_y_carry
+    odo_y_rem = odo_y_rem - odo_y_carry * 10
+    odo_y_01mm = odo_y_coarse
+    if odo_dtheta_b > 0 then
+        if odo_theta_b > 32767 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_turns = odo_turns + 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_turns = odo_turns - 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    end
+
+    # Registar os incrementos efetivamente usados no cálculo
+    if odo_record_n < 40 then
+        odo_dl_log[odo_record_n] = odo_dl_01mm
+        odo_dr_log[odo_record_n] = odo_dr_01mm
+        odo_pose_log = [odo_x_01mm, odo_y_01mm, odo_theta_b]
+        odo_pose_hi_log = [
+            odo_x_coarse, odo_x_rem,
+            odo_y_coarse, odo_y_rem
+        ]
+        odo_record_n = odo_record_n + 1
+    end
+
+
+    # Fotografia da pose e das velocidades após cada ciclo
+    odo_snapshot = [
+        odo_ticks,
+        odo_x_01mm,
+        odo_y_01mm,
+        odo_theta_b,
+        motor.left.speed,
+        motor.right.speed
+    ]
+
+# V3.6 - Um avanço e uma rotação, modo físico
+# 0=pronto, 1=reta, 2=estabilizar reta
+# 3=rodar, 4=estabilizar rotação
+# 5=concluído, 6=falha
+
+motor.left.target = 0
+motor.right.target = 0
+
+if seq_state == 0 then
+    if seq_request == 1 and seq_arm == 1 then
+        seq_request = 0
+        seq_arm = 0
+
+        if prox.horizontal[0] > 3000 or prox.horizontal[1] > 3000 or prox.horizontal[2] > 3000 or prox.horizontal[3] > 3000 or prox.horizontal[4] > 3000 then
+            seq_fault = 1
+            seq_state = 6
+        else
+        seq_arm = 0
+        seq_ticks = 0
+        seq_side = 0
+        seq_line_ticks = 0
+        seq_turn_ticks = 0
+        seq_progress = 0
+        seq_heading_b = 0
+        seq_angle_b = 0
+        seq_wait = 0
+        seq_fault = 0
+        seq_state = 1
+        end
+    end
+
+elseif seq_state == 1 then
+    seq_ticks = seq_ticks + 1
+    seq_line_ticks = seq_line_ticks + 1
+
+    seq_progress = seq_progress + (odo_dl_01mm + odo_dr_01mm) * 5
+    seq_heading_b = seq_heading_b + odo_dtheta_b
+
+    seq_correction = (0 - seq_heading_b) / 182
+    if seq_correction > 8 then
+        seq_correction = 8
+    end
+    if seq_correction < -8 then
+        seq_correction = -8
+    end
+
+    if seq_line_ticks >= 60 then
+        seq_fault = 2
+        seq_state = 6
+    elseif seq_heading_b > 2730 or seq_heading_b < -2730 then
+        seq_fault = 3
+        seq_state = 6
+    elseif seq_progress >= 9700 then
+        seq_state = 2
+        seq_wait = 0
+    else
+        if seq_progress >= 7000 then
+            motor.left.target = 40 - seq_correction
+            motor.right.target = 40 + seq_correction
+        else
+            motor.left.target = 80 - seq_correction
+            motor.right.target = 80 + seq_correction
+        end
+    end
+
+elseif seq_state == 2 then
+    seq_ticks = seq_ticks + 1
+    seq_wait = seq_wait + 1
+    if seq_wait >= 8 then
+        seq_wait = 0
+        seq_angle_b = 0
+        seq_state = 3
+    end
+
+elseif seq_state == 3 then
+    seq_ticks = seq_ticks + 1
+    seq_turn_ticks = seq_turn_ticks + 1
+    seq_angle_b = seq_angle_b + odo_dtheta_b
+
+    if seq_turn_ticks >= 100 then
+        seq_fault = 4
+        seq_state = 6
+    elseif seq_angle_b < -1000 then
+        seq_fault = 5
+        seq_state = 6
+    elseif seq_angle_b >= 16111 then
+        seq_state = 4
+        seq_wait = 0
+    elseif seq_angle_b >= 11833 then
+        motor.left.target = -30
+        motor.right.target = 30
+    else
+        motor.left.target = -60
+        motor.right.target = 60
+    end
+
+elseif seq_state == 4 then
+    seq_ticks = seq_ticks + 1
+    seq_wait = seq_wait + 1
+    if seq_wait >= 8 then
+        seq_side = seq_side + 1
+
+        if seq_side >= seq_goal_sides then
+            seq_state = 5
+        else
+            seq_line_ticks = 0
+            seq_turn_ticks = 0
+            seq_progress = 0
+            seq_heading_b = 0
+            seq_correction = 0
+            seq_angle_b = 0
+            seq_wait = 0
+            seq_state = 1
+        end
+    end
+end
+
+# Obstáculo frontal ou pedido de interrupção.
+if seq_state >= 1 and seq_state <= 4 then
+    if seq_abort == 1 then
+        seq_fault = 6
+        seq_state = 6
+    elseif prox.horizontal[0] > 3000 or prox.horizontal[1] > 3000 or prox.horizontal[2] > 3000 or prox.horizontal[3] > 3000 or prox.horizontal[4] > 3000 then
+        seq_fault = 1
+        seq_state = 6
+    end
+end
+
+if seq_ticks >= 700 and seq_state != 5 then
+    seq_fault = 7
+    seq_state = 6
+end
+
+if seq_state == 5 or seq_state == 6 then
+    motor.left.target = 0
+    motor.right.target = 0
+end
+
+if seq_state != seq_last_state then
+    if seq_history_n < 20 then
+        seq_history[seq_history_n] = seq_state
+        seq_history_n = seq_history_n + 1
+    end
+    seq_last_state = seq_state
+end
+
+# V4.2: apply external pose only once the 4-side sequence has finished.
+# State 5 means complete, 6 means fault. Never correct on a fault.
+if corr_request == 1 then
+    if seq_state == 5 and seq_fault == 0 then
+        if motor.left.target == 0 and motor.right.target == 0 then
+            if motor.left.speed >= -2 and motor.left.speed <= 2 and motor.right.speed >= -2 and motor.right.speed <= 2 then
+                corr_pre_x_coarse = odo_x_coarse
+                corr_pre_x_rem = odo_x_rem
+                corr_pre_y_coarse = odo_y_coarse
+                corr_pre_y_rem = odo_y_rem
+                corr_pre_theta_b = odo_theta_b
+                corr_pre_turns = odo_turns
+
+                odo_x_coarse = corr_ref_x_coarse
+                odo_x_rem = corr_ref_x_rem
+                odo_y_coarse = corr_ref_y_coarse
+                odo_y_rem = corr_ref_y_rem
+                odo_x_carry = 0
+                odo_y_carry = 0
+                odo_x_01mm = odo_x_coarse
+                odo_y_01mm = odo_y_coarse
+                odo_theta_b = corr_ref_theta_b
+                odo_turns = corr_ref_turns
+
+                corr_request = 0
+                corr_applied = corr_applied + 1
+                corr_status = 1
+                # Snapshot is refreshed after the correction.
+                odo_snapshot = [odo_ticks, odo_x_01mm, odo_y_01mm, odo_theta_b, motor.left.speed, motor.right.speed]
+            end
+        end
+    else
+        # Invalid sequence state: do not change any odometry coordinate.
+        corr_request = 0
+        corr_rejected = corr_rejected + 1
+        corr_status = -1
+    end
+end

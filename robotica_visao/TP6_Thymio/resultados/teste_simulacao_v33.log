@@ -1,0 +1,31 @@
+Simulação iniciada.
+{'amostra': 0, 'estado': 0, 'ticks': 0, 'angulo_graus': 0.0, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 1, 'estado': 0, 'ticks': 0, 'angulo_graus': 0.0, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 2, 'estado': 1, 'ticks': 2, 'angulo_graus': 5.625, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 3, 'estado': 1, 'ticks': 2, 'angulo_graus': 5.625, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 4, 'estado': 1, 'ticks': 5, 'angulo_graus': 14.0625, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 5, 'estado': 1, 'ticks': 8, 'angulo_graus': 22.5, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 6, 'estado': 1, 'ticks': 11, 'angulo_graus': 30.9375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 7, 'estado': 1, 'ticks': 11, 'angulo_graus': 30.9375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 8, 'estado': 1, 'ticks': 14, 'angulo_graus': 39.375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 9, 'estado': 1, 'ticks': 17, 'angulo_graus': 47.8125, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 10, 'estado': 1, 'ticks': 17, 'angulo_graus': 47.8125, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 11, 'estado': 1, 'ticks': 20, 'angulo_graus': 56.25, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 12, 'estado': 1, 'ticks': 20, 'angulo_graus': 56.25, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 13, 'estado': 1, 'ticks': 23, 'angulo_graus': 64.6875, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 14, 'estado': 1, 'ticks': 23, 'angulo_graus': 64.6875, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 15, 'estado': 1, 'ticks': 27, 'angulo_graus': 75.9375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 16, 'estado': 1, 'ticks': 30, 'angulo_graus': 84.375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 17, 'estado': 1, 'ticks': 30, 'angulo_graus': 84.375, 'paragem_graus': 0.0, 'modo': 0}
+{'amostra': 18, 'estado': 2, 'ticks': 32, 'angulo_graus': 90.0, 'paragem_graus': 90.0, 'modo': 0}
+{'amostra': 19, 'estado': 2, 'ticks': 32, 'angulo_graus': 90.0, 'paragem_graus': 90.0, 'modo': 0}
+{'amostra': 20, 'estado': 2, 'ticks': 32, 'angulo_graus': 90.0, 'paragem_graus': 90.0, 'modo': 0}
+{'amostra': 21, 'estado': 3, 'ticks': 32, 'angulo_graus': 90.0, 'paragem_graus': 90.0, 'modo': 0}
+
+=== RESULTADO ===
+Estado final: 3
+Ciclos: 32
+Ângulo de paragem: 90.0
+Ficheiro: resultados/simulacao_angular_v33.json
+SIMULAÇÃO V3.3: OK
+Paragem solicitada. Nó desbloqueado.

@@ -1,0 +1,23 @@
+{
+  "ensaio": "V4.5 - quadrado calibrado",
+  "estado": "trajetoria concluida; correcao offline",
+  "correcao_aplicada_no_robot": false,
+  "odometria": {
+    "x_cm": -0.282,
+    "y_cm": 0.495,
+    "theta_graus": 354.6112060546875
+  },
+  "medicao_fisica": {
+    "x_cm": 0.3,
+    "y_cm": 0.5,
+    "theta_graus": 355.0
+  },
+  "desvio_fisico_relativo_graus": -5.0,
+  "erro_fecho_fisico_cm": 0.5830951894845301,
+  "discrepancia_posicional_cm": 0.5820214772669475,
+  "correcao_calculada": {
+    "delta_x_cm": 0.582,
+    "delta_y_cm": 0.0050000000000000044,
+    "delta_theta_graus": 0.3887939453125
+  }
+}

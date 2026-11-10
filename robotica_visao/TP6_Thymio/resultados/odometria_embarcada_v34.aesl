@@ -1,0 +1,243 @@
+# TP6 exercício 7: odometria embarcada em Aseba (protótipo A TESTAR em hardware).
+# Convenções: x/y e ds em unidades de 0.1 mm; theta em unidades Aseba (-pi,pi -> int16).
+# Intervalo fixo de timer0 = 100 ms. Usar GANHO APENAS DEPOIS de calibrar.
+# KD_MILLI: round(Kd(cm/(s*unidade motor.speed))*1000) calculado no script Python.
+# Exemplo: Kd=0.04 -> KD_MILLI=40, mas é apenas ilustrativo, NÃO é calibração.
+# Risco de arredondamento (Aseba aritmética inteira), escorregamento e overflow int16.
+# Este programa não comanda motores. Apenas calcula pose estimada.
+
+var odo_x_01mm = 0
+var odo_y_01mm = 0
+var odo_theta_b = 0
+var odo_kd_milli = 35
+var odo_dl_01mm = 0
+var odo_dr_01mm = 0
+var odo_ds_01mm = 0
+var odo_diff_01mm = 0
+var odo_dtheta_b = 0
+var odo_theta_mid_b = 0
+var odo_cos_b = 0
+var odo_sin_b = 0
+var odo_dx_01mm = 0
+var odo_dy_01mm = 0
+
+# Ativar apenas o timer (não iniciar motores)
+var odo_ticks = 0
+
+var odo_snapshot[6] = [0, 0, 0, 0, 0, 0]
+
+
+# Buffer para 40 ciclos de 100 ms
+var odo_record_n = 0
+var odo_dl_log[40]
+var odo_dr_log[40]
+var odo_pose_log[3] = [0, 0, 0]
+
+# V2: coordenadas em unidades de 0,01 mm
+var odo_x_coarse = 0
+var odo_x_rem = 0
+var odo_x_carry = 0
+var odo_y_coarse = 0
+var odo_y_rem = 0
+var odo_y_carry = 0
+var odo_ds2_005mm = 0
+var odo_dx_001mm = 0
+var odo_dy_001mm = 0
+var odo_pose_hi_log[4] = [0, 0, 0, 0]
+
+var odo_half_b = 0
+var odo_turns = 0
+
+
+# Controlador linear V3.4
+var lin_request = 0
+var lin_mode = 0
+var lin_active_mode = 0
+var lin_abort = 0
+var lin_state = 0
+var lin_ticks = 0
+var lin_progress_001mm = 0
+var lin_increment_001mm = 0
+var lin_stop_001mm = 0
+var lin_settle_ticks = 0
+
+timer.period[0] = 100
+
+onevent timer0
+    odo_ticks = odo_ticks + 1
+    # Kd [cm/s/unidade] -> deslocamento em 0.1 mm num intervalo de 0.1 s
+    # d_01mm = speed * Kd * 10 = speed * KD_MILLI / 100
+    call math.muldiv(odo_dl_01mm, motor.left.speed, odo_kd_milli, 100)
+    call math.muldiv(odo_dr_01mm, motor.right.speed, odo_kd_milli, 100)
+
+    odo_ds_01mm = (odo_dl_01mm + odo_dr_01mm) / 2
+    odo_ds2_005mm = odo_dl_01mm + odo_dr_01mm
+    odo_diff_01mm = odo_dr_01mm - odo_dl_01mm
+
+    # distância entre rodas L=9.35 cm = 935 unidades de 0.1mm
+    # 1 rad = aprox. 10430 unidades Aseba
+    call math.muldiv(odo_dtheta_b, odo_diff_01mm, 10430, 935)
+
+    odo_half_b = odo_dtheta_b / 2
+
+    if odo_half_b > 0 then
+        if odo_theta_b > 32767 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+            odo_theta_mid_b = odo_theta_mid_b - 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_half_b then
+            odo_theta_mid_b = odo_theta_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + odo_half_b
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+            odo_theta_mid_b = odo_theta_mid_b + 16384
+        else
+            odo_theta_mid_b = odo_theta_b + odo_half_b
+        end
+    end
+    call math.cos(odo_cos_b, odo_theta_mid_b)
+    call math.sin(odo_sin_b, odo_theta_mid_b)
+
+    # cos/sin Aseba escalados aproximadamente por 32767
+    call math.muldiv(odo_dx_001mm, odo_ds2_005mm, odo_cos_b, 6553)
+    call math.muldiv(odo_dy_001mm, odo_ds2_005mm, odo_sin_b, 6553)
+
+    odo_x_rem = odo_x_rem + odo_dx_001mm
+    odo_x_carry = odo_x_rem / 10
+    odo_x_coarse = odo_x_coarse + odo_x_carry
+    odo_x_rem = odo_x_rem - odo_x_carry * 10
+    odo_x_01mm = odo_x_coarse
+    odo_y_rem = odo_y_rem + odo_dy_001mm
+    odo_y_carry = odo_y_rem / 10
+    odo_y_coarse = odo_y_coarse + odo_y_carry
+    odo_y_rem = odo_y_rem - odo_y_carry * 10
+    odo_y_01mm = odo_y_coarse
+    if odo_dtheta_b > 0 then
+        if odo_theta_b > 32767 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b - 16384
+            odo_theta_b = odo_theta_b - 16384
+            odo_turns = odo_turns + 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    else
+        if odo_theta_b < -32768 - odo_dtheta_b then
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+            odo_theta_b = odo_theta_b + 16384
+            odo_theta_b = odo_theta_b + 16384
+            odo_turns = odo_turns - 1
+        else
+            odo_theta_b = odo_theta_b + odo_dtheta_b
+        end
+    end
+
+    # Registar os incrementos efetivamente usados no cálculo
+    if odo_record_n < 40 then
+        odo_dl_log[odo_record_n] = odo_dl_01mm
+        odo_dr_log[odo_record_n] = odo_dr_01mm
+        odo_pose_log = [odo_x_01mm, odo_y_01mm, odo_theta_b]
+        odo_pose_hi_log = [
+            odo_x_coarse, odo_x_rem,
+            odo_y_coarse, odo_y_rem
+        ]
+        odo_record_n = odo_record_n + 1
+    end
+
+
+    # Fotografia da pose e das velocidades após cada ciclo
+    odo_snapshot = [
+        odo_ticks,
+        odo_x_01mm,
+        odo_y_01mm,
+        odo_theta_b,
+        motor.left.speed,
+        motor.right.speed
+    ]
+
+# TP6 - Controlador linear embarcado V3.4
+# Estado: 0=pronto, 1=avancar, 2=estabilizar,
+# 3=concluido, 4=abortado
+# Modo: 0=simulacao, 1=movimento real
+
+if lin_state == 0 then
+    motor.left.target = 0
+    motor.right.target = 0
+
+    if lin_request == 1 then
+        lin_request = 0
+        lin_active_mode = lin_mode
+        lin_ticks = 0
+        lin_progress_001mm = 0
+        lin_stop_001mm = 0
+        lin_settle_ticks = 0
+        lin_state = 1
+    end
+end
+
+if lin_state == 1 then
+    lin_ticks = lin_ticks + 1
+
+    if lin_active_mode == 0 then
+        # Simulacao: 0,25 cm por ciclo
+        lin_progress_001mm = lin_progress_001mm + 250
+    else
+        # Incrementos das duas rodas em unidades de 0,1 mm.
+        # Distancia media em unidades de 0,01 mm.
+        lin_increment_001mm = odo_dl_01mm + odo_dr_01mm
+        lin_increment_001mm = lin_increment_001mm * 5
+        lin_progress_001mm = lin_progress_001mm + lin_increment_001mm
+    end
+
+    if lin_abort == 1 or lin_ticks >= 60 then
+        lin_state = 4
+    elseif lin_active_mode != 0 and lin_active_mode != 1 then
+        lin_state = 4
+    elseif lin_progress_001mm < -100 then
+        lin_state = 4
+    elseif lin_progress_001mm >= 9500 then
+        lin_stop_001mm = lin_progress_001mm
+        lin_settle_ticks = 0
+        lin_state = 2
+    end
+
+    if lin_state == 1 and lin_active_mode == 1 then
+        if lin_progress_001mm >= 7000 then
+            motor.left.target = 40
+            motor.right.target = 40
+        else
+            motor.left.target = 80
+            motor.right.target = 80
+        end
+    else
+        motor.left.target = 0
+        motor.right.target = 0
+    end
+end
+
+if lin_state == 2 then
+    motor.left.target = 0
+    motor.right.target = 0
+    lin_settle_ticks = lin_settle_ticks + 1
+
+    if lin_abort == 1 then
+        lin_state = 4
+    elseif lin_settle_ticks >= 8 then
+        lin_state = 3
+    end
+end
+
+if lin_state == 3 or lin_state == 4 then
+    motor.left.target = 0
+    motor.right.target = 0
+end

@@ -1,0 +1,12 @@
+=== TP6 — COMPILAÇÃO ASEBA COM TDM ===
+Programa: resultados/odometria_embarcada_calibrada.aesl
+A procurar o Thymio...
+Nó encontrado: d2e63ca0-00fa-4913-b67b-563cc7c73352
+Nome: Thymio-II Wireless
+A solicitar acesso exclusivo...
+Bloqueio do nó: OK
+A compilar e carregar Aseba...
+Compilação: OK
+Programa carregado.
+Programa NÃO executado.
+Nó desbloqueado.
