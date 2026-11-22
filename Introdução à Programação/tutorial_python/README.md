@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-43-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-53-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -32,7 +32,7 @@ O curso está organizado em **dois níveis**, a que se junta um nível dedicado 
 
 ### Nível 1 – Introdução
 
-Pasta [`nivel_1_introducao`](nivel_1_introducao). São 26 capítulos, da lógica de programação à visualização de dados e ao Python intermédio. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
+Pasta [`nivel_1_introducao`](nivel_1_introducao). São 27 capítulos, da lógica de programação à visualização de dados, ao Python intermédio e às árvores como estrutura de dados. Os capítulos devem ser feitos por ordem, porque cada um usa conceitos dos anteriores.
 
 #### Fundamentos (capítulos 0 a 3)
 
@@ -100,6 +100,12 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 26 capítulos, da lógica
 | N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
 | 25 | [Python intermédio](nivel_1_introducao/25_Python_Intermedio.ipynb) | Iteradores (`iter`/`next`), geradores e `yield`, `zip`/`any`/`all`, decoradores com `functools.wraps`, gestores de contexto (`with`, `__enter__`/`__exit__`, `contextlib`) e anotações de tipo, com a ligação ao `DataLoader` e ao `torch.no_grad()` do PyTorch. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_1_introducao/25_Python_Intermedio.ipynb) |
+
+#### Árvores e travessias (capítulo 26)
+
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 26 | [Árvores: estrutura de dados e travessias](nivel_1_introducao/26_Arvores_Travessias.ipynb) | Vocabulário (raiz, folha, altura, largura), árvore binária com uma `dataclass`, árvore binária de pesquisa (inserir e procurar), travessias em pré-ordem, em-ordem, pós-ordem e por níveis (com `deque`), versões iterativas com pilha, árvores de expressão, custos O(n), O(h) e O(w), árvores equilibradas e degeneradas e o limite da recursão. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_1_introducao/26_Arvores_Travessias.ipynb) |
 
 ### Nível 2 – Avançado
 
