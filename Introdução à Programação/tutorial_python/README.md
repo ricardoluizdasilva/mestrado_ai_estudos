@@ -105,7 +105,7 @@ Pasta [`nivel_1_introducao`](nivel_1_introducao). São 27 capítulos, da lógica
 
 | N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
-| 26 | [Árvores: estrutura de dados e travessias](nivel_1_introducao/26_Arvores_Travessias.ipynb) | Vocabulário (raiz, folha, altura, largura), árvore binária com uma `dataclass`, árvore binária de pesquisa (inserir e procurar), travessias em pré-ordem, em-ordem, pós-ordem e por níveis (com `deque`), versões iterativas com pilha, árvores de expressão, custos O(n), O(h) e O(w), árvores equilibradas e degeneradas e o limite da recursão. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_1_introducao/26_Arvores_Travessias.ipynb) |
+| 26 | [Árvores: estrutura de dados e travessias](nivel_1_introducao/26_Arvores_Travessias.ipynb) | Vocabulário (raiz, folha, altura, largura), árvore binária com uma `dataclass`, árvore binária de pesquisa (inserir e procurar), travessias em pré-ordem, em-ordem, pós-ordem e por níveis (com `deque`), versões iterativas com pilha, árvores de expressão, custos O(n), O(h) e O(w), árvores equilibradas e degeneradas e o limite da recursão, com desenhos e animações das travessias em matplotlib. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_1_introducao/26_Arvores_Travessias.ipynb) |
 
 ### Nível 2 – Avançado
 
