@@ -2,7 +2,7 @@
 
 **Curso de introdução à programação com Python, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-53-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-55-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks.yml)
 
 Este tutorial acompanha quem nunca programou desde a lógica de programação até à análise de dados e à aprendizagem automática. Cada capítulo combina explicações curtas, exemplos executáveis, células para experimentar e exercícios com soluções.
 
@@ -23,12 +23,13 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Tratar erros, trabalhar com ficheiros e organizar código em funções, classes, módulos e pacotes.
 - Manipular dados numéricos com **NumPy** e tabelas com **pandas**, e comunicá-los com gráficos (**matplotlib**, **seaborn** e **plotly**).
 - No nível avançado: preparar dados reais e criar, avaliar e interpretar modelos com **scikit-learn**.
+- Em Engenharia de Software: orientação a objetos a fundo, princípios SOLID e padrões de desenho em Python.
 
 ---
 
 ## Estrutura do curso
 
-O curso está organizado em **dois níveis**, a que se junta um nível dedicado à inteligência artificial.
+O curso está organizado em **dois níveis**, a que se juntam um nível dedicado à inteligência artificial e uma secção de engenharia de software.
 
 ### Nível 1 – Introdução
 
@@ -141,6 +142,15 @@ Pasta [`nivel_3_ia`](nivel_3_ia). Módulos orientados para a inteligência artif
 | 10 | [Pesquisa em grafos: o algoritmo de Dijkstra](nivel_3_ia/N3_10_Dijkstra_Caminhos.ipynb) | Caminhos mais curtos: grafos em Python, o Dijkstra passo a passo e com `heapq`, empates e reconstrução de caminhos, porque funciona e porque falha com pesos negativos. Dijkstra em grelhas (labirinto com lama, terreno com custo *minimax*), aumento do estado (escalas, cupões, bateria, chaves em máscara de bits), A* com heurísticas admissíveis, Bellman-Ford e arbitragem, e os resultados recentes sobre a otimalidade do Dijkstra. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_3_ia/N3_10_Dijkstra_Caminhos.ipynb) |
 | 11 | [Problemas de satisfação de restrições](nivel_3_ia/N3_11_Restricoes_CSP.ipynb) | Variáveis, domínios e restrições: uma classe CSP única, *backtracking*, *forward checking*, AC-3 e MAC, heurísticas MRV, grau e LCV com uma tabela comparativa, Sudoku (resolver e gerar puzzles com solução única), horários de aulas, pesquisa local *min-conflicts* com milhares de rainhas e otimização com restrições (*branch and bound*). Exercícios: mapa dos distritos, SEND + MORE = MONEY com variáveis escondidas e contagem das soluções das N rainhas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/nivel_3_ia/N3_11_Restricoes_CSP.ipynb) |
 
+### Engenharia de Software
+
+Pasta [`engenharia_software`](engenharia_software). Módulos sobre a forma de organizar programas que crescem: orientação a objetos a fundo e padrões de desenho, sempre em Python. Podem ser feitos depois do nível 1 (capítulos 20 e 25); os exemplos ligados ao scikit-learn e ao PyTorch são opcionais.
+
+| Módulo | Tema | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 1 | [Programação orientada a objetos em Python](engenharia_software/ES_01_POO_Python.ipynb) | O modelo de dados (`__repr__`, `__eq__`, `__hash__`, ordem, aritmética, contentores, `__call__`), métodos de classe e propriedades com validação, *duck typing*, classes abstratas e protocolos, herança múltipla, MRO e *mixins*, `dataclasses` e `enum` a fundo, a orientação a objetos no scikit-learn e os princípios SOLID. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/engenharia_software/ES_01_POO_Python.ipynb) |
+| 2 | [Padrões de desenho em Python](engenharia_software/ES_02_Padroes_Desenho.ipynb) | Origem e famílias dos padrões e o caso do Python; fábrica, construtor e *singleton*; adaptador, decorador, composto e fachada; estratégia, observador, método-modelo, iterador e comando; os padrões no scikit-learn e no PyTorch; quando não os usar; um caso integrado. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python/engenharia_software/ES_02_Padroes_Desenho.ipynb) |
+
 ---
 
 ## Fichas de consulta rápida
@@ -191,7 +201,7 @@ Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Ju
 - 💡 **Soluções:** os exercícios têm uma solução escondida num bloco «Ver uma solução possível». Tenta primeiro sozinho!
 - Alguns capítulos usam `input()`: escreve a resposta na caixa que aparece e carrega em `Enter`.
 - ✅ **Verifica o que aprendeste:** cada capítulo termina com uma lista de verificação. Se houver um ponto de que não tenhas a certeza, volta à secção correspondente.
-- Os notebooks dos níveis 1 e 2 são guardados **sem saídas**: os resultados aparecem quando executas as células. Os do nível IA guardam as saídas de uma execução de referência, porque alguns exemplos demoram a correr.
+- Os notebooks dos níveis 1 e 2 e de Engenharia de Software são guardados **sem saídas**: os resultados aparecem quando executas as células. Os do nível IA guardam as saídas de uma execução de referência, porque alguns exemplos demoram a correr.
 
 ### Verificação automática
 
@@ -236,10 +246,11 @@ tutorial_python/
 ├── requirements.txt          ← bibliotecas usadas nos notebooks
 ├── consulta_rapida/          ← fichas de consulta rápida em PDF
 ├── ferramentas/              ← verificação automática dos notebooks
-├── nivel_1_introducao/       ← capítulos 0 a 25
+├── nivel_1_introducao/       ← capítulos 0 a 26
 ├── nivel_2_avancado/         ← módulos 1 a 5 e anexos A1 e A2
-└── nivel_3_ia/               ← Python para inteligência artificial
-    └── dados/                ← conjuntos de dados reais usados nos módulos
+├── nivel_3_ia/               ← Python para inteligência artificial
+│   └── dados/                ← conjuntos de dados reais usados nos módulos
+└── engenharia_software/      ← orientação a objetos e padrões de desenho
 ```
 
 ## Licença

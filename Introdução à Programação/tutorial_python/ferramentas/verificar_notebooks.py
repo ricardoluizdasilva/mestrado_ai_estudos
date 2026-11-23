@@ -36,7 +36,7 @@ from jupyter_client.manager import KernelManager
 from nbclient import NotebookClient
 
 RAIZ = Path(__file__).resolve().parent.parent
-PASTAS = ("nivel_1_introducao", "nivel_2_avancado", "nivel_3_ia")
+PASTAS = ("nivel_1_introducao", "nivel_2_avancado", "nivel_3_ia", "engenharia_software")
 
 RESPOSTAS = ["10", "3", "5", "7", "2", "4", "8", "1", "6", "9", "sair", "n", "0"]
 CELULA_INPUT = (
