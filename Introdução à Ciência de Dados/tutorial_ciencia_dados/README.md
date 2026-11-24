@@ -2,11 +2,11 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-24-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-31-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
-Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados.
+Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados; no módulo 5, uma empresa de distribuição que quer prever as entregas atrasadas.
 
 Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e no **VS Code**. Cada notebook tem um botão «Abrir no Colab».
 
@@ -33,6 +33,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Aplicar o método científico: formular hipóteses testáveis, amostrar sem enviesar e quantificar a incerteza.
 - Explorar dados: agrupar, resumir, visualizar, medir associações e analisar séries temporais.
 - Preparar dados para um modelo: dividir em treino e teste, imputar, mudar escalas, codificar categorias e montar um *pipeline* sem fugas de informação.
+- Treinar e avaliar modelos supervisionados: escolher métricas, implementar um KNN e uma árvore de decisão de raiz, diagnosticar sobreajuste e escolher hiperparâmetros com validação cruzada.
 
 ---
 
@@ -92,12 +93,29 @@ Pasta [`modulo_4_preparar_os_dados`](modulo_4_preparar_os_dados). Caso do módul
 | 05 | [Codificar categorias](modulo_4_preparar_os_dados/05_Codificar_Categorias.ipynb) | Porque não se numeram categorias nominais; codificação *one-hot*; variáveis ordinais; categorias raras, desconhecidas e numerosas; atributos a partir de datas; engenharia de atributos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/05_Codificar_Categorias.ipynb) |
 | 06 | [*Pipelines* sem fuga de informação](modulo_4_preparar_os_dados/06_Pipelines_sem_Fuga_de_Informacao.ipynb) | Formas de fuga de informação; uma fuga que fabrica um modelo a partir de ruído; `Pipeline` e `ColumnTransformer`; quanto valeu cada passo de preparação; oito verificações antes de confiar num resultado. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/06_Pipelines_sem_Fuga_de_Informacao.ipynb) |
 
-### Módulos seguintes
+### Módulo 5 – Modelos supervisionados
 
-Estão previstos mais dois módulos, cada um na sua pasta:
+Pasta [`modulo_5_modelos_supervisionados`](modulo_5_modelos_supervisionados). Caso do módulo: uma empresa de distribuição urbana que quer prever que entregas vão atrasar e quanto tempo demora cada uma.
+
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 01 | [Métricas de avaliação](modulo_5_modelos_supervisionados/01_Metricas_de_Avaliacao.ipynb) | Matriz de confusão; exatidão, precisão, sensibilidade, especificidade e F1; o limiar; curvas precisão–sensibilidade e ROC, AUC; MAE, MSE, RMSE, MAPE e R²; efeito dos valores extremos; análise de resíduos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/01_Metricas_de_Avaliacao.ipynb) |
+| 02 | [K vizinhos mais próximos: classificação](modulo_5_modelos_supervisionados/02_KNN_Classificacao.ipynb) | Aprender por semelhança; distâncias euclidiana e de Manhattan; KNN implementado em NumPy; normalização; fronteiras de decisão; escolha de k; atributos irrelevantes; votos ponderados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/02_KNN_Classificacao.ipynb) |
+| 03 | [K vizinhos mais próximos: regressão](modulo_5_modelos_supervisionados/03_KNN_Regressao.ipynb) | Média simples e média ponderada pelo inverso da distância, implementadas de raiz; curva de previsão e efeito de k; comparação com a regressão linear pelos resíduos; extrapolação; maldição da dimensionalidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/03_KNN_Regressao.ipynb) |
+| 04 | [Árvores de decisão](modulo_5_modelos_supervisionados/04_Arvores_de_Decisao.ipynb) | Ler uma árvore; índice de Gini e ganho; procura da melhor divisão e crescimento recursivo implementados de raiz; regiões retangulares; profundidade e tamanho das folhas; importância dos atributos; árvores de regressão; instabilidade; KNN ou árvore. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/04_Arvores_de_Decisao.ipynb) |
+| 05 | [Sobreajuste, viés e variância](modulo_5_modelos_supervisionados/05_Sobreajuste_Vies_e_Variancia.ipynb) | Subajuste e sobreajuste num mundo simulado; um modelo que memoriza ruído; decomposição do erro em viés, variância e ruído, medida por simulação; diagnóstico com os erros de treino e de validação; curvas de aprendizagem; que remédio para que problema. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/05_Sobreajuste_Vies_e_Variancia.ipynb) |
+| 06 | [Validação cruzada e escolha de hiperparâmetros](modulo_5_modelos_supervisionados/06_Validacao_Cruzada.ipynb) | Porque uma divisão é um sorteio; validação cruzada com K partes implementada de raiz; variantes estratificada, por grupos e temporal; procura em grelha; a fuga de preparar antes de dividir; o protocolo completo até ao teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/06_Validacao_Cruzada.ipynb) |
+| 07 | [Projeto: um modelo supervisionado de ponta a ponta](modulo_5_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) | Cancelamentos num ginásio, em oito passos: enquadrar, detetar uma fuga, pipeline, KNN, árvore, diagnóstico, limiar pelo custo e teste, explicação; resumo para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) |
+
+### Módulo seguinte
+
+Está previsto mais um módulo:
 
 | Módulo | Conteúdos previstos |
 | --- | --- |
+| 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; avaliar sem rótulos; projeto final de ponta a ponta |
+
+--- | --- |
 | 5. Modelos supervisionados | Métricas de classificação e de regressão; KNN; árvores de decisão; sobreajuste, viés e variância; validação cruzada |
 | 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; projeto final de ponta a ponta |
 
@@ -153,7 +171,7 @@ Os notebooks são executados numa cópia temporária, por isso os originais não
 | Python | 3.10 ou superior |
 | NumPy | 2.x |
 | pandas | 2.2 ou superior (testado com 3.0) |
-| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulo 4) |
+| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulos 4 e 5) |
 | matplotlib | 3.10 ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
@@ -190,13 +208,21 @@ tutorial_ciencia_dados/
 │   ├── 05_Associacao_e_Correlacoes_Espurias.ipynb
 │   ├── 06_Series_Temporais.ipynb
 │   └── 07_Projeto_Analise_Exploratoria.ipynb
-└── modulo_4_preparar_os_dados/
-    ├── 01_O_que_e_Aprender_com_Dados.ipynb
-    ├── 02_Treino_Teste_e_Linha_de_Base.ipynb
-    ├── 03_Valores_em_Falta_e_Imputacao.ipynb
-    ├── 04_Escalas.ipynb
-    ├── 05_Codificar_Categorias.ipynb
-    └── 06_Pipelines_sem_Fuga_de_Informacao.ipynb
+├── modulo_4_preparar_os_dados/
+│   ├── 01_O_que_e_Aprender_com_Dados.ipynb
+│   ├── 02_Treino_Teste_e_Linha_de_Base.ipynb
+│   ├── 03_Valores_em_Falta_e_Imputacao.ipynb
+│   ├── 04_Escalas.ipynb
+│   ├── 05_Codificar_Categorias.ipynb
+│   └── 06_Pipelines_sem_Fuga_de_Informacao.ipynb
+└── modulo_5_modelos_supervisionados/
+    ├── 01_Metricas_de_Avaliacao.ipynb
+    ├── 02_KNN_Classificacao.ipynb
+    ├── 03_KNN_Regressao.ipynb
+    ├── 04_Arvores_de_Decisao.ipynb
+    ├── 05_Sobreajuste_Vies_e_Variancia.ipynb
+    ├── 06_Validacao_Cruzada.ipynb
+    └── 07_Projeto_Modelo_Supervisionado.ipynb
 ```
 
 ## Licença
