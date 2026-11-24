@@ -1,0 +1,16 @@
+# Bibliotecas usadas nos notebooks do tutorial (Python 3.10 ou superior).
+# Instalação:  pip install -r requirements.txt
+# O Google Colab já inclui todas estas bibliotecas.
+
+# Dados e cálculo
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.6
+
+# Gráficos
+matplotlib>=3.8
+
+# Notebooks (Jupyter, VS Code e verificação automática)
+ipykernel>=6.29
+nbformat>=5.9
+nbclient>=0.10
