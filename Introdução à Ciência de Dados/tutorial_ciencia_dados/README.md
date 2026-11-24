@@ -2,11 +2,11 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-31-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-36-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
-Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados; no módulo 5, uma empresa de distribuição que quer prever as entregas atrasadas.
+Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados; no módulo 5, uma empresa de distribuição que quer prever as entregas atrasadas; no módulo 6, uma aplicação de aprendizagem de línguas que quer conhecer os seus utilizadores.
 
 Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e no **VS Code**. Cada notebook tem um botão «Abrir no Colab».
 
@@ -34,12 +34,14 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Explorar dados: agrupar, resumir, visualizar, medir associações e analisar séries temporais.
 - Preparar dados para um modelo: dividir em treino e teste, imputar, mudar escalas, codificar categorias e montar um *pipeline* sem fugas de informação.
 - Treinar e avaliar modelos supervisionados: escolher métricas, implementar um KNN e uma árvore de decisão de raiz, diagnosticar sobreajuste e escolher hiperparâmetros com validação cruzada.
+- Encontrar estrutura sem alvo: agrupar com K-Means e com métodos hierárquicos, avaliar um agrupamento sem rótulos e reduzir dimensões com PCA.
+- Levar um projeto do enquadramento à recomendação, combinando todas as etapas.
 
 ---
 
 ## Estrutura do curso
 
-O tutorial cresce por módulos. Os capítulos de cada módulo devem ser feitos por ordem.
+O tutorial tem seis módulos, que devem ser feitos por ordem. Os capítulos de cada módulo devem ser feitos por ordem.
 
 ### Módulo 1 – Do problema à decisão
 
@@ -107,12 +109,19 @@ Pasta [`modulo_5_modelos_supervisionados`](modulo_5_modelos_supervisionados). Ca
 | 06 | [Validação cruzada e escolha de hiperparâmetros](modulo_5_modelos_supervisionados/06_Validacao_Cruzada.ipynb) | Porque uma divisão é um sorteio; validação cruzada com K partes implementada de raiz; variantes estratificada, por grupos e temporal; procura em grelha; a fuga de preparar antes de dividir; o protocolo completo até ao teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/06_Validacao_Cruzada.ipynb) |
 | 07 | [Projeto: um modelo supervisionado de ponta a ponta](modulo_5_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) | Cancelamentos num ginásio, em oito passos: enquadrar, detetar uma fuga, pipeline, KNN, árvore, diagnóstico, limiar pelo custo e teste, explicação; resumo para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_5_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) |
 
-### Módulo seguinte
+### Módulo 6 – Aprendizagem não supervisionada
 
-Está previsto mais um módulo:
+Pasta [`modulo_6_aprendizagem_nao_supervisionada`](modulo_6_aprendizagem_nao_supervisionada). Caso do módulo: uma aplicação de aprendizagem de línguas que quer conhecer os tipos de utilizadores que tem.
 
-| Módulo | Conteúdos previstos |
-| --- | --- |
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 01 | [Agrupar sem rótulos: K-Means](modulo_6_aprendizagem_nao_supervisionada/01_KMeans.ipynb) | Aprendizagem supervisionada e não supervisionada; atribuir e atualizar; K-Means implementado em NumPy; inércia; inicialização e mínimos locais; efeito da escala; descrever os grupos e dar-lhes nome; limitações. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_aprendizagem_nao_supervisionada/01_KMeans.ipynb) |
+| 02 | [Quantos grupos? Avaliar sem rótulos](modulo_6_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) | O método do cotovelo e os seus limites; coeficiente de silhueta calculado de raiz; gráfico de silhuetas; estabilidade e índice de Rand ajustado; comparação com dados sem estrutura; validação interna, externa e por utilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) |
+| 03 | [Agrupamento hierárquico](modulo_6_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) | Algoritmo aglomerativo implementado de raiz; ligações simples, completa, média e de Ward; ler e cortar um dendrograma; efeito de cadeia; hierarquia de perfis; K-Means ou hierárquico. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) |
+| 04 | [Reduzir dimensões: análise de componentes principais](modulo_6_aprendizagem_nao_supervisionada/04_PCA.ipynb) | Colunas correlacionadas e redundância; a direção de maior variância; PCA em NumPy (covariâncias, valores e vetores próprios); variância explicada; interpretar os pesos; mapa dos dados em duas componentes; reconstrução; cuidados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_aprendizagem_nao_supervisionada/04_PCA.ipynb) |
+| 05 | [Projeto final: do problema à decisão](modulo_6_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) | Onde instalar 15 postos de carregamento, em oito passos que percorrem os seis módulos: enquadrar, verificar, explorar, segmentar, preparar, modelar, decidir e comunicar; as ideias que atravessam o tutorial. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) |
+
+--- | --- |
 | 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; avaliar sem rótulos; projeto final de ponta a ponta |
 
 --- | --- |
@@ -171,7 +180,8 @@ Os notebooks são executados numa cópia temporária, por isso os originais não
 | Python | 3.10 ou superior |
 | NumPy | 2.x |
 | pandas | 2.2 ou superior (testado com 3.0) |
-| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulos 4 e 5) |
+| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulos 4 a 6) |
+| SciPy | 1.13 ou superior (módulo 6, capítulo 3; é instalado com o scikit-learn) |
 | matplotlib | 3.10 ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
@@ -215,14 +225,20 @@ tutorial_ciencia_dados/
 │   ├── 04_Escalas.ipynb
 │   ├── 05_Codificar_Categorias.ipynb
 │   └── 06_Pipelines_sem_Fuga_de_Informacao.ipynb
-└── modulo_5_modelos_supervisionados/
-    ├── 01_Metricas_de_Avaliacao.ipynb
-    ├── 02_KNN_Classificacao.ipynb
-    ├── 03_KNN_Regressao.ipynb
-    ├── 04_Arvores_de_Decisao.ipynb
-    ├── 05_Sobreajuste_Vies_e_Variancia.ipynb
-    ├── 06_Validacao_Cruzada.ipynb
-    └── 07_Projeto_Modelo_Supervisionado.ipynb
+├── modulo_5_modelos_supervisionados/
+│   ├── 01_Metricas_de_Avaliacao.ipynb
+│   ├── 02_KNN_Classificacao.ipynb
+│   ├── 03_KNN_Regressao.ipynb
+│   ├── 04_Arvores_de_Decisao.ipynb
+│   ├── 05_Sobreajuste_Vies_e_Variancia.ipynb
+│   ├── 06_Validacao_Cruzada.ipynb
+│   └── 07_Projeto_Modelo_Supervisionado.ipynb
+└── modulo_6_aprendizagem_nao_supervisionada/
+    ├── 01_KMeans.ipynb
+    ├── 02_Avaliar_sem_Rotulos.ipynb
+    ├── 03_Agrupamento_Hierarquico.ipynb
+    ├── 04_PCA.ipynb
+    └── 05_Projeto_Final.ipynb
 ```
 
 ## Licença
