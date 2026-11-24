@@ -2,11 +2,11 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-10-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-18-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
-Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas e gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
+Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
-Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar.
+Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município.
 
 Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e no **VS Code**. Cada notebook tem um botão «Abrir no Colab».
 
@@ -30,6 +30,8 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Ler o significado de uma variável antes de calcular: tipos, unidades, datas e valores em falta.
 - Levar dados em CSV, JSON, XML, HTML e texto livre até uma tabela.
 - Auditar a qualidade de uma tabela, reparar com evidência e documentar o que fica por resolver.
+- Aplicar o método científico: formular hipóteses testáveis, amostrar sem enviesar e quantificar a incerteza.
+- Explorar dados: agrupar, resumir, visualizar, medir associações e analisar séries temporais.
 
 ---
 
@@ -47,7 +49,8 @@ Pasta [`modulo_1_do_problema_a_decisao`](modulo_1_do_problema_a_decisao).
 | 02 | [Da pergunta ao enquadramento](modulo_1_do_problema_a_decisao/02_Da_Pergunta_ao_Enquadramento.ipynb) | Perguntas descritivas, explicativas, preditivas e de decisão aplicadas aos mesmos dados; associação e causalidade (variável de confusão, paradoxo de Simpson); fuga de informação; cinco perguntas de enquadramento; da previsão à ação. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/02_Da_Pergunta_ao_Enquadramento.ipynb) |
 | 03 | [Uma boa previsão não garante uma boa decisão](modulo_1_do_problema_a_decisao/03_Previsao_nao_e_Decisao.ipynb) | Um modelo com 93% de exatidão que quase não ajuda; linha de base, matriz de confusão, sensibilidade e precisão; o limiar como decisão; custos dos erros e ponto de equilíbrio; limites de recursos; definir o sucesso antes de começar. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/03_Previsao_nao_e_Decisao.ipynb) |
 | 04 | [Dados imperfeitos e o processo de trabalho](modulo_1_do_problema_a_decisao/04_Dados_Imperfeitos_e_Processo.ipynb) | Fontes de dados; dados incompletos, ruidosos, enviesados e dependentes do contexto, cada um simulado; as seis fases do CRISP-DM; onde se gasta o tempo; ferramentas e reprodutibilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/04_Dados_Imperfeitos_e_Processo.ipynb) |
-| 05 | [Projeto: enquadrar um problema](modulo_1_do_problema_a_decisao/05_Projeto_Enquadrar_um_Problema.ipynb) | Ficha de enquadramento com oito componentes, exemplo resolvido, três cenários (perdas de água, livros esgotados, bicicletas partilhadas), grelha de autoavaliação e fichas possíveis. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/05_Projeto_Enquadrar_um_Problema.ipynb) |
+| 05 | [Método científico, amostragem e inferência](modulo_1_do_problema_a_decisao/05_Metodo_Cientifico_Amostragem_Inferencia.ipynb) | O método científico e a sua ligação ao CRISP-DM; hipóteses testáveis; população e amostra; amostragem aleatória, estratificada e por conveniência; intervalos de confiança por reamostragem; teste de hipóteses por permutação; comparações múltiplas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/05_Metodo_Cientifico_Amostragem_Inferencia.ipynb) |
+| 06 | [Projeto: enquadrar um problema](modulo_1_do_problema_a_decisao/06_Projeto_Enquadrar_um_Problema.ipynb) | Ficha de enquadramento com oito componentes, exemplo resolvido, três cenários (perdas de água, livros esgotados, bicicletas partilhadas), grelha de autoavaliação e fichas possíveis. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_1_do_problema_a_decisao/06_Projeto_Enquadrar_um_Problema.ipynb) |
 
 ### Módulo 2 – Fontes, tipos e estruturas de dados
 
@@ -61,9 +64,29 @@ Pasta [`modulo_2_fontes_tipos_estruturas`](modulo_2_fontes_tipos_estruturas). Ca
 | 04 | [Qualidade dos dados](modulo_2_fontes_tipos_estruturas/04_Qualidade_dos_Dados.ipynb) | Consistência, completude, validade, duplicação e enviesamento; auditoria passo a passo a um ficheiro com problemas; reparar com evidência e registar as decisões; o que a limpeza não corrige. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_2_fontes_tipos_estruturas/04_Qualidade_dos_Dados.ipynb) |
 | 05 | [Projeto: desenhar um plano de dados](modulo_2_fontes_tipos_estruturas/05_Projeto_Plano_de_Dados.ipynb) | Plano de dados de uma página (previsão, fontes, variáveis e riscos), exemplo resolvido, três cenários (parque de estacionamento, biblioteca, recolha de resíduos), grelha de autoavaliação e planos possíveis. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_2_fontes_tipos_estruturas/05_Projeto_Plano_de_Dados.ipynb) |
 
+### Módulo 3 – Explorar os dados
+
+Pasta [`modulo_3_explorar_os_dados`](modulo_3_explorar_os_dados). Caso do módulo: o consumo diário de eletricidade de 30 escolas de um município, ao longo de um ano letivo.
+
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 01 | [Revisão de Python, NumPy e pandas](modulo_3_explorar_os_dados/01_Revisao_Python_NumPy_Pandas.ipynb) | Revisão rápida em quatro partes, cada uma com um exercício de reforço: tipos e operadores; estruturas de dados e ciclos; vetores, operações vetorizadas e *broadcasting*; fatiamento, `loc` e `iloc`. Remete para os capítulos do tutorial de Python. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/01_Revisao_Python_NumPy_Pandas.ipynb) |
+| 02 | [Agrupar e remodelar](modulo_3_explorar_os_dados/02_Agrupar_e_Remodelar.ipynb) | Dados transversais, séries temporais e dados em painel; dividir–aplicar–combinar com `groupby`; agregar e transformar; formato longo e formato largo; juntar tabelas e comparar taxas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/02_Agrupar_e_Remodelar.ipynb) |
+| 03 | [Medidas descritivas](modulo_3_explorar_os_dados/03_Medidas_Descritivas.ipynb) | Análise exploratória; média, mediana e moda; variância, desvio padrão e amplitude interquartil; porquê n − 1; quantis e diagrama de caixa; assimetria; medidas robustas; resumos que misturam grupos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/03_Medidas_Descritivas.ipynb) |
+| 04 | [Visualização](modulo_3_explorar_os_dados/04_Visualizacao.ipynb) | O mesmo resumo com quatro formas diferentes; escolher o gráfico pela pergunta; classes de um histograma; eixos truncados, eixos duplos e gráficos circulares; do rascunho ao gráfico final; pequenos múltiplos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/04_Visualizacao.ipynb) |
+| 05 | [Associação e correlações espúrias](modulo_3_explorar_os_dados/05_Associacao_e_Correlacoes_Espurias.ipynb) | Gráfico de dispersão; covariância; Pearson e Spearman; relações que a correlação não vê; matriz de correlações; terceira variável, tendência comum e comparações múltiplas. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/05_Associacao_e_Correlacoes_Espurias.ipynb) |
+| 06 | [Séries temporais](modulo_3_explorar_os_dados/06_Series_Temporais.ipynb) | Índice de datas; reamostragem e médias móveis; tendência, sazonalidade e resto; autocorrelação; variações e período homólogo; linhas de base de previsão; divisão temporal entre treino e teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/06_Series_Temporais.ipynb) |
+| 07 | [Projeto: análise exploratória de ponta a ponta](modulo_3_explorar_os_dados/07_Projeto_Analise_Exploratoria.ipynb) | Roteiro de sete passos aplicado a dados novos (entradas em 12 bibliotecas municipais), com soluções possíveis e um resumo de cinco frases para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/07_Projeto_Analise_Exploratoria.ipynb) |
+
 ### Módulos seguintes
 
-Os próximos módulos serão acrescentados aqui, cada um na sua pasta (`modulo_3_…`, `modulo_4_…`).
+Estão previstos mais três módulos, cada um na sua pasta:
+
+| Módulo | Conteúdos previstos |
+| --- | --- |
+| 4. Preparar os dados para modelar | O que é aprender com dados; treino, teste e linha de base; imputação; escalas; codificação de categorias; *pipelines* sem fuga de informação |
+| 5. Modelos supervisionados | Métricas de classificação e de regressão; KNN; árvores de decisão; sobreajuste, viés e variância; validação cruzada |
+| 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; projeto final de ponta a ponta |
 
 ---
 
@@ -85,12 +108,12 @@ python -m pip install -r requirements.txt
 
 Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Jupyter) e escolhe um kernel **Python 3.10 ou superior**.
 
-Se ainda não programas em Python, começa pelo tutorial [Introdução ao Python](../../Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python) (os capítulos 22 a 24 chegam para acompanhar este módulo).
+Se ainda não programas em Python, começa pelo tutorial [Introdução ao Python](../../Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python). O módulo 3 abre com uma revisão rápida, e cada capítulo indica os capítulos desse tutorial onde a sintaxe é explicada.
 
 ### Convenções dos notebooks
 
 - Cada capítulo abre com os **objetivos** e os **pré-requisitos**.
-- Os esquemas e os gráficos são desenhados pelo código das células, com as funções `tela`, `caixa` e `seta` definidas no início de cada notebook. As cores têm sempre o mesmo significado: no módulo 1, azul para descrever, verde para explicar, violeta para prever e laranja para decidir.
+- Os gráficos de dados são desenhados pelo código das células. Os esquemas são imagens embutidas no notebook ou, nos capítulos mais recentes, desenhados com as funções `tela`, `caixa` e `seta` definidas no início de cada notebook.
 - 💡 **Soluções:** os exercícios têm uma solução escondida num bloco «Ver uma solução possível». Tenta primeiro sozinho!
 - ✅ **Verifica o que aprendeste:** cada capítulo termina com uma lista de verificação.
 - Os notebooks são guardados **com as saídas** de uma execução de referência, para que os esquemas e os gráficos se vejam diretamente no GitHub.
@@ -118,7 +141,7 @@ Os notebooks são executados numa cópia temporária, por isso os originais não
 | NumPy | 2.x |
 | pandas | 2.2 ou superior (testado com 3.0) |
 | scikit-learn | 1.6 ou superior (módulo 1, capítulo 3) |
-| matplotlib | 3.8 ou superior |
+| matplotlib | 3.10 ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
 
@@ -138,13 +161,22 @@ tutorial_ciencia_dados/
 │   ├── 02_Da_Pergunta_ao_Enquadramento.ipynb
 │   ├── 03_Previsao_nao_e_Decisao.ipynb
 │   ├── 04_Dados_Imperfeitos_e_Processo.ipynb
-│   └── 05_Projeto_Enquadrar_um_Problema.ipynb
-└── modulo_2_fontes_tipos_estruturas/
-    ├── 01_Fontes_de_Dados.ipynb
-    ├── 02_Tipos_de_Dados.ipynb
-    ├── 03_Estruturas_e_Formatos.ipynb
-    ├── 04_Qualidade_dos_Dados.ipynb
-    └── 05_Projeto_Plano_de_Dados.ipynb
+│   ├── 05_Metodo_Cientifico_Amostragem_Inferencia.ipynb
+│   └── 06_Projeto_Enquadrar_um_Problema.ipynb
+├── modulo_2_fontes_tipos_estruturas/
+│   ├── 01_Fontes_de_Dados.ipynb
+│   ├── 02_Tipos_de_Dados.ipynb
+│   ├── 03_Estruturas_e_Formatos.ipynb
+│   ├── 04_Qualidade_dos_Dados.ipynb
+│   └── 05_Projeto_Plano_de_Dados.ipynb
+└── modulo_3_explorar_os_dados/
+    ├── 01_Revisao_Python_NumPy_Pandas.ipynb
+    ├── 02_Agrupar_e_Remodelar.ipynb
+    ├── 03_Medidas_Descritivas.ipynb
+    ├── 04_Visualizacao.ipynb
+    ├── 05_Associacao_e_Correlacoes_Espurias.ipynb
+    ├── 06_Series_Temporais.ipynb
+    └── 07_Projeto_Analise_Exploratoria.ipynb
 ```
 
 ## Licença
