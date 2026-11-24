@@ -25,5 +25,5 @@ O código-fonte está licenciado sob a [licença MIT](LICENSE-MIT.txt). Isto inc
 ## Conteúdos de terceiros
 
 - Os dados usados nos notebooks são sintéticos, gerados pelo próprio código. Não representam nenhuma organização real.
-- Os valores do gráfico «Onde se gasta o tempo» (capítulo 4) são do *Data Science Report* de 2016 da CrowdFlower, citado no local.
+- Os valores do gráfico «Onde se gasta o tempo» (módulo 1, capítulo 4) são do *Data Science Report* de 2016 da CrowdFlower, citado no local.
 - As bibliotecas usadas (NumPy, pandas, scikit-learn, matplotlib) não são distribuídas com o tutorial e têm as suas próprias licenças.
