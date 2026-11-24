@@ -2,11 +2,11 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-18-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-24-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
-Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município.
+Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados.
 
 Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e no **VS Code**. Cada notebook tem um botão «Abrir no Colab».
 
@@ -32,6 +32,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Auditar a qualidade de uma tabela, reparar com evidência e documentar o que fica por resolver.
 - Aplicar o método científico: formular hipóteses testáveis, amostrar sem enviesar e quantificar a incerteza.
 - Explorar dados: agrupar, resumir, visualizar, medir associações e analisar séries temporais.
+- Preparar dados para um modelo: dividir em treino e teste, imputar, mudar escalas, codificar categorias e montar um *pipeline* sem fugas de informação.
 
 ---
 
@@ -78,13 +79,25 @@ Pasta [`modulo_3_explorar_os_dados`](modulo_3_explorar_os_dados). Caso do módul
 | 06 | [Séries temporais](modulo_3_explorar_os_dados/06_Series_Temporais.ipynb) | Índice de datas; reamostragem e médias móveis; tendência, sazonalidade e resto; autocorrelação; variações e período homólogo; linhas de base de previsão; divisão temporal entre treino e teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/06_Series_Temporais.ipynb) |
 | 07 | [Projeto: análise exploratória de ponta a ponta](modulo_3_explorar_os_dados/07_Projeto_Analise_Exploratoria.ipynb) | Roteiro de sete passos aplicado a dados novos (entradas em 12 bibliotecas municipais), com soluções possíveis e um resumo de cinco frases para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_3_explorar_os_dados/07_Projeto_Analise_Exploratoria.ipynb) |
 
+### Módulo 4 – Preparar os dados para modelar
+
+Pasta [`modulo_4_preparar_os_dados`](modulo_4_preparar_os_dados). Caso do módulo: um stand que quer propor o preço de anúncio de carros usados.
+
+| N.º | Capítulo | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 01 | [O que é aprender com dados](modulo_4_preparar_os_dados/01_O_que_e_Aprender_com_Dados.ipynb) | Regras escritas e regras aprendidas; a definição de Mitchell (tarefa, experiência, desempenho); atributos, alvo, treinar e prever; regressão, classificação e aprendizagem não supervisionada; o que é ajustar um modelo; quando não usar aprendizagem automática. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/01_O_que_e_Aprender_com_Dados.ipynb) |
+| 02 | [Treino, teste e linha de base](modulo_4_preparar_os_dados/02_Treino_Teste_e_Linha_de_Base.ipynb) | Porque o erro de treino engana; dividir em treino e teste; estratificar; linhas de base; conjunto de validação; porque o teste só se usa uma vez; quando não dividir ao acaso. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/02_Treino_Teste_e_Linha_de_Base.ipynb) |
+| 03 | [Valores em falta e imputação](modulo_4_preparar_os_dados/03_Valores_em_Falta_e_Imputacao.ipynb) | Quanto falta e porquê; três mecanismos de falta; remover, preencher com a mediana, preencher por grupo e indicador de falta; efeito na distribuição e no modelo; aprender no treino e aplicar no teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/03_Valores_em_Falta_e_Imputacao.ipynb) |
+| 04 | [Escalas](modulo_4_preparar_os_dados/04_Escalas.ipynb) | Porque o maior número manda nas distâncias; padronização, Min-Max e escala robusta; efeito dos valores extremos; que modelos precisam de escala; o logaritmo para variáveis assimétricas e para o alvo. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/04_Escalas.ipynb) |
+| 05 | [Codificar categorias](modulo_4_preparar_os_dados/05_Codificar_Categorias.ipynb) | Porque não se numeram categorias nominais; codificação *one-hot*; variáveis ordinais; categorias raras, desconhecidas e numerosas; atributos a partir de datas; engenharia de atributos. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/05_Codificar_Categorias.ipynb) |
+| 06 | [*Pipelines* sem fuga de informação](modulo_4_preparar_os_dados/06_Pipelines_sem_Fuga_de_Informacao.ipynb) | Formas de fuga de informação; uma fuga que fabrica um modelo a partir de ruído; `Pipeline` e `ColumnTransformer`; quanto valeu cada passo de preparação; oito verificações antes de confiar num resultado. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_4_preparar_os_dados/06_Pipelines_sem_Fuga_de_Informacao.ipynb) |
+
 ### Módulos seguintes
 
-Estão previstos mais três módulos, cada um na sua pasta:
+Estão previstos mais dois módulos, cada um na sua pasta:
 
 | Módulo | Conteúdos previstos |
 | --- | --- |
-| 4. Preparar os dados para modelar | O que é aprender com dados; treino, teste e linha de base; imputação; escalas; codificação de categorias; *pipelines* sem fuga de informação |
 | 5. Modelos supervisionados | Métricas de classificação e de regressão; KNN; árvores de decisão; sobreajuste, viés e variância; validação cruzada |
 | 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; projeto final de ponta a ponta |
 
@@ -140,7 +153,7 @@ Os notebooks são executados numa cópia temporária, por isso os originais não
 | Python | 3.10 ou superior |
 | NumPy | 2.x |
 | pandas | 2.2 ou superior (testado com 3.0) |
-| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3) |
+| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulo 4) |
 | matplotlib | 3.10 ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
@@ -169,14 +182,21 @@ tutorial_ciencia_dados/
 │   ├── 03_Estruturas_e_Formatos.ipynb
 │   ├── 04_Qualidade_dos_Dados.ipynb
 │   └── 05_Projeto_Plano_de_Dados.ipynb
-└── modulo_3_explorar_os_dados/
-    ├── 01_Revisao_Python_NumPy_Pandas.ipynb
-    ├── 02_Agrupar_e_Remodelar.ipynb
-    ├── 03_Medidas_Descritivas.ipynb
-    ├── 04_Visualizacao.ipynb
-    ├── 05_Associacao_e_Correlacoes_Espurias.ipynb
-    ├── 06_Series_Temporais.ipynb
-    └── 07_Projeto_Analise_Exploratoria.ipynb
+├── modulo_3_explorar_os_dados/
+│   ├── 01_Revisao_Python_NumPy_Pandas.ipynb
+│   ├── 02_Agrupar_e_Remodelar.ipynb
+│   ├── 03_Medidas_Descritivas.ipynb
+│   ├── 04_Visualizacao.ipynb
+│   ├── 05_Associacao_e_Correlacoes_Espurias.ipynb
+│   ├── 06_Series_Temporais.ipynb
+│   └── 07_Projeto_Analise_Exploratoria.ipynb
+└── modulo_4_preparar_os_dados/
+    ├── 01_O_que_e_Aprender_com_Dados.ipynb
+    ├── 02_Treino_Teste_e_Linha_de_Base.ipynb
+    ├── 03_Valores_em_Falta_e_Imputacao.ipynb
+    ├── 04_Escalas.ipynb
+    ├── 05_Codificar_Categorias.ipynb
+    └── 06_Pipelines_sem_Fuga_de_Informacao.ipynb
 ```
 
 ## Licença
