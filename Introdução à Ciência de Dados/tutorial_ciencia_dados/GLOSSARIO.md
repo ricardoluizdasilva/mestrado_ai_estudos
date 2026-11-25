@@ -40,7 +40,7 @@ Alguns termos não têm tradução estabelecida e usam-se em inglês também em 
 | engenharia de atributos | *feature engineering* | Criar atributos novos a partir dos existentes. | [4.5](modulo_4_preparar_os_dados/05_Codificar_Categorias.ipynb) |
 | erro absoluto médio (MAE) | *mean absolute error* | Média dos valores absolutos dos resíduos. | [5.1](modulo_5_modelos_lineares/01_Regressao_Linear_Simples.ipynb) |
 | erro quadrático médio (MSE, RMSE) | *mean squared error, root mean squared error* | Média dos quadrados dos resíduos; a raiz (RMSE) volta à unidade do alvo. | [6.1](modulo_6_modelos_supervisionados/01_Metricas_de_Avaliacao.ipynb) |
-| escala, normalização | *scaling, standardization* | Pôr os atributos em unidades comparáveis, por exemplo em desvios-padrão. | [4.4](modulo_4_preparar_os_dados/04_Escalas.ipynb) |
+| escala, normalização | *scaling, standardization* | Pôr os atributos em unidades comparáveis, por exemplo em desvios padrão. | [4.4](modulo_4_preparar_os_dados/04_Escalas.ipynb) |
 | especificidade | *specificity, true negative rate* | Dos casos negativos, a fração corretamente identificada. | [6.1](modulo_6_modelos_supervisionados/01_Metricas_de_Avaliacao.ipynb) |
 | exatidão | *accuracy* | Fração de previsões certas. | [1.3](modulo_1_do_problema_a_decisao/03_Previsao_nao_e_Decisao.ipynb) |
 | extrapolação | *extrapolation* | Prever fora do intervalo de valores coberto pelos dados. | [5.1](modulo_5_modelos_lineares/01_Regressao_Linear_Simples.ipynb) |
