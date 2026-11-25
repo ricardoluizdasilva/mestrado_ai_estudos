@@ -165,6 +165,10 @@ Depois abre a pasta no Jupyter (`jupyter lab`) ou no VS Code (com a extensão Ju
 
 Se ainda não programas em Python, começa pelo tutorial [Introdução ao Python](../../Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o/tutorial_python). O módulo 3 abre com uma revisão rápida, e cada capítulo indica os capítulos desse tutorial onde a sintaxe é explicada.
 
+### Glossário
+
+O tutorial usa os termos em português. O [glossário português–inglês](GLOSSARIO.md) faz a correspondência com os termos da documentação em inglês e indica o capítulo em que cada um é apresentado.
+
 ### Convenções dos notebooks
 
 - Cada capítulo abre com os **objetivos** e os **pré-requisitos**.
@@ -206,6 +210,7 @@ O Google Colab já inclui todas estas bibliotecas.
 ```text
 tutorial_ciencia_dados/
 ├── README.md                          ← este ficheiro
+├── GLOSSARIO.md                       ← termos em português e em inglês
 ├── LICENSE.md                         ← licenças (conteúdos e código)
 ├── LICENSE-CC-BY-NC-SA-4.0.txt
 ├── LICENSE-MIT.txt
