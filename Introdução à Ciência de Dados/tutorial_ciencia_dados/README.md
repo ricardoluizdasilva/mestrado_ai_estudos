@@ -2,11 +2,11 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-43-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-50-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
-Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados; no módulo 5, uma empresa de painéis solares que quer estimar a produção de cada telhado; no módulo 6, uma empresa de distribuição que quer prever as entregas atrasadas; no módulo 7, uma aplicação de aprendizagem de línguas que quer conhecer os seus utilizadores.
+Cada módulo acompanha um caso do princípio ao fim, com **dados sintéticos** gerados dentro de cada notebook: no módulo 1, uma rede de clínicas que quer reduzir as faltas a consultas; no módulo 2, uma cadeia de padarias que quer prever em que lojas o pão vai esgotar; no módulo 3, o consumo de eletricidade das escolas de um município; no módulo 4, um stand que quer propor o preço de carros usados; no módulo 5, uma empresa de painéis solares que quer estimar a produção de cada telhado; no módulo 6, uma empresa de distribuição que quer prever as entregas atrasadas; no módulo 7, uma aplicação de aprendizagem de línguas que quer conhecer os seus utilizadores; no módulo 8, um centro de formação que quer saber que formandos estão em risco de desistir.
 
 Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e no **VS Code**. Cada notebook tem um botão «Abrir no Colab».
 
@@ -37,12 +37,13 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Treinar e avaliar modelos supervisionados: escolher métricas, implementar de raiz um KNN, uma árvore de decisão, uma floresta e um boosting, diagnosticar sobreajuste e escolher hiperparâmetros com validação cruzada.
 - Encontrar estrutura sem alvo: agrupar com K-Means e com métodos hierárquicos, avaliar um agrupamento sem rótulos e reduzir dimensões com PCA.
 - Levar um projeto do enquadramento à recomendação, combinando todas as etapas.
+- Comunicar resultados a quem decide, dizer a incerteza, documentar um modelo, avaliá-lo por grupo e proteger os dados pessoais.
 
 ---
 
 ## Estrutura do curso
 
-O tutorial tem sete módulos, que devem ser feitos por ordem. Os capítulos de cada módulo devem ser feitos por ordem.
+O tutorial tem oito módulos, que devem ser feitos por ordem. Os capítulos de cada módulo devem ser feitos por ordem.
 
 ### Módulo 1 – Do problema à decisão
 
@@ -129,7 +130,21 @@ Pasta [`modulo_6_modelos_supervisionados`](modulo_6_modelos_supervisionados). Ca
 Pasta [`modulo_7_aprendizagem_nao_supervisionada`](modulo_7_aprendizagem_nao_supervisionada). Caso do módulo: uma aplicação de aprendizagem de línguas que quer conhecer os tipos de utilizadores que tem.
 
 | N.º | Capítulo | Conteúdos | Colab |
+| ### Módulo 8 – Comunicar e usar com responsabilidade
+
+Pasta [`modulo_8_comunicar_e_usar_com_responsabilidade`](modulo_8_comunicar_e_usar_com_responsabilidade). Caso do módulo: um centro de formação profissional que quer saber que formandos estão em risco de desistir.
+
+| N.º | Capítulo | Conteúdos | Colab |
 | --- | --- | --- | --- |
+| 01 | [Do resultado à mensagem](modulo_8_comunicar_e_usar_com_responsabilidade/01_Do_Resultado_a_Mensagem.ipynb) | Resultado e mensagem; o leitor e a decisão; frequências naturais; termos de comparação; a conclusão primeiro; título-mensagem; o relatório de uma página; o mesmo trabalho para leitores diferentes. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/01_Do_Resultado_a_Mensagem.ipynb) |
+| 02 | [Gráficos para explicar](modulo_8_comunicar_e_usar_com_responsabilidade/02_Graficos_para_Explicar.ipynb) | Explorar e explicar; um gráfico antes e depois; escolher o gráfico pela mensagem; cor, nomes diretos e anotações; retirar o que não informa; eixos cortados, eixos duplos e janelas escolhidas; acessibilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/02_Graficos_para_Explicar.ipynb) |
+| 03 | [Comunicar a incerteza](modulo_8_comunicar_e_usar_com_responsabilidade/03_Comunicar_a_Incerteza.ipynb) | Uma métrica é uma estimativa; intervalos por bootstrap para qualquer métrica; tamanho da amostra; intervalo da diferença entre dois modelos; grupos pequenos e gráfico em funil; o que significa um risco de 30%; o que um intervalo não cobre. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/03_Comunicar_a_Incerteza.ipynb) |
+| 04 | [Documentar e acompanhar um modelo](modulo_8_comunicar_e_usar_com_responsabilidade/04_Documentar_e_Acompanhar_um_Modelo.ipynb) | Ficha do modelo e ficha dos dados; documentação gerada a partir do código; guardar o pipeline; deriva das entradas, da relação e da medição; vigiar entradas, previsões e desempenho; quando rever ou suspender. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/04_Documentar_e_Acompanhar_um_Modelo.ipynb) |
+| 05 | [Equidade: para quem é que o modelo funciona?](modulo_8_comunicar_e_usar_com_responsabilidade/05_Equidade.ipynb) | Avaliação por grupo; quem é prejudicado depende do uso; calibração por grupo; porque retirar o atributo não resolve; paridade, igualdade de oportunidades e significado da pontuação; o custo de cada política; origens do enviesamento. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/05_Equidade.ipynb) |
+| 06 | [Privacidade e dados pessoais](modulo_8_comunicar_e_usar_com_responsabilidade/06_Privacidade_e_Dados_Pessoais.ipynb) | Dados pessoais e quase-identificadores; princípios do RGPD; pseudonimizar e anonimizar; reidentificação por ligação; k-anonimato, generalização e supressão; células pequenas; hábitos de trabalho. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/06_Privacidade_e_Dados_Pessoais.ipynb) |
+| 07 | [Projeto: um relatório e uma ficha de modelo](modulo_8_comunicar_e_usar_com_responsabilidade/07_Projeto_Relatorio_e_Ficha.ipynb) | Uma empresa de águas e os atrasos de pagamento, em sete passos: leitor, números em pessoas, margem, um gráfico, avaliação por grupo, dados pessoais, relatório de uma página e ficha do modelo. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/07_Projeto_Relatorio_e_Ficha.ipynb) |
+
+--- | --- | --- | --- |
 | 01 | [Agrupar sem rótulos: K-Means](modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) | Aprendizagem supervisionada e não supervisionada; atribuir e atualizar; K-Means implementado em NumPy; inércia; inicialização e mínimos locais; efeito da escala; descrever os grupos e dar-lhes nome; limitações. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) |
 | 02 | [Quantos grupos? Avaliar sem rótulos](modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) | O método do cotovelo e os seus limites; coeficiente de silhueta calculado de raiz; gráfico de silhuetas; estabilidade e índice de Rand ajustado; comparação com dados sem estrutura; validação interna, externa e por utilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) |
 | 03 | [Agrupamento hierárquico](modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) | Algoritmo aglomerativo implementado de raiz; ligações simples, completa, média e de Ward; ler e cortar um dendrograma; efeito de cadeia; hierarquia de perfis; K-Means ou hierárquico. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) |
@@ -199,8 +214,8 @@ Os notebooks são executados numa cópia temporária, por isso os originais não
 | Python | 3.10 ou superior |
 | NumPy | 2.x |
 | pandas | 2.2 ou superior (testado com 3.0) |
-| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulos 4 a 7) |
-| SciPy | 1.13 ou superior (módulo 7, capítulo 3; é instalado com o scikit-learn) |
+| scikit-learn | 1.6 ou superior (módulo 1, capítulo 3, e módulos 4 a 8) |
+| SciPy | 1.13 ou superior (módulos 7 e 8; é instalado com o scikit-learn) |
 | matplotlib | 3.10 ou superior |
 
 O Google Colab já inclui todas estas bibliotecas.
@@ -261,12 +276,20 @@ tutorial_ciencia_dados/
 │   ├── 07_Florestas_Aleatorias.ipynb
 │   ├── 08_Boosting.ipynb
 │   └── 09_Projeto_Modelo_Supervisionado.ipynb
-└── modulo_7_aprendizagem_nao_supervisionada/
-    ├── 01_KMeans.ipynb
-    ├── 02_Avaliar_sem_Rotulos.ipynb
-    ├── 03_Agrupamento_Hierarquico.ipynb
-    ├── 04_PCA.ipynb
-    └── 05_Projeto_Final.ipynb
+├── modulo_7_aprendizagem_nao_supervisionada/
+│   ├── 01_KMeans.ipynb
+│   ├── 02_Avaliar_sem_Rotulos.ipynb
+│   ├── 03_Agrupamento_Hierarquico.ipynb
+│   ├── 04_PCA.ipynb
+│   └── 05_Projeto_Final.ipynb
+└── modulo_8_comunicar_e_usar_com_responsabilidade/
+    ├── 01_Do_Resultado_a_Mensagem.ipynb
+    ├── 02_Graficos_para_Explicar.ipynb
+    ├── 03_Comunicar_a_Incerteza.ipynb
+    ├── 04_Documentar_e_Acompanhar_um_Modelo.ipynb
+    ├── 05_Equidade.ipynb
+    ├── 06_Privacidade_e_Dados_Pessoais.ipynb
+    └── 07_Projeto_Relatorio_e_Ficha.ipynb
 ```
 
 ## Licença

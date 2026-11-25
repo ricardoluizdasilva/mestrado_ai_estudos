@@ -37,7 +37,8 @@ from nbclient import NotebookClient
 
 RAIZ = Path(__file__).resolve().parent.parent
 PASTAS = ("modulo_1_do_problema_a_decisao", "modulo_2_fontes_tipos_estruturas", "modulo_3_explorar_os_dados", "modulo_4_preparar_os_dados",
-          "modulo_5_modelos_lineares", "modulo_6_modelos_supervisionados", "modulo_7_aprendizagem_nao_supervisionada")
+          "modulo_5_modelos_lineares", "modulo_6_modelos_supervisionados", "modulo_7_aprendizagem_nao_supervisionada",
+          "modulo_8_comunicar_e_usar_com_responsabilidade")
 
 RESPOSTAS = ["10", "3", "5", "7", "2", "4", "8", "1", "6", "9", "sair", "n", "0"]
 CELULA_INPUT = (
