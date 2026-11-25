@@ -2,7 +2,7 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-50-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-53-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
@@ -38,12 +38,13 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Encontrar estrutura sem alvo: agrupar com K-Means e com métodos hierárquicos, avaliar um agrupamento sem rótulos e reduzir dimensões com PCA.
 - Levar um projeto do enquadramento à recomendação, combinando todas as etapas.
 - Comunicar resultados a quem decide, dizer a incerteza, documentar um modelo, avaliá-lo por grupo e proteger os dados pessoais.
+- Trabalhar com dados reais: lacunas na documentação, valores em falta disfarçados, mudanças ao longo do tempo e resultados que só se confirmam em dados posteriores.
 
 ---
 
 ## Estrutura do curso
 
-O tutorial tem oito módulos, que devem ser feitos por ordem. Os capítulos de cada módulo devem ser feitos por ordem.
+O tutorial tem oito módulos, que devem ser feitos por ordem, e um projeto com dados reais, para fazer no fim. Os capítulos de cada módulo devem ser feitos por ordem.
 
 ### Módulo 1 – Do problema à decisão
 
@@ -130,7 +131,14 @@ Pasta [`modulo_6_modelos_supervisionados`](modulo_6_modelos_supervisionados). Ca
 Pasta [`modulo_7_aprendizagem_nao_supervisionada`](modulo_7_aprendizagem_nao_supervisionada). Caso do módulo: uma aplicação de aprendizagem de línguas que quer conhecer os tipos de utilizadores que tem.
 
 | N.º | Capítulo | Conteúdos | Colab |
-| ### Módulo 8 – Comunicar e usar com responsabilidade
+| --- | --- | --- | --- |
+| 01 | [Agrupar sem rótulos: K-Means](modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) | Aprendizagem supervisionada e não supervisionada; atribuir e atualizar; K-Means implementado em NumPy; inércia; inicialização e mínimos locais; efeito da escala; descrever os grupos e dar-lhes nome; limitações. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) |
+| 02 | [Quantos grupos? Avaliar sem rótulos](modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) | O método do cotovelo e os seus limites; coeficiente de silhueta calculado de raiz; gráfico de silhuetas; estabilidade e índice de Rand ajustado; comparação com dados sem estrutura; validação interna, externa e por utilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) |
+| 03 | [Agrupamento hierárquico](modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) | Algoritmo aglomerativo implementado de raiz; ligações simples, completa, média e de Ward; ler e cortar um dendrograma; efeito de cadeia; hierarquia de perfis; K-Means ou hierárquico. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) |
+| 04 | [Reduzir dimensões: análise de componentes principais](modulo_7_aprendizagem_nao_supervisionada/04_PCA.ipynb) | Colunas correlacionadas e redundância; a direção de maior variância; PCA em NumPy (covariâncias, valores e vetores próprios); variância explicada; interpretar os pesos; mapa dos dados em duas componentes; reconstrução; cuidados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/04_PCA.ipynb) |
+| 05 | [Projeto final: do problema à decisão](modulo_7_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) | Onde instalar 15 postos de carregamento, em oito passos que percorrem os seis módulos: enquadrar, verificar, explorar, segmentar, preparar, modelar, decidir e comunicar; as ideias que atravessam o tutorial. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) |
+
+### Módulo 8 – Comunicar e usar com responsabilidade
 
 Pasta [`modulo_8_comunicar_e_usar_com_responsabilidade`](modulo_8_comunicar_e_usar_com_responsabilidade). Caso do módulo: um centro de formação profissional que quer saber que formandos estão em risco de desistir.
 
@@ -144,19 +152,15 @@ Pasta [`modulo_8_comunicar_e_usar_com_responsabilidade`](modulo_8_comunicar_e_us
 | 06 | [Privacidade e dados pessoais](modulo_8_comunicar_e_usar_com_responsabilidade/06_Privacidade_e_Dados_Pessoais.ipynb) | Dados pessoais e quase-identificadores; princípios do RGPD; pseudonimizar e anonimizar; reidentificação por ligação; k-anonimato, generalização e supressão; células pequenas; hábitos de trabalho. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/06_Privacidade_e_Dados_Pessoais.ipynb) |
 | 07 | [Projeto: um relatório e uma ficha de modelo](modulo_8_comunicar_e_usar_com_responsabilidade/07_Projeto_Relatorio_e_Ficha.ipynb) | Uma empresa de águas e os atrasos de pagamento, em sete passos: leitor, números em pessoas, margem, um gráfico, avaliação por grupo, dados pessoais, relatório de uma página e ficha do modelo. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_8_comunicar_e_usar_com_responsabilidade/07_Projeto_Relatorio_e_Ficha.ipynb) |
 
---- | --- | --- | --- |
-| 01 | [Agrupar sem rótulos: K-Means](modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) | Aprendizagem supervisionada e não supervisionada; atribuir e atualizar; K-Means implementado em NumPy; inércia; inicialização e mínimos locais; efeito da escala; descrever os grupos e dar-lhes nome; limitações. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/01_KMeans.ipynb) |
-| 02 | [Quantos grupos? Avaliar sem rótulos](modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) | O método do cotovelo e os seus limites; coeficiente de silhueta calculado de raiz; gráfico de silhuetas; estabilidade e índice de Rand ajustado; comparação com dados sem estrutura; validação interna, externa e por utilidade. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/02_Avaliar_sem_Rotulos.ipynb) |
-| 03 | [Agrupamento hierárquico](modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) | Algoritmo aglomerativo implementado de raiz; ligações simples, completa, média e de Ward; ler e cortar um dendrograma; efeito de cadeia; hierarquia de perfis; K-Means ou hierárquico. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/03_Agrupamento_Hierarquico.ipynb) |
-| 04 | [Reduzir dimensões: análise de componentes principais](modulo_7_aprendizagem_nao_supervisionada/04_PCA.ipynb) | Colunas correlacionadas e redundância; a direção de maior variância; PCA em NumPy (covariâncias, valores e vetores próprios); variância explicada; interpretar os pesos; mapa dos dados em duas componentes; reconstrução; cuidados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/04_PCA.ipynb) |
-| 05 | [Projeto final: do problema à decisão](modulo_7_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) | Onde instalar 15 postos de carregamento, em oito passos que percorrem os seis módulos: enquadrar, verificar, explorar, segmentar, preparar, modelar, decidir e comunicar; as ideias que atravessam o tutorial. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_7_aprendizagem_nao_supervisionada/05_Projeto_Final.ipynb) |
+### Projeto com dados reais
 
---- | --- |
-| 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; avaliar sem rótulos; projeto final de ponta a ponta |
+Pasta [`projeto_dados_reais`](projeto_dados_reais). Os módulos usam dados sintéticos; este projeto aplica o percurso completo a **dados reais**: mais de 41 000 chamadas de campanhas de telemarketing de um banco português (2008 a 2010), do conjunto *Bank Marketing* (S. Moro, P. Cortez e P. Rita, 2014; UCI Machine Learning Repository; CC BY 4.0). O ficheiro está na pasta [`dados`](projeto_dados_reais/dados), com a descrição da fonte.
 
---- | --- |
-| 5. Modelos supervisionados | Métricas de classificação e de regressão; KNN; árvores de decisão; sobreajuste, viés e variância; validação cruzada |
-| 6. Aprendizagem não supervisionada | K-Means; agrupamento hierárquico; PCA; projeto final de ponta a ponta |
+| Parte | Notebook | Conteúdos | Colab |
+| --- | --- | --- | --- |
+| 1 | [Enquadrar o problema e auditar os dados](projeto_dados_reais/01_Enquadrar_e_Auditar_os_Dados.ipynb) | Avaliar a fonte; ficha de enquadramento; dicionário de dados; valores em falta disfarçados (`unknown` e 999); duplicados sem identificador; reconstruir o tempo a partir da documentação; campanhas que mudam; o que se conhece no momento da previsão. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/projeto_dados_reais/01_Enquadrar_e_Auditar_os_Dados.ipynb) |
+| 2 | [Explorar, dividir e modelar](projeto_dados_reais/02_Explorar_Dividir_e_Modelar.ipynb) | Separar o teste pelo tempo; explorar sem misturar épocas; divisão aleatória contra divisão temporal; uma fuga e colunas que são calendário; métrica ligada à decisão; uma regra simples contra regressão logística e boosting; teste com intervalo. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/projeto_dados_reais/02_Explorar_Dividir_e_Modelar.ipynb) |
+| 3 | [Decidir, verificar e comunicar](projeto_dados_reais/03_Decidir_Verificar_e_Comunicar.ipynb) | Resultado por capacidade; o que mudou entre o desenvolvimento e o teste; probabilidades que não resistem à mudança; acompanhamento mensal; avaliação por idade; quase-identificadores e minimização; ficha da solução e relatório de uma página. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/projeto_dados_reais/03_Decidir_Verificar_e_Comunicar.ipynb) |
 
 ---
 
@@ -300,14 +304,21 @@ tutorial_ciencia_dados/
 │   ├── 03_Agrupamento_Hierarquico.ipynb
 │   ├── 04_PCA.ipynb
 │   └── 05_Projeto_Final.ipynb
-└── modulo_8_comunicar_e_usar_com_responsabilidade/
-    ├── 01_Do_Resultado_a_Mensagem.ipynb
-    ├── 02_Graficos_para_Explicar.ipynb
-    ├── 03_Comunicar_a_Incerteza.ipynb
-    ├── 04_Documentar_e_Acompanhar_um_Modelo.ipynb
-    ├── 05_Equidade.ipynb
-    ├── 06_Privacidade_e_Dados_Pessoais.ipynb
-    └── 07_Projeto_Relatorio_e_Ficha.ipynb
+├── modulo_8_comunicar_e_usar_com_responsabilidade/
+│   ├── 01_Do_Resultado_a_Mensagem.ipynb
+│   ├── 02_Graficos_para_Explicar.ipynb
+│   ├── 03_Comunicar_a_Incerteza.ipynb
+│   ├── 04_Documentar_e_Acompanhar_um_Modelo.ipynb
+│   ├── 05_Equidade.ipynb
+│   ├── 06_Privacidade_e_Dados_Pessoais.ipynb
+│   └── 07_Projeto_Relatorio_e_Ficha.ipynb
+└── projeto_dados_reais/
+    ├── dados/
+    │   ├── bank-additional-full.csv   ← dados reais (Bank Marketing, CC BY 4.0)
+    │   └── LEIA-ME.md                 ← fonte, citação e licença dos dados
+    ├── 01_Enquadrar_e_Auditar_os_Dados.ipynb
+    ├── 02_Explorar_Dividir_e_Modelar.ipynb
+    └── 03_Decidir_Verificar_e_Comunicar.ipynb
 ```
 
 ## Licença

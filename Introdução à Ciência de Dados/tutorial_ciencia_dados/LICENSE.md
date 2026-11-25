@@ -24,6 +24,7 @@ O código-fonte está licenciado sob a [licença MIT](LICENSE-MIT.txt). Isto inc
 
 ## Conteúdos de terceiros
 
-- Os dados usados nos notebooks são sintéticos, gerados pelo próprio código. Não representam nenhuma organização real.
+- Os dados usados nos notebooks dos oito módulos são sintéticos, gerados pelo próprio código. Não representam nenhuma organização real.
+- O projeto com dados reais usa o conjunto *Bank Marketing*, de S. Moro, P. Cortez e P. Rita (2014), publicado no UCI Machine Learning Repository (https://doi.org/10.24432/C5K306) com a licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt). O ficheiro `projeto_dados_reais/dados/bank-additional-full.csv` é distribuído sem alterações e mantém essa licença, e não a do tutorial. Os detalhes estão em [`projeto_dados_reais/dados/LEIA-ME.md`](projeto_dados_reais/dados/LEIA-ME.md).
 - Os valores do gráfico «Onde se gasta o tempo» (módulo 1, capítulo 4) são do *Data Science Report* de 2016 da CrowdFlower, citado no local.
 - As bibliotecas usadas (NumPy, pandas, scikit-learn, matplotlib) não são distribuídas com o tutorial e têm as suas próprias licenças.
