@@ -160,6 +160,23 @@ Pasta [`modulo_8_comunicar_e_usar_com_responsabilidade`](modulo_8_comunicar_e_us
 
 ---
 
+## Fichas de consulta rápida
+
+Pasta [`consulta_rapida`](consulta_rapida). São resumos em PDF (A4 na horizontal), um por módulo, para imprimir ou ter abertos ao lado do notebook. Cada bloco indica o capítulo onde o tema é explicado, e a maior parte das fichas inclui blocos com as armadilhas mais frequentes.
+
+| Ficha | Conteúdos | Módulo |
+| --- | --- | --- |
+| [Do problema à decisão](consulta_rapida/Consulta_Rapida_1_Do_Problema_a_Decisao.pdf) | 2 páginas: de dados a decisão, tipos de pergunta, ficha de enquadramento, métricas e limiar; dados imperfeitos, CRISP-DM, amostragem, intervalos de confiança e testes de hipóteses. | 1 |
+| [Fontes, tipos e estruturas](consulta_rapida/Consulta_Rapida_2_Fontes_Tipos_Estruturas.pdf) | 2 páginas: alvo e momento da previsão, classificar e verificar fontes, tipos de variáveis e armadilhas; formatos (CSV, JSON, XML), esquema, auditoria de qualidade e plano de dados. | 2 |
+| [Explorar os dados](consulta_rapida/Consulta_Rapida_3_Explorar_os_Dados.pdf) | 2 páginas: selecionar, agrupar, remodelar e juntar com pandas, medidas descritivas; escolha de gráficos, matplotlib, correlação e séries temporais. | 3 |
+| [Preparar os dados](consulta_rapida/Consulta_Rapida_4_Preparar_os_Dados.pdf) | 2 páginas: vocabulário, treino e teste, linha de base, valores em falta; escalas, codificação de categorias, pipelines e fugas de informação. | 4 |
+| [Modelos lineares](consulta_rapida/Consulta_Rapida_5_Modelos_Lineares.pdf) | 2 páginas: regressão linear de raiz e com o scikit-learn, leitura de coeficientes e pressupostos; regressão logística, calibração, Ridge e Lasso. | 5 |
+| [Modelos supervisionados](consulta_rapida/Consulta_Rapida_6_Modelos_Supervisionados.pdf) | 3 páginas: métricas e KNN; árvores, viés e variância, validação cruzada e procura em grelha; florestas aleatórias, boosting e escolha do modelo. | 6 |
+| [Aprendizagem não supervisionada](consulta_rapida/Consulta_Rapida_7_Aprendizagem_Nao_Supervisionada.pdf) | 2 páginas: K-Means, silhueta, validação e agrupamento hierárquico; PCA de raiz e com o scikit-learn, o percurso completo e as ideias que atravessam o tutorial. | 7 |
+| [Comunicar e usar com responsabilidade](consulta_rapida/Consulta_Rapida_8_Comunicar_e_Responsabilidade.pdf) | 2 páginas: mensagem, relatório de uma página, gráficos para explicar e incerteza; ficha do modelo, deriva, equidade e dados pessoais. | 8 |
+
+---
+
 ## Como usar
 
 ### No Google Colab (recomendado para começar)
@@ -232,6 +249,7 @@ tutorial_ciencia_dados/
 ├── requirements.txt
 ├── ferramentas/
 │   └── verificar_notebooks.py         ← executa os notebooks e procura erros
+├── consulta_rapida/                   ← fichas de consulta rápida em PDF, uma por módulo
 ├── modulo_1_do_problema_a_decisao/
 │   ├── 01_Dos_Dados_a_Decisao.ipynb
 │   ├── 02_Da_Pergunta_ao_Enquadramento.ipynb
