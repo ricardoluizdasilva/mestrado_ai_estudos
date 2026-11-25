@@ -2,7 +2,7 @@
 
 **Tutorial de ciência de dados, do problema à decisão, em notebooks Jupyter e em português europeu.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-41-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Notebooks](https://img.shields.io/badge/notebooks-43-orange) ![Idioma](https://img.shields.io/badge/idioma-português%20(PT)-green) [![Licença: CC BY-NC-SA 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE.md) [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE-MIT.txt) [![Verificação dos notebooks](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml/badge.svg)](https://github.com/ricardoluizdasilva/mestrado_ai_estudos/actions/workflows/notebooks_ciencia_dados.yml)
 
 Este tutorial ensina a pensar como um cientista de dados antes de ensinar técnicas: que pergunta fazer, que dados a podem responder, como avaliar uma previsão pela decisão que ela permite e como organizar o trabalho. Cada capítulo combina explicações curtas, esquemas, gráficos gerados pelo próprio código, exemplos executáveis e exercícios com soluções.
 
@@ -34,7 +34,7 @@ Os notebooks funcionam no **Google Colab** (sem instalar nada), no **Jupyter** e
 - Explorar dados: agrupar, resumir, visualizar, medir associações e analisar séries temporais.
 - Preparar dados para um modelo: dividir em treino e teste, imputar, mudar escalas, codificar categorias e montar um *pipeline* sem fugas de informação.
 - Construir e interpretar modelos lineares: regressão linear e logística de raiz, leitura dos coeficientes, regularização Ridge e Lasso.
-- Treinar e avaliar modelos supervisionados: escolher métricas, implementar um KNN e uma árvore de decisão de raiz, diagnosticar sobreajuste e escolher hiperparâmetros com validação cruzada.
+- Treinar e avaliar modelos supervisionados: escolher métricas, implementar de raiz um KNN, uma árvore de decisão, uma floresta e um boosting, diagnosticar sobreajuste e escolher hiperparâmetros com validação cruzada.
 - Encontrar estrutura sem alvo: agrupar com K-Means e com métodos hierárquicos, avaliar um agrupamento sem rótulos e reduzir dimensões com PCA.
 - Levar um projeto do enquadramento à recomendação, combinando todas as etapas.
 
@@ -120,7 +120,9 @@ Pasta [`modulo_6_modelos_supervisionados`](modulo_6_modelos_supervisionados). Ca
 | 04 | [Árvores de decisão](modulo_6_modelos_supervisionados/04_Arvores_de_Decisao.ipynb) | Ler uma árvore; índice de Gini e ganho; procura da melhor divisão e crescimento recursivo implementados de raiz; regiões retangulares; profundidade e tamanho das folhas; importância dos atributos; árvores de regressão; instabilidade; KNN ou árvore. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/04_Arvores_de_Decisao.ipynb) |
 | 05 | [Sobreajuste, viés e variância](modulo_6_modelos_supervisionados/05_Sobreajuste_Vies_e_Variancia.ipynb) | Subajuste e sobreajuste num mundo simulado; um modelo que memoriza ruído; decomposição do erro em viés, variância e ruído, medida por simulação; diagnóstico com os erros de treino e de validação; curvas de aprendizagem; que remédio para que problema. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/05_Sobreajuste_Vies_e_Variancia.ipynb) |
 | 06 | [Validação cruzada e escolha de hiperparâmetros](modulo_6_modelos_supervisionados/06_Validacao_Cruzada.ipynb) | Porque uma divisão é um sorteio; validação cruzada com K partes implementada de raiz; variantes estratificada, por grupos e temporal; procura em grelha; a fuga de preparar antes de dividir; o protocolo completo até ao teste. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/06_Validacao_Cruzada.ipynb) |
-| 07 | [Projeto: um modelo supervisionado de ponta a ponta](modulo_6_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) | Cancelamentos num ginásio, em oito passos: enquadrar, detetar uma fuga, pipeline, KNN, árvore, diagnóstico, limiar pelo custo e teste, explicação; resumo para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/07_Projeto_Modelo_Supervisionado.ipynb) |
+| 07 | [Florestas aleatórias](modulo_6_modelos_supervisionados/07_Florestas_Aleatorias.ipynb) | A média de muitas árvores; amostras bootstrap; bagging implementado de raiz; sorteio de atributos; erro out-of-bag; hiperparâmetros; importância por permutação; o que se ganha e o que se perde. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/07_Florestas_Aleatorias.ipynb) |
+| 08 | [Boosting](modulo_6_modelos_supervisionados/08_Boosting.ipynb) | Corrigir erros em sequência; gradient boosting implementado de raiz; taxa de aprendizagem e número de árvores; paragem antecipada; implementações por histograma; bagging e boosting; que modelo escolher. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/08_Boosting.ipynb) |
+| 09 | [Projeto: um modelo supervisionado de ponta a ponta](modulo_6_modelos_supervisionados/09_Projeto_Modelo_Supervisionado.ipynb) | Cancelamentos num ginásio, em oito passos: enquadrar, detetar uma fuga, pipeline, KNN, árvore, diagnóstico, limiar pelo custo e teste, explicação; resumo para quem decide. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ricardoluizdasilva/mestrado_ai_estudos/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados/tutorial_ciencia_dados/modulo_6_modelos_supervisionados/09_Projeto_Modelo_Supervisionado.ipynb) |
 
 ### Módulo 7 – Aprendizagem não supervisionada
 
@@ -251,7 +253,9 @@ tutorial_ciencia_dados/
 │   ├── 04_Arvores_de_Decisao.ipynb
 │   ├── 05_Sobreajuste_Vies_e_Variancia.ipynb
 │   ├── 06_Validacao_Cruzada.ipynb
-│   └── 07_Projeto_Modelo_Supervisionado.ipynb
+│   ├── 07_Florestas_Aleatorias.ipynb
+│   ├── 08_Boosting.ipynb
+│   └── 09_Projeto_Modelo_Supervisionado.ipynb
 └── modulo_7_aprendizagem_nao_supervisionada/
     ├── 01_KMeans.ipynb
     ├── 02_Avaliar_sem_Rotulos.ipynb
