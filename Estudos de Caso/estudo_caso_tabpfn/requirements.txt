@@ -1,0 +1,28 @@
+# Bibliotecas usadas nos notebooks do estudo de caso TabPFN (Python 3.10 ou superior).
+# Instalação:  pip install -r requirements.txt
+# No Google Colab só é preciso instalar o tabpfn e o lightgbm; as restantes já lá estão.
+
+# Modelos
+# O tabpfn tem a versão fixa: o modelo por omissão muda entre versões e os resultados deixariam de ser comparáveis.
+# Na versão 10.2.0 o modelo por omissão é o TabPFN-3.5 (pesos com licença não comercial; exigem TABPFN_TOKEN).
+tabpfn==10.2.0
+lightgbm>=4.5
+scikit-learn>=1.6
+
+# Dados e cálculo
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+
+# Gráficos
+matplotlib>=3.10
+
+# Recolha de dados (notebook 02: APIs do IBGE e ficheiros do TSE)
+requests>=2.32
+
+# Notebooks (Jupyter e VS Code)
+ipykernel>=6.29
+nbformat>=5.9
+
+# O PyTorch é instalado como dependência do tabpfn. Para usar GPU fora do Colab,
+# instale primeiro a versão do torch adequada à sua placa: https://pytorch.org/get-started/locally/
